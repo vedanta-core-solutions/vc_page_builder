@@ -1,13 +1,16 @@
-import ConfigProviderClient from '@/context/ConfigProviderClient';
-import { loadConfig } from '../../lib/config';
-import Header from '../../components/Header';
+import ConfigProviderClient from "@/context/ConfigProviderClient";
+import { loadConfig } from "../../lib/config";
+import Header from "../../components/Header";
+import FeatureSection from "../../components/Features";
 
 export default async function BizPage({ params }) {
   const { bizType } = await params;
   const config = await loadConfig(bizType);
   if (!config) {
     // simple 404 / fallback
-    return <div className="p-8 text-center">Business type “{bizType}” not found</div>;
+    return (
+      <div className="p-8 text-center">Business type “{bizType}” not found</div>
+    );
   }
 
   // const { theme = {}, content = {} } = config;
@@ -70,7 +73,8 @@ export default async function BizPage({ params }) {
     //   </main>
     // </div>
     <ConfigProviderClient config={config}>
-      <Header/>
+      <Header />
+      <FeatureSection />
     </ConfigProviderClient>
   );
 }
