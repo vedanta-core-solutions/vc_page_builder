@@ -1,65 +1,204 @@
+import Link from "next/link";
 import Image from "next/image";
-
-export default function Home() {
+export default function Homepage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      <nav className="flex items-center justify-between bg-linear-to-b from-gray-400 via-white to-gray-300 via-60% p-4 border border-gray-300">
+        <div className="flex items-center gap-2 text-2xl font-semibold">
+          <span className="text-orange-500">🏢</span>
+          <span className="text-blue-600 hover:text-orange-600 transition">
+            VC
+          </span>
+          <span className="text-orange-500">Builder</span>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+        <ul className="flex items-center gap-x-9 text-orange-700 font-medium">
+          <li>
+            <a href="#" className="hover:text-green-600 transition">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-green-600 transition">
+              Product
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-green-600 transition">
+              Service
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-green-600 transition">
+              Features
+            </a>
+          </li>
+          <li className="flex items-center gap-2 bg-white px-3 py-1 rounded-md border border-slate-300 shadow-sm">
+            <span className="text-gray-600">🔍</span>
+            <input
+              type="text"
+              placeholder="3D web design"
+              className="outline-none text-sm text-gray-700 placeholder:text-gray-400"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </li>
+        </ul>
+        <button className="text-2xl text-orange-700 skew-y-4 hover:text-blue-600 hover:skew-y-0 border  p-0.5 rounded-lg bg-white hover:bg-slate-300 outline-none px-4">
+          Login
+        </button>
+      </nav>
+      {/* idhar hai hero section  */}
+      <section className="w-full bg-linear-to-b from-gray-300 via-white to-blue-200 py-20 px-6 m-0.5  ">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12">
+          <div className="flex-1 text-center md:text-left">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
+              Build Beautiful Pages
+              <span className="text-orange-600"> Instantly</span>
+            </h1>
+
+            <p className="mt-4 text-gray-600 text-lg md:w-4/5">
+              A ready to build Web builder which give variety of design .
+            </p>
+
+            <div className="mt-8 flex justify-center md:justify-start gap-4">
+              <button className="px-6 py-3 bg-orange-600 text-white rounded-md hover:bg-green-600 transition">
+                Get Started
+              </button>
+
+              <button className="px-6 py-3 border-2 border-orange-600 text-orange-700 rounded-md hover:border-green-600 hover:text-green-600 transition">
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          <div className="flex-1 flex justify-center">
+            <div className="w-72 h-72 md:w-96 md:h-96 rounded-xl bg-linear-to-b from-orange-300 via-yellow-200 to-green-200 shadow-xl ">
+              <Link href="#">
+                <div className="rounded-xl shadow-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform">
+                  <Image
+                    src="/girl.jpeg"
+                    alt="Hero Image"
+                    width={400}
+                    height={400}
+                    className="object-cover w-96 h-72 md:w-96 md:h-96"
+                  />
+                </div>
+              </Link>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+      {/* idhar content section
+       */}
+
+      {/* idhar footer  */}
+      <footer className="w-full bg-gray-900 text-gray-300 pt-12 pb-6 border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+            <div>
+              <h3 className="text-white font-semibold text-lg mb-4">Company</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link href="/about" className="hover:text-white">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/careers" className="hover:text-white">
+                    Careers
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog" className="hover:text-white">
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="hover:text-white">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-white font-semibold text-lg mb-4">Support</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link href="/help" className="hover:text-white">
+                    Help Center
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/returns" className="hover:text-white">
+                    Returns
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/shipping" className="hover:text-white">
+                    Shipping Info
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/faq" className="hover:text-white">
+                    FAQ
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-white font-semibold text-lg mb-4">Legal</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link href="/terms" className="hover:text-white">
+                    Terms of Service
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/privacy" className="hover:text-white">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/cookies" className="hover:text-white">
+                    Cookie Policy
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-white font-semibold text-lg mb-4">
+                Follow Us
+              </h3>
+              <div className="flex space-x-4 text-xl">
+                <Link href="https://instagram.com" className="hover:text-white">
+                  📸
+                </Link>
+                <Link href="https://twitter.com" className="hover:text-white">
+                  🐦
+                </Link>
+                <Link href="https://facebook.com" className="hover:text-white">
+                  📘
+                </Link>
+                <Link href="https://youtube.com" className="hover:text-white">
+                  ▶️
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-800 my-6"></div>
+
+          <div className="flex flex-col md:flex-row items-center justify-between text-sm">
+            <p className="text-gray-400">
+              © {2025} VedantaCore. All rights reserved.
+            </p>
+
+            <p className="mt-3 md:mt-0">Built with VCBuilder.</p>
+          </div>
+        </div>
+      </footer>
+    </main>
   );
 }
