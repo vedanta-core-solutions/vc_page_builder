@@ -1,6 +1,7 @@
 import ConfigProviderClient from '@/context/ConfigProviderClient';
 import { loadConfig } from '../../lib/config';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer.jsx';
 
 export default async function BizPage({ params }) {
   const { bizType } = await params;
@@ -71,6 +72,7 @@ export default async function BizPage({ params }) {
     // </div>
     <ConfigProviderClient config={config}>
       <Header/>
+      <Footer/>
     </ConfigProviderClient>
   );
 }
