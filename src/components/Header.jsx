@@ -12,7 +12,7 @@ export default function Header() {
   const { theme, content } = config;
 
   return (
-    <header>
+    <header style={{ fontFamily: theme.fontFamily }}>
       <nav
         className="flex justify-between p-4 items-center"
         style={{ backgroundColor: theme?.bgColor }}
@@ -23,15 +23,6 @@ export default function Header() {
         <ul className="flex space-x-14">
           <li><Link href="#home">Home</Link></li>
           <li><Link href="#services">Services</Link></li>
-          <li>
-            <details>
-              <summary>More</summary>
-              <ul>
-                <li><Link href="#about">About</Link></li>
-                <li><Link href="#team">Team</Link></li>
-              </ul>
-            </details>
-          </li>
         </ul>
         <form>
           <input type="search" placeholder="Search..." />

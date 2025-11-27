@@ -1,6 +1,8 @@
 import ConfigProviderClient from '@/context/ConfigProviderClient';
 import { loadConfig } from '../../lib/config';
 import Header from '../../components/Header';
+import Hero from '../../components/Hero';
+
 
 export default async function BizPage({ params }) {
   const { bizType } = await params;
@@ -71,6 +73,7 @@ export default async function BizPage({ params }) {
     // </div>
     <ConfigProviderClient config={config}>
       <Header/>
+      <Hero />
     </ConfigProviderClient>
   );
 }
