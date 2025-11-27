@@ -1,0 +1,24 @@
+{
+  "theme": {
+    "bgColor": "#FEF9F3",
+    "textColor": "#2E4C3D",
+    "fontFamily": "serif",
+    "logo": "/logo-restaurant.png"
+  },
+  "content": {
+    "hero": {
+      "title": "Delicious Meals Served Fresh",
+      "subtitle": "Welcome to Our Restaurant"
+    },
+    "menu": [
+      { "name": "Paneer Curry", "price": "₹150" },
+      { "name": "Chicken Biryani", "price": "₹220" },
+      { "name": "Gulab Jamun", "price": "₹60" }
+    ],
+    "about": "Our family-run restaurant brings authentic flavours.",
+    "contact": {
+      "phone": "+91-9123456780",
+      "address": "Food Street, City"
+    }
+  }
+}

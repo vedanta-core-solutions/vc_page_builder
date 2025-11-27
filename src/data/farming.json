@@ -1,0 +1,23 @@
+{
+  "theme": {
+    "bgColor": "#F4F9F4",
+    "textColor": "#26482C",
+    "fontFamily": "sans-serif",
+    "logo": "/logo-farming.png"
+  },
+  "content": {
+    "hero": {
+      "title": "Farming Supply & Services",
+      "subtitle": "Quality Seeds, Tools & Advice"
+    },
+    "products": [
+      { "name": "Seeds Pack", "price": "₹200" },
+      { "name": "Fertilizer Bag", "price": "₹950" }
+    ],
+    "about": "We support farmers with high-quality supplies and services.",
+    "contact": {
+      "phone": "+91-9988776655",
+      "address": "Farm Lane, Countryside"
+    }
+  }
+}
