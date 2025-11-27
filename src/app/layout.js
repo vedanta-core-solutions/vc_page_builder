@@ -1,29 +1,12 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import config from "../lib/config";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+export default async function Page({ params }) {
+  const bizType = params.id ?? "default";
+  const loadconfig = await config(bizType);
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata = {
-  title: "VCBuilder",
-  description: "One Solution for multiple design of webpage",
-};
-
-export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <YourProvider data={loadconfig}>
+      <YourPageContent />
+    </YourProvider>
   );
 }

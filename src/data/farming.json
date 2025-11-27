@@ -19,5 +19,58 @@
       "phone": "+91-9988776655",
       "address": "Farm Lane, Countryside"
     }
-  }
+  },
+
+  "features": [
+    {
+      "icon": "🌾",
+      "title": "Smart Crop Monitoring",
+      "description": "Track soil moisture, crop health, and growth data in real time."
+    },
+    {
+      "icon": "⛈️",
+      "title": "Weather Alerts",
+      "description": "Instant updates on rain, storms, frost, and climate changes."
+    },
+    {
+      "icon": "🛒",
+      "title": "Online Marketplace",
+      "description": "Sell farm produce directly to customers and retailers."
+    },
+    {
+      "icon": "🚜",
+      "title": "Equipment Rentals",
+      "description": "Rent tractors, drones, and farming tools when needed."
+    },
+    {
+      "icon": "🧪",
+      "title": "Soil Testing",
+      "description": "Smart recommendations based on soil quality and nutrients."
+    },
+    {
+      "icon": "💧",
+      "title": "Smart Irrigation",
+      "description": "Automated watering based on crop requirements to save time and water."
+    },
+    {
+      "icon": "🐄",
+      "title": "Livestock Tracking",
+      "description": "Monitor animal health, diet, and vaccination schedules."
+    },
+    {
+      "icon": "📊",
+      "title": "Profit Analytics",
+      "description": "Understand your farm’s expenses and profit insights easily."
+    },
+    {
+      "icon": "🎓",
+      "title": "Farmer Tutorials",
+      "description": "Learn organic farming, pest control, and modern farm techniques."
+    },
+    {
+      "icon": "🚚",
+      "title": "Direct Delivery System",
+      "description": "Deliver fresh produce straight from farm to home."
+    }
+  ]
 }
