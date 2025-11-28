@@ -1,10 +1,5 @@
 {
-  "theme": {
-    "bgColor": "#F4F9F4",
-    "textColor": "#26482C",
-    "fontFamily": "Bebas Neue",
-    "logo": "/logo-farming.png"
-  },
+  
   "content": {
     "hero": {
       "title": "Farming Supply & Services",

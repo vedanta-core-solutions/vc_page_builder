@@ -1,10 +1,4 @@
-{
-  "theme": {
-    "bgColor": "#FEF9F3",
-    "textColor": "#2E4C3D",
-    "fontFamily": "serif",
-    "logo": "/logo-restaurant.png"
-  },
+{  
   "content": {
     "hero": {
       "title": "Delicious Meals Served Fresh",

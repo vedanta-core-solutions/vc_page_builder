@@ -6,19 +6,18 @@ import Link from 'next/link';
 export default function Header() {
   const config = useConfig();
   if (!config) {
-    console.log("no code")
     return null; // or a fallback
   }
-  const { theme, content } = config;
+  const { themeForBiz, content } = config;
 
   return (
-    <header style={{ fontFamily: theme.fontFamily }}>
+    <header style={{ fontFamily: themeForBiz.font }}>
       <nav
         className="flex justify-between p-4 items-center"
-        style={{ backgroundColor: theme?.bgColor }}
+        style={{ backgroundColor: themeForBiz.colors.secondary }}
       >
         <Link href="#">
-          <img src={theme?.logo || '/default-logo.png'} alt="Logo" className="h-12"/>
+          <img src={themeForBiz?.logo || '/default-logo.png'} alt="Logo" className="h-12"/>
         </Link>
         <ul className="flex space-x-14">
           <li><Link href="#home">Home</Link></li>

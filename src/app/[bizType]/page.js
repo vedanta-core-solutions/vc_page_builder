@@ -7,6 +7,9 @@ import Hero from '../../components/Hero';
 export default async function BizPage({ params }) {
   const { bizType } = await params;
   const config = await loadConfig(bizType);
+  const themeForBiz = config.theme.themes[bizType];
+  const themeContent = {...config.content, themeForBiz}
+  console.log("check", themeContent)
   if (!config) {
     // simple 404 / fallback
     return <div className="p-8 text-center">Business type “{bizType}” not found</div>;
@@ -71,7 +74,7 @@ export default async function BizPage({ params }) {
     //     )}
     //   </main>
     // </div>
-    <ConfigProviderClient config={config}>
+    <ConfigProviderClient config={themeContent}>
       <Header/>
       <Hero />
     </ConfigProviderClient>

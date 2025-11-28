@@ -1,0 +1,59 @@
+{
+  "themes": {
+    "default": {
+      "colors": {
+        "primary": "#0066FF",
+        "secondary": "#1A1A1A",
+        "accent": "#FFB800",
+        "background": "#FFFFFF"
+      },
+      "font": "Inter, sans-serif",
+      "extras": {
+        "borderRadius": "6px",
+        "buttonStyle": "rounded"
+      }
+    },
+
+    "retail": {
+      "colors": {
+        "primary": "#FF5722",
+        "secondary": "#212121",
+        "accent": "#FFC107",
+        "background": "#FAFAFA"
+      },
+      "font": "Poppins, sans-serif",
+      "extras": {
+        "cardShadow": "0 2px 6px rgba(0,0,0,0.15)",
+        "badgeStyle": "pill"
+      }
+    },
+
+    "restaurant": {
+      "colors": {
+        "primary": "#C62828",
+        "secondary": "#4E342E",
+        "accent": "#FF7043",
+        "background": "#FFF3E0"
+      },
+      "font": "Playfair Display, serif",
+      "extras": {
+        "menuStyle": "elegant",
+        "buttonCurve": "8px"
+      }
+    },
+
+    "farming": {
+      "colors": {
+        "primary": "#4CAF50",
+        "secondary": "#33691E",
+        "accent": "#8BC34A",
+        "background": "#F1F8E9"
+      },
+      "font": "Lora, serif",
+      "extras": {
+        "iconStyle": "organic",
+        "borderStyle": "soft"
+      }
+    }
+  }
+}

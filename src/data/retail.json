@@ -1,10 +1,4 @@
-{
-  "theme": {
-    "bgColor": "#FFFFFF",
-    "textColor": "#000000",
-    "fontFamily": "sans-serif",
-    "logo": "/logo-retail.png"
-  },
+{  
   "content": {
     "hero": {
       "title": "Welcome to Our Retail Store",
