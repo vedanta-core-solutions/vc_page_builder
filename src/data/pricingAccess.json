@@ -1,0 +1,73 @@
+{
+  "farming": {
+    "free": ["basic_access", "weather_alerts", "online_marketplace"],
+    "pro": [
+      "basic_access",
+      "weather_alerts",
+      "online_marketplace",
+      "smart_irrigation",
+      "profit_analytics",
+      "farmer_tutorials"
+    ],
+    "vcore": [
+      "smart_crop_monitoring",
+      "basic_access",
+      "weather_alerts",
+      "online_marketplace",
+      "smart_irrigation",
+      "profit_analytics",
+      "farmer_tutorials",
+      "livestock_tracking",
+      "equipment_rentals",
+      "soil_testing",
+      "direct_delivery_system",
+      "advanced_ai_tools",
+      "drone_monitoring",
+      "ai_crop_prediction"
+    ]
+  },
+
+  "restaurant": {
+    "free": ["basic_access", "weather_alerts", "online_marketplace"],
+    "pro": [
+      "basic_access",
+      "online_marketplace",
+      "smart_irrigation",
+      "profit_analytics",
+      "farmer_tutorials"
+    ],
+    "vcore": [
+      "smart_crop_monitoring",
+      "online_marketplace",
+      "smart_irrigation",
+      "profit_analytics",
+      "farmer_tutorials",
+      "soil_testing",
+      "direct_delivery_system",
+      "advanced_ai_tools",
+      "ai_crop_prediction"
+    ]
+  },
+
+  "retail": {
+    "free": ["basic_access", "online_marketplace", "profit_analytics"],
+    "pro": [
+      "basic_access",
+      "online_marketplace",
+      "smart_irrigation",
+      "profit_analytics",
+      "farmer_tutorials"
+    ],
+    "vcore": [
+      "smart_crop_monitoring",
+      "online_marketplace",
+      "smart_irrigation",
+      "profit_analytics",
+      "farmer_tutorials",
+      "direct_delivery_system",
+      "advanced_ai_tools",
+      "drone_monitoring",
+      "weather_alerts"
+    ]
+  }
+}

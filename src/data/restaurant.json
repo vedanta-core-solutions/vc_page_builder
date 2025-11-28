@@ -1,24 +1,110 @@
 {
   "theme": {
-    "bgColor": "#FEF9F3",
-    "textColor": "#2E4C3D",
+    "bgColor": "#FFF7F0",
+    "textColor": "#4A2E2A",
     "fontFamily": "serif",
-    "logo": "/logo-restaurant.png"
+    "logo": "./restaurant-logo.png"
   },
+
+  "variant": 2,
+
+  "variantSettings": {
+    "featureLayout": "grid",
+    "pricingTop": false,
+    "spacing": "medium",
+    "highlightPlan": "VCore",
+    "showIcons": true,
+    "featureStyle": "boxed",
+    "pricingShape": "rounded",
+    "divider": "dashed",
+    "bgPattern": "dots"
+  },
+
   "content": {
     "hero": {
-      "title": "Delicious Meals Served Fresh",
-      "subtitle": "Welcome to Our Restaurant"
+      "title": "Fresh Food Delivered Hot",
+      "subtitle": "Quality • Taste • Trust"
     },
-    "menu": [
-      { "name": "Paneer Curry", "price": "₹150" },
-      { "name": "Chicken Biryani", "price": "₹220" },
-      { "name": "Gulab Jamun", "price": "₹60" }
+    "products": [
+      { "name": "Margherita Pizza", "price": "₹299" },
+      { "name": "Veg Biryani", "price": "₹180" }
     ],
-    "about": "Our family-run restaurant brings authentic flavours.",
+    "about": "A restaurant serving love, flavor, and fresh ingredients.",
     "contact": {
-      "phone": "+91-9123456780",
-      "address": "Food Street, City"
+      "phone": "+91-9876543210",
+      "address": "City Center, Main Road"
     }
-  }
+  },
+
+  "features": [
+    {
+      "icon": "🔥",
+      "title": "Live Kitchen Tracking",
+      "key": "smart_crop_monitoring",
+      "description": "Track your food being cooked live."
+    },
+    {
+      "icon": "📡",
+      "title": "Instant Order Updates",
+      "key": "weather_alerts",
+      "description": "Live cooking, packing, and delivery status."
+    },
+    {
+      "icon": "🛒",
+      "title": "Online Menu Ordering",
+      "key": "online_marketplace",
+      "description": "Order from a wide and rich menu."
+    },
+    {
+      "icon": "🥗",
+      "title": "Smart Nutrition Guide",
+      "key": "smart_irrigation",
+      "description": "Automated dietary suggestions."
+    },
+    {
+      "icon": "📊",
+      "title": "Customer Analytics",
+      "key": "profit_analytics",
+      "description": "Insights into your eating habits."
+    },
+    {
+      "icon": "🎓",
+      "title": "Cooking Academy",
+      "key": "farmer_tutorials",
+      "description": "Learn cooking from professionals."
+    },
+    {
+      "icon": "🧪",
+      "title": "Food Quality Testing",
+      "key": "soil_testing",
+      "description": "Tested fresh before cooking."
+    },
+    {
+      "icon": "🚚",
+      "title": "Express Delivery",
+      "key": "direct_delivery_system",
+      "description": "Delivered hot and fresh."
+    }
+  ],
+
+  "pricing": [
+    {
+      "name": "Starter",
+      "price": "₹0",
+      "description": "Begin your journey",
+      "benefits": ["Basic menu", "Standard delivery"]
+    },
+    {
+      "name": "Pro",
+      "price": "₹199 / month",
+      "description": "Best for families",
+      "benefits": ["Full menu", "Priority delivery"]
+    },
+    {
+      "name": "VCore",
+      "price": "₹499 / month",
+      "description": "Unlimited premium access",
+      "benefits": ["All dishes", "Express delivery", "Special Offers"]
+    }
+  ]
 }

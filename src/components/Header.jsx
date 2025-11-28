@@ -1,12 +1,12 @@
-'use client';    // ensure this is a client component
-import React from 'react';
-import { useConfig } from '@/context/ConfigProviderClient';
-import Link from 'next/link';
+"use client"; // ensure this is a client component
+import React from "react";
+import { useConfig } from "@/context/ConfigProviderClient";
+import Link from "next/link";
 
 export default function Header() {
   const config = useConfig();
   if (!config) {
-    console.log("no code")
+    console.log("no code");
     return null; // or a fallback
   }
   const { theme, content } = config;
@@ -18,17 +18,25 @@ export default function Header() {
         style={{ backgroundColor: theme?.bgColor }}
       >
         <Link href="#">
-          <img src={theme?.logo || '/default-logo.png'} alt="Logo" className="h-12"/>
+          <img src={theme?.logo || "./girl.jpeg"} alt="Logo" className="h-12" />
         </Link>
         <ul className="flex space-x-14">
-          <li><Link href="#home">Home</Link></li>
-          <li><Link href="#services">Services</Link></li>
+          <li>
+            <Link href="#home">Home</Link>
+          </li>
+          <li>
+            <Link href="#services">Services</Link>
+          </li>
           <li>
             <details>
               <summary>More</summary>
               <ul>
-                <li><Link href="#about">About</Link></li>
-                <li><Link href="#team">Team</Link></li>
+                <li>
+                  <Link href="#about">About</Link>
+                </li>
+                <li>
+                  <Link href="#team">Team</Link>
+                </li>
               </ul>
             </details>
           </li>

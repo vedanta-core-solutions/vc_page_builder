@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+
 export default function Homepage() {
   return (
     <main>
@@ -47,8 +47,9 @@ export default function Homepage() {
         </button>
       </nav>
       {/* idhar hai hero section  */}
-      <section className="w-full bg-linear-to-b from-gray-300 via-white to-blue-200 py-20 px-6 m-0.5  ">
+      <section className="w-full bg-linear-to-b from-gray-300 via-white to-blue-200 py-20 px-6 m-0.5">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12">
+          {/* LEFT TEXT */}
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
               Build Beautiful Pages
@@ -63,30 +64,40 @@ export default function Homepage() {
               <button className="px-6 py-3 bg-orange-600 text-white rounded-md hover:bg-green-600 transition">
                 Get Started
               </button>
-
               <button className="px-6 py-3 border-2 border-orange-600 text-orange-700 rounded-md hover:border-green-600 hover:text-green-600 transition">
                 Learn More
               </button>
             </div>
           </div>
 
-          <div className="flex-1 flex justify-center">
-            <div className="w-72 h-72 md:w-96 md:h-96 rounded-xl bg-linear-to-b from-orange-300 via-yellow-200 to-green-200 shadow-xl ">
-              <Link href="#">
-                <div className="rounded-xl shadow-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform">
-                  <Image
-                    src="/girl.jpeg"
-                    alt="Hero Image"
-                    width={400}
-                    height={400}
-                    className="object-cover w-96 h-72 md:w-96 md:h-96"
-                  />
-                </div>
-              </Link>
+          {/* RIGHT: IMAGE + VIDEO */}
+          <div className="flex-1 flex flex-col md:flex-row items-center gap-6">
+            {/* IMAGE */}
+            {/* <div className="w-72 h-72 md:w-96 md:h-96 rounded-xl bg-linear-to-b from-orange-300 via-yellow-200 to-green-200 shadow-xl overflow-hidden">
+              <Image
+                src="/web.jpg"
+                alt="Hero Image"
+                width={400}
+                height={400}
+                className="object-cover w-full h-full"
+              />
+            </div> */}
+
+            {/* VIDEO (infinite autoplay + same size) */}
+            <div className="w-72 h-72 md:w-96 md:h-96 rounded-xl shadow-xl overflow-hidden">
+              <video
+                src="/web1.mp4" // 🔥 apna video yahan daalna
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="object-cover w-full h-full"
+              />
             </div>
           </div>
         </div>
       </section>
+
       {/* idhar content section
        */}
 

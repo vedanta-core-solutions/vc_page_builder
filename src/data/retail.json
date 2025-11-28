@@ -1,24 +1,104 @@
 {
   "theme": {
-    "bgColor": "#FFFFFF",
-    "textColor": "#000000",
-    "fontFamily": "sans-serif",
-    "logo": "/logo-retail.png"
+    "bgColor": "#F0F8FF",
+    "textColor": "#23343B",
+    "fontFamily": "inter",
+    "logo": "./retail-logo.png"
   },
+
+  "variant": 3,
+
+  "variantSettings": {
+    "featureLayout": "list",
+    "pricingTop": true,
+    "spacing": "compact",
+    "highlightPlan": "Pro",
+    "showIcons": true,
+    "featureStyle": "minimal",
+    "pricingShape": "square",
+    "divider": "line",
+    "bgPattern": "grid"
+  },
+
   "content": {
     "hero": {
-      "title": "Welcome to Our Retail Store",
-      "subtitle": "Best products at best prices"
+      "title": "Smart Retail Dashboard",
+      "subtitle": "Sell Smarter, Track Faster"
     },
     "products": [
-      { "name": "Product A", "price": "499" },
-      { "name": "Product B", "price": "799" },
-      { "name": "Product C", "price": "1299" }
+      { "name": "Shirt", "price": "₹499" },
+      { "name": "Shoes", "price": "₹1299" }
     ],
-    "about": "We provide quality retail products across categories.",
+    "about": "Empowering every retail shop with modern tools.",
     "contact": {
-      "phone": "+91-9876543210",
-      "address": "Retail Street, City"
+      "phone": "+91-9090909090",
+      "address": "Fashion Street, Downtown"
     }
-  }
+  },
+
+  "features": [
+    {
+      "icon": "📦",
+      "title": "Smart Inventory Tracking",
+      "key": "smart_crop_monitoring",
+      "description": "Track stock in real-time."
+    },
+    {
+      "icon": "🔔",
+      "title": "Instant Notifications",
+      "key": "weather_alerts",
+      "description": "Alerts for orders and sales."
+    },
+    {
+      "icon": "🛍️",
+      "title": "Online Storefront",
+      "key": "online_marketplace",
+      "description": "Sell products globally."
+    },
+    {
+      "icon": "♻️",
+      "title": "Auto Restocking",
+      "key": "smart_irrigation",
+      "description": "Auto reorder when low stock."
+    },
+    {
+      "icon": "📈",
+      "title": "Sales Analytics",
+      "key": "profit_analytics",
+      "description": "Visualize business growth."
+    },
+    {
+      "icon": "📚",
+      "title": "Learn Selling Skills",
+      "key": "farmer_tutorials",
+      "description": "Guides & tutorials."
+    },
+    {
+      "icon": "🚚",
+      "title": "Smart Delivery System",
+      "key": "direct_delivery_system",
+      "description": "Track shipments end-to-end."
+    }
+  ],
+
+  "pricing": [
+    {
+      "name": "Free",
+      "price": "₹0",
+      "description": "Basic access only",
+      "benefits": ["Limited dashboard", "Basic Insights"]
+    },
+    {
+      "name": "Pro",
+      "price": "₹499 / month",
+      "description": "Perfect for growing shops",
+      "benefits": ["Analytics", "Advanced insights"]
+    },
+    {
+      "name": "VCore",
+      "price": "₹999 / month",
+      "description": "Next-level power tools",
+      "benefits": ["Automation", "Smart AI tools"]
+    }
+  ]
 }

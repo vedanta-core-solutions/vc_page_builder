@@ -3,8 +3,23 @@
     "bgColor": "#F4F9F4",
     "textColor": "#26482C",
     "fontFamily": "sans-serif",
-    "logo": "/logo-farming.png"
+    "logo": "./HariVert.jpg"
   },
+
+  "variant": 1,
+
+  "variantSettings": {
+    "featureLayout": "grid",
+    "pricingTop": true,
+    "spacing": "large",
+    "highlightPlan": "Pro",
+    "showIcons": true,
+    "featureStyle": "minimal",
+    "pricingShape": "square",
+    "divider": "line",
+    "bgPattern": "soft-grid"
+  },
+
   "content": {
     "hero": {
       "title": "Farming Supply & Services",
@@ -25,52 +40,83 @@
     {
       "icon": "🌾",
       "title": "Smart Crop Monitoring",
+      "key": "smart_crop_monitoring",
       "description": "Track soil moisture, crop health, and growth data in real time."
     },
     {
       "icon": "⛈️",
       "title": "Weather Alerts",
+      "key": "weather_alerts",
       "description": "Instant updates on rain, storms, frost, and climate changes."
     },
     {
       "icon": "🛒",
       "title": "Online Marketplace",
+      "key": "online_marketplace",
       "description": "Sell farm produce directly to customers and retailers."
     },
     {
       "icon": "🚜",
       "title": "Equipment Rentals",
+      "key": "equipment_rentals",
       "description": "Rent tractors, drones, and farming tools when needed."
     },
     {
       "icon": "🧪",
       "title": "Soil Testing",
+      "key": "soil_testing",
       "description": "Smart recommendations based on soil quality and nutrients."
     },
     {
       "icon": "💧",
       "title": "Smart Irrigation",
-      "description": "Automated watering based on crop requirements to save time and water."
+      "key": "smart_irrigation",
+      "description": "Automated watering based on crop requirements."
     },
     {
       "icon": "🐄",
       "title": "Livestock Tracking",
+      "key": "livestock_tracking",
       "description": "Monitor animal health, diet, and vaccination schedules."
     },
     {
       "icon": "📊",
       "title": "Profit Analytics",
-      "description": "Understand your farm’s expenses and profit insights easily."
+      "key": "profit_analytics",
+      "description": "Understand your farm’s expenses and profits."
     },
     {
       "icon": "🎓",
       "title": "Farmer Tutorials",
-      "description": "Learn organic farming, pest control, and modern farm techniques."
+      "key": "farmer_tutorials",
+      "description": "Learn modern farming techniques."
     },
     {
       "icon": "🚚",
       "title": "Direct Delivery System",
-      "description": "Deliver fresh produce straight from farm to home."
+      "key": "direct_delivery_system",
+      "description": "Deliver fresh produce from farm to home."
+    }
+  ],
+
+  "pricing": [
+    {
+      "name": "Permanent Free",
+      "price": "₹0",
+      "description": "Perfect for testing",
+      "benefits": ["Basic access", "Limited features"]
+    },
+    {
+      "name": "Pro",
+      "price": "₹299 / month",
+      "description": "Ideal for professionals",
+      "benefits": ["All features", "Priority support"]
+    },
+    {
+      "name": "VCore",
+      "price": "₹999 / month",
+      "description": "Full power plan",
+      "benefits": ["Unlimited everything", "24/7 support", "Advanced tools"]
     }
   ]
 }
