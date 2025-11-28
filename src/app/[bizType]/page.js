@@ -1,4 +1,5 @@
 import ConfigProviderClient from "@/context/ConfigProviderClient";
+import { ContentProvider } from "@/context/ContentContext";
 import { loadConfig } from "../../lib/config";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
@@ -9,21 +10,20 @@ export default async function BizPage({ params }) {
   const config = await loadConfig(bizType);
 
   if (!config) {
-    // simple 404 / fallback
     return (
       <div className="p-8 text-center">Business type “{bizType}” not found</div>
     );
   }
 
-  const themeForBiz = config.theme.themes[bizType];
-  const themeContent = { ...config.content, themeForBiz }
-
-
+  const { theme, content } = config;
+     
   return (
-    <ConfigProviderClient config={themeContent}>
-      <Header />
-      <Hero />
-      <Footer/>
+    <ConfigProviderClient theme={theme}>
+      <ContentProvider content={content}>
+        <Header />
+        <Hero />
+        {/* <Footer /> */}
+      </ContentProvider>
     </ConfigProviderClient>
   );
 }

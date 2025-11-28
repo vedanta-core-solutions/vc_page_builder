@@ -1,6 +1,6 @@
 'use client';
 import React from 'react'
-import { useConfig } from '../context/ConfigProviderClient';
+// import { useConfig } from '../context/ConfigProviderClient';
 
 const Hero = () => {
 
