@@ -17,7 +17,7 @@ export default function Header() {
         style={{ backgroundColor: themeForBiz.colors.secondary }}
       >
         <Link href="#">
-          <img src={themeForBiz?.logo || '/default-logo.png'} alt="Logo" className="h-12"/>
+          <img src={themeForBiz?.logo} alt="Logo" className="h-12"/>
         </Link>
         <ul className="flex space-x-14">
           <li><Link href="#home">Home</Link></li>
