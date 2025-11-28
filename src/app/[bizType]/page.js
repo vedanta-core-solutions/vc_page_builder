@@ -3,6 +3,7 @@ import { loadConfig } from "../../lib/config";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import Footer from "../../components/Footer.jsx";
+import Testimonials from "../../components/Testimonials.jsx";
 
 export default async function BizPage({ params }) {
   const { bizType } = await params;
@@ -24,6 +25,7 @@ export default async function BizPage({ params }) {
     <ConfigProviderClient config={themeContent}>
       <Header />
       <Hero />
+      <Testimonials/>
       <Footer/>
     </ConfigProviderClient>
   );
