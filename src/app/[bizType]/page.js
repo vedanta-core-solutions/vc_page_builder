@@ -1,8 +1,8 @@
-import ConfigProviderClient from '@/context/ConfigProviderClient';
-import { loadConfig } from '../../lib/config';
-import Header from '../../components/Header';
-import Hero from '../../components/Hero';
-
+import ConfigProviderClient from "@/context/ConfigProviderClient";
+import { loadConfig } from "../../lib/config";
+import Header from "../../components/Header";
+import Hero from "../../components/Hero";
+import Footer from "../../components/Footer.jsx";
 
 export default async function BizPage({ params }) {
   const { bizType } = await params;
@@ -10,7 +10,9 @@ export default async function BizPage({ params }) {
 
   if (!config) {
     // simple 404 / fallback
-    return <div className="p-8 text-center">Business type “{bizType}” not found</div>;
+    return (
+      <div className="p-8 text-center">Business type “{bizType}” not found</div>
+    );
   }
 
   const themeForBiz = config.theme.themes[bizType];
@@ -21,6 +23,7 @@ export default async function BizPage({ params }) {
     <ConfigProviderClient config={themeContent}>
       <Header />
       <Hero />
+      <Footer/>
     </ConfigProviderClient>
   );
 }

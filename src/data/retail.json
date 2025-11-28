@@ -13,6 +13,17 @@
     "contact": {
       "phone": "+91-9876543210",
       "address": "Retail Street, City"
+    },
+    
+  "footer": {
+    "variant": 1,
+    "columns": {
+      "company": ["About Retail"],
+      "support": ["Help", "Returns"],
+      "social": ["X", "Instagram"]
     }
+  }
+
+
   }
 }
