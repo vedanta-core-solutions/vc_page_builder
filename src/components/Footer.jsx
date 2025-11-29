@@ -2,7 +2,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { useConfig } from '../context/ConfigProviderClient';
+// import { useConfig } from '../context/ConfigProviderClient';
 
 const VARIANT_LAYOUTS = {
   1: ['company', 'support', 'legal', 'social'],
@@ -25,7 +25,7 @@ const DEFAULT_COLUMNS = {
 export default function Footer() {
   
   const config = useConfig(); // read from context
-  console.log("CLIENT config:", config);
+  // console.log("CLIENT config:", config);
 
   if(!config){
         console.log("theme is not accessing");

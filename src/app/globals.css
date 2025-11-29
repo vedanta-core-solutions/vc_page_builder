@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import "tailwindcss";
 
+:root {
+  /* Theme Colors */
+  --color-primary: #d4af37;
+  --color-secondary: #8b7355;
+  --color-accent: #d4af37;
+  --color-background: #f5f5f5;
+  --color-surface: #1a1a1a;
+  --color-text: #2c2416;
+}
 
- 
+@theme {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-text: var(--color-text);
+
+} 
