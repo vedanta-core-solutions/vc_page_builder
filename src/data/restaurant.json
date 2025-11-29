@@ -4,16 +4,12 @@
       "logo": "/logo_rest.jpg",
       "navlink": [
         {
-          "label": "Home",
-          "href": "/"
+          "label": "Menu",
+          "href": "/menu"
         },
         {
           "label": "About",
           "href": "/about"
-        },
-        {
-          "label": "Services",
-          "href": "/services"
         },
         {
           "label": "Contact",
@@ -22,8 +18,8 @@
       ],
       "button": [
         {
-          "label": "Sign Up",
-          "href": "/signup"
+          "label": "Book Table",
+          "href": "/booking"
         }
       ]
     },
