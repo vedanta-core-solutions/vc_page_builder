@@ -8,7 +8,6 @@ import Services from "../../components/Services.jsx";
 export default async function BizPage({ params }) {
   const { bizType } = await params;
   const config = await loadConfig(bizType);
-  console.log(config,"sumit")
   if (!config) {
     // simple 404 / fallback
     return (

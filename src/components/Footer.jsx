@@ -23,6 +23,7 @@ export default function Footer() {
   const columns = footerConfig.columns || {};
   const layout = VARIANT_LAYOUTS[variant] || VARIANT_LAYOUTS[1];
 
+
   const finalColumns = {};
   layout.forEach((key) => {
     if (Array.isArray(columns[key]) && columns[key].length > 0) {
