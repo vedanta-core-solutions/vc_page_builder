@@ -1,25 +1,16 @@
-import { promises as fs } from 'fs';
-import path from 'path';
+import themeData from "@/ui/theme.json";
+import retail from "@/data/retail.json";
+import farming from "@/data/farming.json";
+import restaurant from "@/data/restaurant.json";
+
+const contentMap = {
+  retail,
+  farming,
+  restaurant
+};
 
 export async function loadConfig(bizType) {
-  const contentFilePath = path.join(process.cwd(), 'src', 'data', `${bizType}.json`);
-  const themeFilePath = path.join(process.cwd(), 'src', 'ui', 'theme.json');
-
-  try {
-    const rawData = await fs.readFile(contentFilePath, 'utf-8');
-    const rawTheme = await fs.readFile(themeFilePath, 'utf-8');
-
-    const content = JSON.parse(rawData);
-    const theme = JSON.parse(rawTheme);
-
-    // Merge both files in one object
-    return {
-      content,
-      theme
-    };
-
-  } catch (error) {
-    console.error("Error loading config:", error);
-    return null;
-  }
+  const theme = themeData.themes[bizType] || themeData.themes.default;
+  const content = contentMap[bizType] || contentMap["retail"]; // default
+  return { theme, content };
 }

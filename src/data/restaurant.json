@@ -1,13 +1,70 @@
 {
   "content": {
+    "navbar": {
+      "logo": "/logo_rest.jpg",
+      "navlink": [
+        {
+          "label": "Menu",
+          "href": "/menu"
+        },
+        {
+          "label": "About",
+          "href": "/about"
+        },
+        {
+          "label": "Contact",
+          "href": "/contact"
+        }
+      ],
+      "button": [
+        {
+          "label": "Book Table",
+          "href": "/booking"
+        }
+      ]
+    },
     "hero": {
+      "branding": "56 Bhog",
+      "tagline": "Taste the Tradition",
       "title": "Delicious Meals Served Fresh",
-      "subtitle": "Welcome to Our Restaurant"
+      "highlight": "Delicious",
+      "subtitle": "Welcome to Our Restaurant",
+      "description": "Experience authentic flavors made with fresh ingredients, handcrafted spices, and love.",
+      "badges": [
+        "100% Fresh Ingredients",
+        "Pure Veg",
+        "Authentic Taste"
+      ],
+      "rating": {
+        "value": 4.8,
+        "text": "Rated by 2,300+ food lovers"
+      },
+      "button": [
+        {
+          "label": "View Menu",
+          "href": "/menu"
+        },
+        {
+          "label": "Order Now",
+          "href": "/order"
+        }
+      ],
+      "ctaNote": "Serving happiness since 1995.",
+      "image": "/melted-cheese-burger.jpg"
     },
     "menu": [
-      { "name": "Paneer Curry", "price": "₹150" },
-      { "name": "Chicken Biryani", "price": "₹220" },
-      { "name": "Gulab Jamun", "price": "₹60" }
+      {
+        "name": "Paneer Curry",
+        "price": "₹150"
+      },
+      {
+        "name": "Chicken Biryani",
+        "price": "₹220"
+      },
+      {
+        "name": "Gulab Jamun",
+        "price": "₹60"
+      }
     ],
     "about": "Our family-run restaurant brings authentic flavours.",
     "contact": {
@@ -40,21 +97,54 @@
       "variant": 3,
       "columns": {
         "company": [
-          { "label": "About Us", "href": "/about" },
-          { "label": "Careers", "href": "/careers" },
-          { "label": "Blog", "href": "/blog" },
-          { "label": "Contact", "href": "/contact" }
+          {
+            "label": "About Us",
+            "href": "/about"
+          },
+          {
+            "label": "Careers",
+            "href": "/careers"
+          },
+          {
+            "label": "Blog",
+            "href": "/blog"
+          },
+          {
+            "label": "Contact",
+            "href": "/contact"
+          }
         ],
         "support": [
-          { "label": "Help Center", "href": "/help" },
-          { "label": "Returns", "href": "/returns" },
-          { "label": "Shipping Info", "href": "/shipping" },
-          { "label": "FAQ", "href": "/faq" }
+          {
+            "label": "Help Center",
+            "href": "/help"
+          },
+          {
+            "label": "Returns",
+            "href": "/returns"
+          },
+          {
+            "label": "Shipping Info",
+            "href": "/shipping"
+          },
+          {
+            "label": "FAQ",
+            "href": "/faq"
+          }
         ],
         "legal": [
-          { "label": "Terms of Service", "href": "/terms" },
-          { "label": "Privacy Policy", "href": "/privacy" },
-          { "label": "Cookie Policy", "href": "/cookies" }
+          {
+            "label": "Terms of Service",
+            "href": "/terms"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "/privacy"
+          },
+          {
+            "label": "Cookie Policy",
+            "href": "/cookies"
+          }
         ],
         
 
