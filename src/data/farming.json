@@ -13,6 +13,55 @@
     "contact": {
       "phone": "+91-9988776655",
       "address": "Farm Lane, Countryside"
+    },
+    "services": {
+      "variant": 1,
+      "top_heading": [{ "h_1": "Services","text": "Cultivating Innovation, Growing the Future, From Our Farm to Your Table, and Where Quality Harvest Meets Your Needs"}],
+      "cards":[
+        {
+          "img":"./agri.webp",
+          "h_1":"Expert Advisory and Educational Resources",
+          "para":"Platforms offer educational content like tutorials, articles, and webinars on modern farming techniques, crop management, soil health, and sustainable practices. Farmers can also access expert advice and post questions in online forums, fostering a community for knowledge exchange.",
+          "btn":"get demo",
+          "alignment": "left" 
+        },
+        {
+          "img":"./agri1.jpg",
+          "h_1":"Government Schemes and Subsidies",
+          "para":"These platforms serve as a single window for information on various government policies, regulations, subsidies, and programs relevant to the agricultural sector, helping farmers access available support.",
+          "btn":"get demo",
+          "alignment": "right" 
+        }
+      ]
+      
+    },
+    "footer": {
+      "variant": 2,
+      "columns": {
+        "company": [
+          { "label": "About Us", "href": "/about" },
+          { "label": "Careers", "href": "/careers" },
+          { "label": "Blog", "href": "/blog" },
+          { "label": "Contact", "href": "/contact" }
+        ],
+        "support": [
+          { "label": "Help Center", "href": "/help" },
+          { "label": "Returns", "href": "/returns" },
+          { "label": "Shipping Info", "href": "/shipping" },
+          { "label": "FAQ", "href": "/faq" }
+        ],
+        "legal": [
+          { "label": "Terms of Service", "href": "/terms" },
+          { "label": "Privacy Policy", "href": "/privacy" },
+          { "label": "Cookie Policy", "href": "/cookies" }
+        ],
+        "social": [
+          { "label": "Instagram", "href": "https://instagram.com" },
+          { "label": "Twitter", "href": "https://twitter.com" },
+          { "label": "Facebook", "href": "https://facebook.com" },
+          { "label": "YouTube", "href": "https://youtube.com" }
+        ]
+      }
     }
   }
 }
