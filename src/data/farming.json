@@ -14,11 +14,26 @@
       "phone": "+91-9988776655",
       "address": "Farm Lane, Countryside"
     },
-    "testimonials":{
-      "variant":1,
-      "card_1":[
-        {"h_1":"testimonials 1","label":"About Us","text":""}
+    "services": {
+      "variant": 1,
+      "top_heading": [{ "h_1": "Services","text": "Cultivating Innovation, Growing the Future, From Our Farm to Your Table, and Where Quality Harvest Meets Your Needs"}],
+      "cards":[
+        {
+          "img":"./agri.webp",
+          "h_1":"Expert Advisory and Educational Resources",
+          "para":"Platforms offer educational content like tutorials, articles, and webinars on modern farming techniques, crop management, soil health, and sustainable practices. Farmers can also access expert advice and post questions in online forums, fostering a community for knowledge exchange.",
+          "btn":"get demo",
+          "alignment": "left" 
+        },
+        {
+          "img":"./agri1.jpg",
+          "h_1":"Government Schemes and Subsidies",
+          "para":"These platforms serve as a single window for information on various government policies, regulations, subsidies, and programs relevant to the agricultural sector, helping farmers access available support.",
+          "btn":"get demo",
+          "alignment": "right" 
+        }
       ]
+      
     },
     "footer": {
       "variant": 2,

@@ -14,9 +14,26 @@
       "phone": "+91-9876543210",
       "address": "Retail Street, City"
     },
-    "testimonials": {
+    "services": {
       "variant": 1,
-      "card_1": [{ "h_1": "testimonials 1", "label": "About Us", "text": "" }]
+      "top_heading": [{ "h_1": "Services","text": "buying and selling of goods and services over the Internet" }],
+      "cards":[
+        {
+          "img":"./food.png",
+          "h_1":"Direct Marketing and E-commerce",
+          "para":"providing comprehensive product catalogs with detailed descriptions and images, secure payment gateways that process transactions safely, and virtual shopping carts for accumulating items before checkout.",
+          "btn":"get demo",
+          "alignment": "left" 
+        },
+        {
+          "img":"./food1.avif",
+          "h_1":"Chef's Picks",
+          "para":"product display through high-quality images and detailed descriptions, secure electronic payment processing, and order management and fulfillment systems.",
+          "btn":"get demo",
+          "alignment": "right" 
+        }
+      ]
+      
     },
 
     "footer": {

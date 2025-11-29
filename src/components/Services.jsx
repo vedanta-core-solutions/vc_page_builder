@@ -32,29 +32,21 @@ export default function Services() {
           {content?.services?.cards.map((item, i) => (
             <div
               key={i}
-              className="
-          flex flex-col lg:flex-row 
-          justify-center items-center 
-          lg:space-x-10 space-y-6 lg:space-y-0 w-full
-        "
+              className="flex flex-col lg:flex-row justify-center items-center lg:space-x-10 space-y-6 lg:space-y-0 w-full"
             >
               {/* Image Section */}
               <div className="w-full lg:w-1/3 flex items-center justify-center">
                 <img
-                key={i}
+                  key={i}
                   src={item.img}
                   alt="img"
-                  className="rounded-lg shadow-xl hover:shadow-amber-500 duration-700 
-                       w-full max-w-xs lg:max-w-sm object-cover"
+                  className="rounded-lg shadow-xl hover:shadow-amber-500 duration-700 w-full max-w-xs lg:max-w-sm object-cover hover:rotate-z-6 hover:rotate-x-12"
                 />
               </div>
 
               {/* Text Section */}
               <div
-                className="
-            w-full lg:w-2/3 rounded-3xl shadow-xl border-b-2 border-b-red-200 
-            px-6 py-5 
-          "
+                className="w-full lg:w-2/3 rounded-3xl shadow-xl border-b-2 border-b-red-200 px-6 py-5"
               >
                 <div className="space-y-3.5">
                   <h1 className="text-xl md:text-2xl font-semibold">

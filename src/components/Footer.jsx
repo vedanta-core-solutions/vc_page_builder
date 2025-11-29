@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useConfig } from "../context/ConfigProviderClient";
 
 const VARIANT_LAYOUTS = {
-  1: ["company", "support", "legal", "icons"],
+  1: ["company", "support", "legal", "social"],
   2: ["company", "legal", "support", "social"],
   3: ["social", "company", "support", "legal"],
 };
@@ -22,7 +22,6 @@ export default function Footer() {
   const variant = footerConfig.variant || 1;
   const columns = footerConfig.columns || {};
   const layout = VARIANT_LAYOUTS[variant] || VARIANT_LAYOUTS[1];
-
 
   const finalColumns = {};
   layout.forEach((key) => {
@@ -57,19 +56,8 @@ export default function Footer() {
                 <h3 className="text-black text-lg mb-4">{title}</h3>
 
                 {key === "social" ? (
-                  <div className="text-2xl grid items-start justify-start px-7 ">
-                    {/* <div className="grid sm:grid-cols-2 gap-x-2 gap-y-6">
-                      {items.map((it, i) => (
-                        <Link
-                          key={i}
-                          href={it.href}
-                          className="hover:text-white border-2 rounded-full p-1"
-                        >
-                          {it.icon || it.label || "🔗"}
-                        </Link>
-                      ))}
-                    </div> */}
-                    {content?.footer?.columns?.icons.map((icon, i) => (
+                  <div className="text-2xl grid items-start justify-start px-7 ">                   
+                    {content?.footer?.columns?.social.map((icon, i) => (
                       <div key={i} className="hover:text-white">
                         <Link
                           key={i}
@@ -81,7 +69,6 @@ export default function Footer() {
                           <svg
                             viewBox={icon.viewBox}
                             className="w-6 h-6 fill-current "
-                            
                           >
                             <path d={icon.path} />
                           </svg>
