@@ -1,5 +1,13 @@
 {  
   "content": {
+    "navbar": {
+      "logo": "/girl.jpeg",
+      "navlink": [
+        { "label": "Home", "href": "/" },
+        { "label": "About", "href": "/about" },
+        { "label": "Services", "href": "/services" }
+      ]
+    },
     "hero": {
       "title": "Welcome to Our Retail Store",
       "subtitle": "Best products at best prices"
