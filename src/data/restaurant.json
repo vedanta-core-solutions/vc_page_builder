@@ -14,9 +14,26 @@
       "phone": "+91-9123456780",
       "address": "Food Street, City"
     },
-    "testimonials": {
+    "services": {
       "variant": 1,
-      "card_1": [{ "h_1": "Services", "label": "About Us", "text": "" }]
+      "top_heading": [{ "h_1": "Services","text": "Where every meal is a masterpiece, A journey of taste awaits, or Fast, Fresh, Flawless" }],
+      "cards":[
+        {
+          "img":"./food.png",
+          "h_1":"Restaurants and Bars",
+          "para":"In the restaurant and bar industry, challenges related to \noptimization, customer satisfaction, promotion \neffectiveness, crowd density management, and inventory control \nare common. Establishments often face difficulties in aligning \nstaff levels with customer demand during peak hours. Managing \ncrowd density is essential for providing a pleasant \nexperience, while understanding the impact of promotions on \ncustomer turnout is vital for effective marketing strategies. ",
+          "btn":"get demo",
+          "alignment": "left" 
+        },
+        {
+          "img":"./food1.avif",
+          "h_1":"Chef's Picks",
+          "para":"A restaurant's website should serve as its digital storefront, offering a seamless and engaging experience that converts online visitors into paying customers. The core services provided are designed to inform, entice, and offer convenient transactional options. ",
+          "btn":"get demo",
+          "alignment": "right" 
+        }
+      ]
+      
     },
 
     "footer": {

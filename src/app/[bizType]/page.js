@@ -3,11 +3,12 @@ import { loadConfig } from "../../lib/config";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import Footer from "../../components/Footer.jsx";
-import Testimonials from "../../components/Testimonials.jsx";
+import Services from "../../components/Services.jsx";
 
 export default async function BizPage({ params }) {
   const { bizType } = await params;
   const config = await loadConfig(bizType);
+  console.log(config,"sumit")
   if (!config) {
     // simple 404 / fallback
     return (
@@ -25,7 +26,7 @@ export default async function BizPage({ params }) {
     <ConfigProviderClient config={themeContent}>
       <Header />
       <Hero />
-      <Testimonials/>
+      <Services/>
       <Footer/>
     </ConfigProviderClient>
   );
