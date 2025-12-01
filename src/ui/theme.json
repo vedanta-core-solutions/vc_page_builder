@@ -33,9 +33,9 @@
         "primary": "#d4af37",
         "secondary": "#8b7355",
         "accent": "#d4af37",
-        "background": "#FFF3E0",   
+        "background": "#FFF3E0",
         "colortext": "#2c2416",
-        "colorsurface": "#1a1a1a"
+        "colorsurface": "#4af37"
       },
       "font": "Playfair Display, serif",
       "extras": {

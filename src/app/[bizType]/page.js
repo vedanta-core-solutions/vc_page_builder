@@ -3,8 +3,9 @@ import { ContentProvider } from "@/context/ContentContext";
 import { loadConfig } from "../../lib/config";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
-import Footer from "../../components/Footer.jsx";
 import Services from "../../components/Services.jsx";
+import ContentSection from "@/components/ContentSection";
+import Footer from "../../components/Footer.jsx";
 
 export default async function BizPage({ params }) {
   const { bizType } = await params;
@@ -17,13 +18,14 @@ export default async function BizPage({ params }) {
   }
 
   const { theme, content } = config;
- 
+
   return (
     <ConfigProviderClient theme={theme}>
       <ContentProvider content={content}>
         <Header />
         <Hero />
-        <Services/>
+        <Services />
+        <ContentSection />
         <Footer />
       </ContentProvider>
     </ConfigProviderClient>
