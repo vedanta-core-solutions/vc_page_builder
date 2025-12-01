@@ -1,37 +1,78 @@
-{  
+{
   "content": {
     "navbar": {
       "logo": "/girl.jpeg",
       "navlink": [
-        { "label": "Home", "href": "/" },
-        { "label": "About", "href": "/about" },
-        { "label": "Services", "href": "/services" }
-      ]
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "About",
+          "href": "/about"
+        },
+        {
+          "label": "Services",
+          "href": "/services"
+        }
+      ],
+      "button": []
     },
     "hero": {
+      "branding": "RetailCo",
+      "tagline": "Everything You Need.",
       "title": "Welcome to Our Retail Store",
-      "subtitle": "Best products at best prices"
+      "highlight": "",
+      "subtitle": "Best products at best prices",
+      "description": "Discover premium products, great discounts, and everything you need under one roof.",
+      "badges": [
+        "Top Brands",
+        "Great Discounts",
+        "Trusted Quality"
+      ],
+      "rating": {
+        "iconPath": "",
+        "value": "",
+        "text": ""
+      },
+      "button": [],
+      "ctaNote": "",
+      "image": "/retail-hero.jpg"
     },
     "products": [
-      { "name": "Product A", "price": "499" },
-      { "name": "Product B", "price": "799" },
-      { "name": "Product C", "price": "1299" }
+      {
+        "name": "Product A",
+        "price": "499"
+      },
+      {
+        "name": "Product B",
+        "price": "799"
+      },
+      {
+        "name": "Product C",
+        "price": "1299"
+      }
     ],
     "about": "We provide quality retail products across categories.",
     "contact": {
       "phone": "+91-9876543210",
       "address": "Retail Street, City"
     },
-    
-  "footer": {
-    "variant": 1,
-    "columns": {
-      "company": ["About Retail"],
-      "support": ["Help", "Returns"],
-      "social": ["X", "Instagram"]
+    "footer": {
+      "variant": 1,
+      "columns": {
+        "company": [
+          "About Retail"
+        ],
+        "support": [
+          "Help",
+          "Returns"
+        ],
+        "social": [
+          "X",
+          "Instagram"
+        ]
+      }
     }
-  }
-
-
   }
 }
