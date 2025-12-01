@@ -1,28 +1,53 @@
 {
   "content": {
+
     "navbar": {
       "logo": "/logo_rest.jpg",
       "navlink": [
-        {
-          "label": "Menu",
-          "href": "/menu"
-        },
-        {
-          "label": "About",
-          "href": "/about"
-        },
-        {
-          "label": "Contact",
-          "href": "/contact"
-        }
+        { "label": "Menu", "href": "/menu" },
+        { "label": "About", "href": "/about" },
+        { "label": "Contact", "href": "/contact" }
       ],
-      "button": [
+      "button": [{ "label": "Book Table", "href": "/booking" }],
+      "defaultVariant": "v1",
+      "variants": [
         {
-          "label": "Book Table",
-          "href": "/booking"
+          "key": "v1",
+          "label": "Legacy (Logo left — links middle — CTA right)",
+          "logo": "/logo_rest.jpg",
+          "navlink": [
+            { "label": "Menu", "href": "/menu" },
+            { "label": "About", "href": "/about" },
+            { "label": "Contact", "href": "/contact" }
+          ],
+          "button": [{ "label": "Book Table", "href": "/booking" }],
+          "layout": "logo-left links-center button-right"
+        },
+        {
+          "key": "v2",
+          "label": "Centered logo — links left — CTA right",
+          "logo": "/logo_rest.jpg",
+          "navlink": [
+            { "label": "Home", "href": "/" },
+            { "label": "Products", "href": "/products" }
+          ],
+          "button": [{ "label": "Get Quote", "href": "/quote" }],
+          "layout": "logo-center links-left button-right"
+        },
+        {
+          "key": "v3",
+          "label": "Hamburger left — logo center — CTA right",
+          "logo": "/logo_rest.jpg",
+          "navlink": [
+            { "label": "Home", "href": "/" },
+            { "label": "Products", "href": "/products" }
+          ],
+          "button": [{ "label": "Book Table", "href": "/booking" }],
+          "layout": "hamburger-left logo-center links-hidden button-right"
         }
       ]
     },
+
     "hero": {
       "branding": "56 Bhog",
       "tagline": "Taste the Tradition",
