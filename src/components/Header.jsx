@@ -11,7 +11,6 @@ export default function Header() {
       <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
         <div className="flex justify-between items-center h-20">
 
-          {/* Logo */}
           <div className="shrink-0">
             <Link href="/">
               <img
@@ -22,7 +21,6 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Navigation */}
           <nav className="flex items-center space-x-10">
             {navbar.navlink?.map((item, idx) => (
               <Link

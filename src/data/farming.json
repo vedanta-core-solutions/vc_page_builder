@@ -3,21 +3,61 @@
     "navbar": {
       "logo": "/girl.jpeg",
       "navlink": [
-        { "label": "Home", "href": "/" },
-        { "label": "About", "href": "/about" },
-        { "label": "Services", "href": "/services" },
-        { "label": "Contact", "href": "/contact" }
-      ]
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Products",
+          "href": "/products"
+        },
+        {
+          "label": "Services",
+          "href": "/services"
+        },
+        {
+          "label": "About",
+          "href": "/about"
+        },
+        {
+          "label": "Contact",
+          "href": "/contact"
+        }
+      ],
+      "button": []
     },
     "hero": {
+      "branding": "AgriCare",
+      "tagline": "Grow Better. Farm Smarter.",
       "title": "Farming Supply & Services",
-      "subtitle": "Quality Seeds, Tools & Advice"
+      "highlight": "Sustainable",
+      "subtitle": "Seeds, Tools & Expert Support",
+      "description": "Your trusted partner for premium farming essentials — fertilizers, seeds, tools and expert guidance.",
+      "badges": [
+        "Premium Quality Seeds",
+        "Eco-friendly Products",
+        "Trusted by Farmers"
+      ],
+      "rating": {
+        "iconPath": "",
+        "value": "",
+        "text": ""
+      },
+      "button": [],
+      "ctaNote": "",
+      "image": "/farm-hero.jpg"
     },
     "products": [
-      { "name": "Seeds Pack", "price": "₹200" },
-      { "name": "Fertilizer Bag", "price": "₹950" }
+      {
+        "name": "Seeds Pack",
+        "price": "₹200"
+      },
+      {
+        "name": "Fertilizer Bag",
+        "price": "₹950"
+      }
     ],
-    "about": "We support farmers with high-quality supplies and services.",
+    "about": "We support farmers with high-quality supplies and professional services.",
     "contact": {
       "phone": "+91-9988776655",
       "address": "Farm Lane, Countryside"

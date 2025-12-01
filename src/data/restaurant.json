@@ -8,12 +8,12 @@
           "href": "/menu"
         },
         {
-          "label": "About",
-          "href": "/about"
+          "label": "Delivery",
+          "href": "/delivery"
         },
         {
-          "label": "Contact",
-          "href": "/contact"
+          "label": "Offers",
+          "href": "/offers"
         }
       ],
       "button": [
@@ -32,6 +32,7 @@
       "description": "Experience authentic flavors made with fresh ingredients, handcrafted spices, and love.",
       "badges": ["100% Fresh Ingredients", "Pure Veg", "Authentic Taste"],
       "rating": {
+        "iconPath": "M12 .587l3.668 7.568L24 9.748l-6 5.848L19.335 24 12 19.897 4.665 24 6 15.596 0 9.748l8.332-1.593z",
         "value": 4.8,
         "text": "Rated by 2,300+ food lovers"
       },
