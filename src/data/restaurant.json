@@ -8,12 +8,12 @@
           "href": "/menu"
         },
         {
-          "label": "About",
-          "href": "/about"
+          "label": "Delivery",
+          "href": "/delivery"
         },
         {
-          "label": "Contact",
-          "href": "/contact"
+          "label": "Offers",
+          "href": "/offers"
         }
       ],
       "button": [
