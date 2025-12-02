@@ -48,9 +48,9 @@ function computeDefaultsFromContent(content) {
   return defaults;
 }
 
-export function ContentProvider({ children, content, initialContent, initialSelectionMap  }) {
+export function ContentProvider({ children, content, initialSelectionMap  }) {
 
-  const raw = content || initialContent || {};
+  const raw = content || {};
 
   const initial = normalizeContent(raw);
 
@@ -72,7 +72,7 @@ export function ContentProvider({ children, content, initialContent, initialSele
     if (!internalContent) return;
     setSelectionMap((prev) => {
       const defaults = computeDefaultsFromContent(internalContent);
-      // only set keys that are missing in prev
+
       const merged = { ...defaults, ...prev };
       return merged;
     });

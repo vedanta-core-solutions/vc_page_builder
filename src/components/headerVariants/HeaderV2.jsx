@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 export default function HeaderV2({ navbar = {} }) {
   const { logo, navlink = [], button = [] } = navbar;
-
   return (
     <header className="bg-background shadow-card font-base">
       <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">

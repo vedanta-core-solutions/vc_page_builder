@@ -53,12 +53,10 @@
 
 
 
-// sumit 
+// 3 
 'use client';
 import React from 'react';
 import { useContent } from '@/context/ContentContext';
-
-// variant components
 import HeaderV1 from './headerVariants/HeaderV1';
 import HeaderV2 from './headerVariants/HeaderV2';
 import HeaderV3 from './headerVariants/HeaderV3';
@@ -71,8 +69,7 @@ const VARIANT_MAP = {
 
 export default function Header() {
   const ctx = useContent();
-
-  // guard: if context not ready yet, render nothing (or a minimal placeholder)
+ 
   if (!ctx) return null;
 
   const { content = {}, selectionMap = {} } = ctx;
@@ -92,9 +89,6 @@ export default function Header() {
     layout: 'logo-left',
   };
 
-  // DEBUG: safe log AFTER variables exist
-  // Remove or comment out in production
-  // eslint-disable-next-line no-console
   // console.log('Header debug → selectedKey:', selectedKey, 'variantData:', variantData, 'data:', data);
 
   const VariantComp = VARIANT_MAP[selectedKey] || VARIANT_MAP[navbarRoot?.defaultVariant] || HeaderV1;
