@@ -57,13 +57,11 @@ export default async function BizPage({ params, searchParams }) {
     <ConfigProviderClient theme={theme}>
       <ContentProvider
         content={normalizedContent}
-        initialSelectionMap={initialSelectionMap}
-      >
+        initialSelectionMap={initialSelectionMap} >
         <Header />
         <Hero />
         <Services />
         <ContentSection />
-        <Services />
         <Footer />
       </ContentProvider>
     </ConfigProviderClient>
