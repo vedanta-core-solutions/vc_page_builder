@@ -55,7 +55,7 @@
 
 // 3 
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { useContent } from '@/context/ContentContext';
 import HeaderV1 from './headerVariants/HeaderV1';
 import HeaderV2 from './headerVariants/HeaderV2';

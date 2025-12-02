@@ -57,6 +57,7 @@
       "description": "Experience authentic flavors made with fresh ingredients, handcrafted spices, and love.",
       "badges": ["100% Fresh Ingredients", "Pure Veg", "Authentic Taste"],
       "rating": {
+        "iconPath": "M12 .587l3.668 7.568L24 9.748l-6 5.848L19.335 24 12 19.897 4.665 24 6 15.596 0 9.748l8.332-1.593z",
         "value": 4.8,
         "text": "Rated by 2,300+ food lovers"
       },
@@ -116,9 +117,87 @@
         }
       ]
     },
-
+    "contentSection": {
+      "heading": "Choose Your Restaurant Plan",
+      "subheading": "From simple booking tools to a complete management suite. Find the perfect fit for your establishment.",
+      "layoutVariant": 6,
+      "variantSettings": {
+        "spacing": "normal",
+        "pricingShape": "rounded",
+        "featureStyle": "card",
+        "bgPattern": "",
+        "divider": "line",
+        "showIcons": true,
+        "featuresAsAccordion": true
+      },
+      "features": [
+        "Online Reservations",
+        "Digital Menu & QR Codes",
+        "Customer Loyalty Program",
+        "Advanced Table Management",
+        "Online Ordering Integration",
+        "Staff Scheduling Tool",
+        "Advanced Analytics",
+        "Dedicated Support Manager"
+      ],
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "$29",
+          "period": "/month",
+          "description": "Perfect for small cafes and new restaurants.",
+          "button": { "label": "Start Free Trial", "href": "/signup" },
+          "popular": false,
+          "features": {
+            "Online Reservations": true,
+            "Digital Menu & QR Codes": true,
+            "Customer Loyalty Program": false,
+            "Advanced Table Management": false,
+            "Online Ordering Integration": false,
+            "Staff Scheduling Tool": false,
+            "Advanced Analytics": false,
+            "Dedicated Support Manager": false
+          }
+        },
+        {
+          "name": "Pro",
+          "price": "$79",
+          "period": "/month",
+          "description": "Our most popular plan for full-service restaurants.",
+          "button": { "label": "Start Free Trial", "href": "/signup" },
+          "popular": true,
+          "features": {
+            "Online Reservations": true,
+            "Digital Menu & QR Codes": true,
+            "Customer Loyalty Program": true,
+            "Advanced Table Management": true,
+            "Online Ordering Integration": true,
+            "Staff Scheduling Tool": true,
+            "Advanced Analytics": false,
+            "Dedicated Support Manager": false
+          }
+        },
+        {
+          "name": "VCore",
+          "price": "Custom",
+          "period": "",
+          "description": "The all-in-one solution for restaurant chains and enterprises.",
+          "button": { "label": "Contact Sales", "href": "/contact" },
+          "popular": false,
+          "features": {
+            "Online Reservations": true,
+            "Digital Menu & QR Codes": true,
+            "Customer Loyalty Program": true,
+            "Advanced Table Management": true,
+            "Online Ordering Integration": true,
+            "Staff Scheduling Tool": true,
+            "Advanced Analytics": true,
+            "Dedicated Support Manager": true
+          }
+        }
+      ]
+    },
     "footer": {
-      
       "columns": {
         "company": [
           { "label": "About Our Restaurant", "href": "/about" },

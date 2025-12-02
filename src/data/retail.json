@@ -3,19 +3,55 @@
     "navbar": {
       "logo": "/girl.jpeg",
       "navlink": [
-        { "label": "Home", "href": "/" },
-        { "label": "About", "href": "/about" },
-        { "label": "Services", "href": "/services" }
-      ]
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "About",
+          "href": "/about"
+        },
+        {
+          "label": "Services",
+          "href": "/services"
+        }
+      ],
+      "button": []
     },
     "hero": {
+      "branding": "RetailCo",
+      "tagline": "Everything You Need.",
       "title": "Welcome to Our Retail Store",
-      "subtitle": "Best products at best prices"
+      "highlight": "",
+      "subtitle": "Best products at best prices",
+      "description": "Discover premium products, great discounts, and everything you need under one roof.",
+      "badges": [
+        "Top Brands",
+        "Great Discounts",
+        "Trusted Quality"
+      ],
+      "rating": {
+        "iconPath": "",
+        "value": "",
+        "text": ""
+      },
+      "button": [],
+      "ctaNote": "",
+      "image": "/t-shirt.png"
     },
     "products": [
-      { "name": "Product A", "price": "499" },
-      { "name": "Product B", "price": "799" },
-      { "name": "Product C", "price": "1299" }
+      {
+        "name": "Product A",
+        "price": "499"
+      },
+      {
+        "name": "Product B",
+        "price": "799"
+      },
+      {
+        "name": "Product C",
+        "price": "1299"
+      }
     ],
     "about": "We provide quality retail products across categories.",
     "contact": {
@@ -46,9 +82,88 @@
         }
       ]
     },
+    "contentSection": {
+      "heading": "Power Your Online Store",
+      "subheading": "Select the perfect e-commerce plan to grow your retail business. Scale as you go.",
+      "layoutVariant": 2,
+      "variantSettings": {
+        "spacing": "large",
+        "pricingShape": "rounded",
+        "featureStyle": "minimal",
+        "bgPattern": "soft-grid",
+        "divider": "dashed",
+        "showIcons": false,
+        "featuresAsAccordion": true
+      },
+      "features": [
+        "Product Listings (Unlimited)",
+        "Secure Payment Gateway",
+        "Discount Codes & Coupons",
+        "Inventory Management",
+        "Shipping & Tax Configuration",
+        "SEO & Marketing Tools",
+        "Abandoned Cart Recovery",
+        "24/7 Priority Support"
+      ],
+      "plans": [
+        {
+          "name": "Basic",
+          "price": "$19",
+          "period": "/month",
+          "description": "Essential features to launch your online store.",
+          "button": { "label": "Get Started", "href": "/signup" },
+          "popular": false,
+          "features": {
+            "Product Listings (Unlimited)": true,
+            "Secure Payment Gateway": true,
+            "Discount Codes & Coupons": false,
+            "Inventory Management": false,
+            "Shipping & Tax Configuration": true,
+            "SEO & Marketing Tools": false,
+            "Abandoned Cart Recovery": false,
+            "24/7 Priority Support": false
+          }
+        },
+        {
+          "name": "Professional",
+          "price": "$69",
+          "period": "/month",
+          "description": "Everything you need to run and grow a successful business.",
+          "button": { "label": "Start Free Trial", "href": "/signup" },
+          "popular": true,
+          "features": {
+            "Product Listings (Unlimited)": true,
+            "Secure Payment Gateway": true,
+            "Discount Codes & Coupons": true,
+            "Inventory Management": true,
+            "Shipping & Tax Configuration": true,
+            "SEO & Marketing Tools": true,
+            "Abandoned Cart Recovery": true,
+            "24/7 Priority Support": false
+          }
+        },
+        {
+          "name": "VCore",
+          "price": "Custom",
+          "period": "",
+          "description": "A fully tailored solution for large-scale retailers.",
+          "button": { "label": "Contact Sales", "href": "/contact" },
+          "popular": false,
+          "features": {
+            "Product Listings (Unlimited)": true,
+            "Secure Payment Gateway": true,
+            "Discount Codes & Coupons": true,
+            "Inventory Management": true,
+            "Shipping & Tax Configuration": true,
+            "SEO & Marketing Tools": true,
+            "Abandoned Cart Recovery": true,
+            "24/7 Priority Support": true
+          }
+        }
+      ]
+    },
 
     "footer": {
-      
       "columns": {
         "company": [
           { "label": "About Our Retail Business", "href": "/about" },

@@ -3,8 +3,9 @@ import { ContentProvider } from "@/context/ContentContext";
 import { loadConfig } from "../../lib/config";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
-import Footer from "../../components/Footer.jsx";
 import Services from "../../components/Services.jsx";
+import ContentSection from "@/components/ContentSection";
+import Footer from "../../components/Footer.jsx";
 
 // 3
 function normalizeContent(input) {
@@ -51,6 +52,7 @@ export default async function BizPage({ params, searchParams }) {
   if (heroOverride) initialSelectionMap.hero = heroOverride;
   // 3
 
+
   return (
     <ConfigProviderClient theme={theme}>
       <ContentProvider
@@ -59,6 +61,8 @@ export default async function BizPage({ params, searchParams }) {
       >
         <Header />
         <Hero />
+        <Services />
+        <ContentSection />
         <Services />
         <Footer />
       </ContentProvider>

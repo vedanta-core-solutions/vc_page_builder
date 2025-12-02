@@ -13,13 +13,14 @@
         "buttonStyle": "rounded"
       }
     },
-
     "retail": {
       "colors": {
-        "primary": "#FF5722",
-        "secondary": "#212121",
-        "accent": "#FFC107",
-        "background": "#FAFAFA"
+        "primary": "#3A7AFE",
+        "secondary": "#4A4A4A",
+        "accent": "#FFB200",
+        "background": "#F9FAFB",
+        "colortext": "#1F2937",
+        "colorsurface": "#FFFFFF"
       },
       "font": "Poppins, sans-serif",
       "extras": {
@@ -27,15 +28,14 @@
         "badgeStyle": "pill"
       }
     },
-
     "restaurant": {
       "colors": {
         "primary": "#d4af37",
         "secondary": "#8b7355",
         "accent": "#d4af37",
-        "background": "#FFF3E0",   
+        "background": "#FFF3E0",
         "colortext": "#2c2416",
-        "colorsurface": "#1a1a1a"
+        "colorsurface": "#4af37"
       },
       "font": "Playfair Display, serif",
       "extras": {
@@ -43,7 +43,6 @@
         "buttonCurve": "8px"
       }
     },
-
     "farming": {
       "colors": {
         "primary": "#4CAF50",
