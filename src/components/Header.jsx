@@ -1,92 +1,97 @@
+// 'use client';
+// import React from 'react';
+// import { useContent } from '@/context/ContentContext';
+// import Link from 'next/link';
+
+// export default function Header() {
+//   const { navbar } = useContent().content;
+
+//   return (
+//     <header className="bg-background shadow-card font-base">
+//       <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
+//         <div className="flex justify-between items-center h-20">
+
+//           {/* Logo */}
+//           <div className="shrink-0">
+//             <Link href="/">
+//               <img
+//                 className="h-12 w-auto"
+//                 src={navbar.logo}
+//                 alt="Company Logo"
+//               />
+//             </Link>
+//           </div>
+
+//           {/* Navigation */}
+//           <nav className="flex items-center space-x-10">
+//             {navbar.navlink?.map((item, idx) => (
+//               <Link
+//                 key={idx}
+//                 href={item.href}
+//                 className="text-secondary hover:text-primary text-lg"
+//               >
+//                 {item.label}
+//               </Link>
+//             ))}
+
+//             {navbar.button?.map((btn, idx) => (
+//               <Link
+//                 key={idx}
+//                 href={btn.href}
+//                 className="px-5 py-2 bg-primary text-background rounded-base transition text-lg shadow-sm"
+//               >
+//                 {btn.label}
+//               </Link>
+//             ))}
+//           </nav>
+
+//         </div>
+//       </div>
+//     </header>
+//   );
+// }
+
+
+
+// 3 
 'use client';
 import React, { useState } from 'react';
 import { useContent } from '@/context/ContentContext';
-import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import HeaderV1 from './headerVariants/HeaderV1';
+import HeaderV2 from './headerVariants/HeaderV2';
+import HeaderV3 from './headerVariants/HeaderV3';
+
+const VARIANT_MAP = {
+  v1: HeaderV1,
+  v2: HeaderV2,
+  v3: HeaderV3,
+};
 
 export default function Header() {
-  const { navbar } = useContent().content;
-  const [open, setOpen] = useState(false);
+  const ctx = useContent();
+ 
+  if (!ctx) return null;
 
-  return (
-    <header className="bg-background shadow-card font-base sticky top-0 z-50">
-      <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
-        <div className="flex justify-between items-center h-20">
+  const { content = {}, selectionMap = {} } = ctx;
+  const navbarRoot = content?.navbar || {};
 
-          {/* LOGO */}
-          <div className="shrink-0">
-            <Link href="/">
-              <img
-                className="h-12 w-auto"
-                src={navbar.logo}
-                alt="Company Logo"
-              />
-            </Link>
-          </div>
+  // determine selected variant key (selectionMap overrides default)
+  const selectedKey = selectionMap?.navbar || navbarRoot?.defaultVariant;
 
-          {/* DESKTOP NAV */}
-          <nav className="hidden md:flex items-center space-x-10">
-            {navbar.navlink?.map((item, idx) => (
-              <Link
-                key={idx}
-                href={item.href}
-                className="text-secondary hover:text-primary text-lg"
-              >
-                {item.label}
-              </Link>
-            ))}
+  // find variant data (if any)
+  const variantData = navbarRoot?.variants?.find(v => v.key === selectedKey);
 
-            {navbar.button?.map((btn, idx) => (
-              <Link
-                key={idx}
-                href={btn.href}
-                className="px-5 py-2 bg-primary text-background rounded-base transition text-lg shadow-sm"
-              >
-                {btn.label}
-              </Link>
-            ))}
-          </nav>
+  // canonical data object to pass into variant components (fallback to legacy)
+  const data = variantData || {
+    logo: navbarRoot.logo,
+    navlink: navbarRoot.navlink,
+    button: navbarRoot.button,
+    layout: 'logo-left',
+  };
 
-          {/* MOBILE MENU BUTTON */}
-          <button
-            className="md:hidden p-2 text-secondary"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
+  // console.log('Header debug → selectedKey:', selectedKey, 'variantData:', variantData, 'data:', data);
 
-        {/* MOBILE NAV */}
-        {open && (
-          <div className="md:hidden py-4 space-y-4">
-            {navbar.navlink?.map((item, idx) => (
-              <Link
-                key={idx}
-                href={item.href}
-                className="block text-secondary hover:text-primary text-lg"
-                onClick={() => setOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
-
-            {navbar.button?.length > 0 && (
-              <div className="pt-2">
-                {navbar.button.map((btn, idx) => (
-                  <Link
-                    key={idx}
-                    href={btn.href}
-                    className="block w-full text-center px-5 py-2 bg-primary text-background rounded-base transition text-lg shadow-sm"
-                    onClick={() => setOpen(false)}
-                  >
-                    {btn.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-        )}
-      </div>
-    </header>
-  );
+  const VariantComp = VARIANT_MAP[selectedKey] || VARIANT_MAP[navbarRoot?.defaultVariant] || HeaderV1;
+  return <VariantComp navbar={data} />;
 }
+
