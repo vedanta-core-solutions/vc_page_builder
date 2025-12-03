@@ -1,25 +1,32 @@
 import ConfigProviderClient from "@/context/ConfigProviderClient";
 import { ContentProvider } from "@/context/ContentContext";
 import { loadConfig } from "../../lib/config";
+import { getInitialSelectionMap } from "@/lib/getInitialSelectionMap";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import Services from "../../components/Services.jsx";
 import ContentSection from "@/components/ContentSection";
 import Footer from "../../components/Footer.jsx";
 
-// 3
-function normalizeContent(input) {
-  if (!input) return {};
-  if (input.content && (input.content.navbar || input.content.hero || input.content.footer)) {
-    return input.content;
-  }
-  return input;
-}
-// 3
+
 
 export default async function BizPage({ params, searchParams }) {
-  const { bizType } = await params;
-  const sp = await searchParams;
+
+  // const { bizType } = await params;
+  // const sp = await searchParams;
+
+  // 3
+  const resolvedParams =
+    typeof params?.then === "function" ? await params : params;
+  const resolvedSearchParams =
+    typeof searchParams?.then === "function"
+      ? await searchParams
+      : searchParams;
+
+  const { bizType } = resolvedParams;
+  const sp = resolvedSearchParams;
+  // 3
+
   const config = await loadConfig(bizType);
 
   if (!config) {
@@ -30,34 +37,11 @@ export default async function BizPage({ params, searchParams }) {
 
   const { theme, content } = config;
 
-  // 3
-  const normalizedContent = normalizeContent(content);
-
-  const initialSelectionMap = {};
-  ["navbar", "hero", "footer"].forEach((key) => {
-    const comp = normalizedContent?.[key];
-    if (!comp) return;
-    initialSelectionMap[key] =
-      comp.defaultVariant || (comp.variants && comp.variants[0]?.key) || null;
-  });
-
-  const navbarOverride =
-    typeof sp?.get === "function"
-      ? sp.get("variant_navbar")
-      : sp?.variant_navbar;
-  const heroOverride =
-    typeof sp?.get === "function" ? sp.get("variant_hero") : sp?.variant_hero;
-
-  if (navbarOverride) initialSelectionMap.navbar = navbarOverride;
-  if (heroOverride) initialSelectionMap.hero = heroOverride;
-  // 3
-
+  const initialSelectionMap = getInitialSelectionMap(content, sp );
 
   return (
     <ConfigProviderClient theme={theme}>
-      <ContentProvider
-        content={normalizedContent}
-        initialSelectionMap={initialSelectionMap} >
+      <ContentProvider content={content} initialSelectionMap={initialSelectionMap}>
         <Header />
         <Hero />
         <Services />
@@ -68,7 +52,4 @@ export default async function BizPage({ params, searchParams }) {
   );
 }
 
-// initialSelectionMap do :-
-// Tells the server which variant to render
-// We generate initialSelectionMap so server and client render the same component versions during first load. This prevents hydration mismatch.
-// Server → BizPage → initialSelectionMap → ContentProvider → Header Render
+
