@@ -27,7 +27,6 @@ export default function HeaderV3({ navbar = {} }) {
           </div>
         </div>
 
-        {/* OPTIONAL: Basic mobile menu preview (uncontrolled, for dev). Replace with accessible drawer */}
         <div className="lg:hidden">
           {/* you can implement a toggled drawer here when building mobile menu */}
         </div>
