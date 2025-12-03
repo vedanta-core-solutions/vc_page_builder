@@ -1,16 +1,17 @@
 import ConfigProviderClient from "@/context/ConfigProviderClient";
 import { ContentProvider } from "@/context/ContentContext";
 import { loadConfig } from "../../lib/config";
-import Header from "../../components/Header";
-import Hero from "../../components/Hero";
-import Services from "../../components/Services.jsx";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services.jsx";
 import ContentSection from "@/components/ContentSection";
-import Footer from "../../components/Footer.jsx";
+import Footer from "@/components/Footer.jsx";
 
 // 3
 function normalizeContent(input) {
   if (!input) return {};
   if (input.content && (input.content.navbar || input.content.hero || input.content.footer)) {
+    console.log("input", input.content)
     return input.content;
   }
   return input;
@@ -29,13 +30,15 @@ export default async function BizPage({ params, searchParams }) {
   }
 
   const { theme, content } = config;
-
+  console.log("config", config)
   // 3
+  console.log("content", content)
   const normalizedContent = normalizeContent(content);
-
+  console.log("normalAfter", normalizedContent)
   const initialSelectionMap = {};
   ["navbar", "hero", "footer"].forEach((key) => {
     const comp = normalizedContent?.[key];
+    console.log("nav", comp)
     if (!comp) return;
     initialSelectionMap[key] =
       comp.defaultVariant || (comp.variants && comp.variants[0]?.key) || null;

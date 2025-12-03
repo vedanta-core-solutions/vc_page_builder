@@ -1,7 +1,7 @@
-import themeData from "@/ui/theme.json";
-import retail from "@/data/retail.json";
-import farming from "@/data/farming.json";
-import restaurant from "@/data/restaurant.json";
+import themeData from "../ui/theme.json";
+import retail from "../data/retail.json";
+import farming from "../data/farming.json";
+import restaurant from "../data/restaurant.json";
 
 const contentMap = {
   retail,
