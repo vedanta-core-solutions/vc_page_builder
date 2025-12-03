@@ -1,7 +1,7 @@
 import ConfigProviderClient from "@/context/ConfigProviderClient";
 import { ContentProvider } from "@/context/ContentContext";
 import { loadConfig } from "../../lib/config";
-import { getInitialSelectionMap } from "@/lib/getInitialSelectionMap";
+import { getInitialSelectionMap } from "../../lib/getInitialSelectionMap";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services.jsx";
