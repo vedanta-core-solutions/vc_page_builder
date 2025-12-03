@@ -9,7 +9,7 @@ export default function FooterV1({ data = {} }) {
   const support = columns.support || [];
   const legal = columns.legal || [];
   const social = columns.social || [];
-    console.log("sum",social)
+  
   const year = new Date().getFullYear();
 
   return (
