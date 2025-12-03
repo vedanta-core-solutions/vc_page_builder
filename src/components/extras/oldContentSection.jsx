@@ -2,247 +2,103 @@
 
 import { useState, useMemo } from "react";
 import { useContent } from "@/context/ContentContext";
-import FeatureAccordion from "@/components/extras/FeaturedAccordion";
+import FeatureAccordion from "./extras/FeaturedAccordion";
 
 // Helper to normalize plan names for state and keys
 function normalizePlanName(name) {
   return name.toLowerCase().replace(/\s+/g, "");
 }
 
-// --- NEW: Control Panel Component ---
-const ControlPanel = ({
-  currentVariant,
-  setVariant,
-  currentPattern,
-  setPattern,
-  currentFeatureStyle,
-  setFeatureStyle,
-  originalSettings,
-}) => {
-  const variants = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  const patterns = [
-    "",
-    "soft-grid",
-    "dots",
-    "grid",
-    "d-stripes",
-    "h-lines",
-    "v-lines",
-    "hatch",
-    "carbon",
-    "wave",
-    "noise",
-    "mesh",
-  ];
-  const featureStyles = ["card", "minimal", "round", "soft"];
-
-  const handleReset = () => {
-    setVariant(originalSettings.layoutVariant || 1);
-    setPattern(originalSettings.variantSettings?.bgPattern || "");
-    setFeatureStyle(originalSettings.variantSettings?.featureStyle || "card");
-  };
-
-  return (
-    <aside
-      className="w-80 p-6 bg-white rounded-lg shadow-xl border border-gray-200 h-fit sticky top-8"
-      style={{
-        backgroundColor: "var(--color-surface)",
-        color: "var(--color-text)",
-      }}
-    >
-      <h3
-        className="text-xl font-bold mb-6 text-center"
-        style={{ color: "var(--color-secondary)" }}
-      >
-        Customize
-      </h3>
-
-      {/* Variant Selector */}
-      <div className="mb-6">
-        <label className="block text-sm font-semibold mb-2">
-          Layout Variant
-        </label>
-        <div className="grid grid-cols-3 gap-2">
-          {variants.map((v) => (
-            <button
-              key={v}
-              onClick={() => setVariant(v)}
-              className={`p-2 rounded-md border transition-all ${
-                currentVariant === v
-                  ? "border-blue-500 bg-blue-100"
-                  : "border-gray-300"
-              }`}
-              style={{
-                borderColor: currentVariant === v ? "var(--color-primary)" : "",
-                backgroundColor:
-                  currentVariant === v
-                    ? "var(--color-primary)"
-                    : "var(--color-surface)",
-                color: currentVariant === v ? "white" : "var(--color-text)",
-              }}
-            >
-              {v}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Pattern Selector */}
-      <div className="mb-6">
-        <label className="block text-sm font-semibold mb-2">
-          Background Pattern
-        </label>
-        <div className="grid grid-cols-2 gap-2">
-          {patterns.map((p) => (
-            <button
-              key={p || "none"}
-              onClick={() => setPattern(p)}
-              className={`p-2 text-xs rounded-md border transition-all ${
-                currentPattern === p
-                  ? "border-blue-500 bg-blue-100"
-                  : "border-gray-300"
-              }`}
-              style={{
-                borderColor: currentPattern === p ? "var(--color-primary)" : "",
-                backgroundColor:
-                  currentPattern === p
-                    ? "var(--color-primary)"
-                    : "var(--color-surface)",
-                color: currentPattern === p ? "white" : "var(--color-text)",
-              }}
-            >
-              {p || "None"}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Feature Style Selector */}
-      <div className="mb-6">
-        <label className="block text-sm font-semibold mb-2">
-          Feature Style
-        </label>
-        <div className="flex gap-2">
-          {featureStyles.map((s) => (
-            <button
-              key={s}
-              onClick={() => setFeatureStyle(s)}
-              className={`flex-1 p-2 rounded-md border transition-all capitalize ${
-                currentFeatureStyle === s
-                  ? "border-blue-500 bg-blue-100"
-                  : "border-gray-300"
-              }`}
-              style={{
-                borderColor:
-                  currentFeatureStyle === s ? "var(--color-primary)" : "",
-                backgroundColor:
-                  currentFeatureStyle === s
-                    ? "var(--color-primary)"
-                    : "var(--color-surface)",
-                color:
-                  currentFeatureStyle === s ? "white" : "var(--color-text)",
-              }}
-            >
-              {s}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Reset Button */}
-      <button
-        onClick={handleReset}
-        className="w-full p-2 rounded-md border border-gray-400 text-gray-700 bg-gray-100 hover:bg-gray-200 transition-all"
-      >
-        Reset to Defaults
-      </button>
-    </aside>
-  );
-};
-
 export default function ContentSection() {
+  // Correctly use the ContentProvider to get the content object
   const { content } = useContent();
   const section = content?.contentSection;
 
+  // If the data is not available, render nothing.
   if (!section) {
     return null;
   }
 
-  // --- NEW: State for live customization ---
-  const [currentVariant, setVariant] = useState(section.layoutVariant || 1);
-  const [currentPattern, setPattern] = useState(
-    section.variantSettings?.bgPattern || ""
-  );
-  const [currentFeatureStyle, setFeatureStyle] = useState(
-    section.variantSettings?.featureStyle || "card"
-  );
+  //  Idhar saare config ,variant ke chizzze hai
+  // This useMemo hook transforms your JSON data into the format the rest of the component expects.
+  const {
+    features,
+    pricing,
+    pricingAccess,
+    settings,
+    variant,
+    heading,
+    subheading,
+  } = useMemo(() => {
+    const {
+      layoutVariant,
+      variantSettings,
+      features: featureList,
+      plans,
+    } = section;
 
-  const { features, pricing, pricingAccess, settings, heading, subheading } =
-    useMemo(() => {
-      const { features: featureList, plans } = section;
-
-      const transformedFeatures = featureList.map((f) => {
-        if (typeof f === "object" && f !== null) {
-          return {
-            key: f.key || f.title,
-            title: f.title,
-            description: f.description || "",
-            icon: f.icon || "🌱",
-          };
-        }
+    // 1. Transform the 'features' array to handle both string and object formats.
+    const transformedFeatures = featureList.map((f) => {
+      // If feature is an object, use it directly. If it's a string, convert it to an object.
+      if (typeof f === "object" && f !== null) {
         return {
-          key: f,
-          title: f,
-          description: "",
-          icon: "🌱",
+          key: f.key || f.title,
+          title: f.title,
+          description: f.description || "",
+          icon: f.icon || "🌱",
         };
-      });
-
-      const transformedPricing = plans.map((plan) => {
-        const benefits = featureList
-          .filter((feature) => {
-            const featureKey =
-              typeof feature === "object" ? feature.key : feature;
-            return plan.features[featureKey];
-          })
-          .map((feature) =>
-            typeof feature === "object" ? feature.title : feature
-          );
-        return { ...plan, benefits };
-      });
-
-      const transformedAccess = plans.reduce((acc, plan) => {
-        const key = normalizePlanName(plan.name);
-        acc[key] = featureList
-          .filter((feature) => {
-            const featureKey =
-              typeof feature === "object" ? feature.key : feature;
-            return plan.features[featureKey];
-          })
-          .map((feature) =>
-            typeof feature === "object" ? feature.key : feature
-          );
-        return acc;
-      }, {});
-
-      //yeh par customize live preview button settings
-      const liveSettings = {
-        ...section.variantSettings,
-        bgPattern: currentPattern,
-        featureStyle: currentFeatureStyle,
-      };
-
+      }
+      // If it's just a string, create a basic object.
       return {
-        features: transformedFeatures,
-        pricing: transformedPricing,
-        pricingAccess: transformedAccess,
-        settings: liveSettings,
-        variant: currentVariant,
-        heading: section.heading,
-        subheading: section.subheading,
+        key: f,
+        title: f,
+        description: "",
+        icon: "🌱",
       };
-    }, [section, currentVariant, currentPattern, currentFeatureStyle]);
+    });
 
+    // 2. Transform the 'plans' array into the 'pricing' format the layout expects.
+    const transformedPricing = plans.map((plan) => {
+      const benefits = featureList
+        .filter((feature) => {
+          const featureKey =
+            typeof feature === "object" ? feature.key : feature;
+          return plan.features[featureKey];
+        })
+        .map((feature) =>
+          typeof feature === "object" ? feature.title : feature
+        );
+
+      return { ...plan, benefits };
+    });
+
+    // 3. Create the 'pricingAccess' map for quick lookups.
+    const transformedAccess = plans.reduce((acc, plan) => {
+      const key = normalizePlanName(plan.name);
+      acc[key] = featureList
+        .filter((feature) => {
+          const featureKey =
+            typeof feature === "object" ? feature.key : feature;
+          return plan.features[featureKey];
+        })
+        .map((feature) =>
+          typeof feature === "object" ? feature.key : feature
+        );
+      return acc;
+    }, {});
+
+    return {
+      features: transformedFeatures,
+      pricing: transformedPricing,
+      pricingAccess: transformedAccess,
+      settings: variantSettings || {},
+      variant: layoutVariant || 1,
+      heading: section.heading,
+      subheading: section.subheading,
+    };
+  }, [section]);
+
+  /* ---------------- State: Selected Plan ---------------- */
   const defaultPlan = pricing?.[0]
     ? normalizePlanName(pricing[0].name)
     : "free";
@@ -251,6 +107,7 @@ export default function ContentSection() {
   const isAllowed = (featureKey) =>
     (pricingAccess?.[selectedPlan] || []).includes(featureKey);
 
+  // Find advanced features only VCore has
   const vcoreExtras =
     pricingAccess?.vcore?.filter(
       (k) =>
@@ -258,6 +115,7 @@ export default function ContentSection() {
         !(pricingAccess?.free || []).includes(k)
     ) || [];
 
+  /* ---------------- STYLE CONFIGURATION ---------------- */
   const spacingClass =
     settings.spacing === "large"
       ? "py-16 px-8"
@@ -273,10 +131,6 @@ export default function ContentSection() {
       ? "border border-gray-200 hover:border-green-500"
       : settings.featureStyle === "card"
       ? "shadow-md hover:shadow-xl"
-      : settings.featureStyle === "round"
-      ? "rounded-2xl border border-red-300 hover:shadow-lg"
-      : settings.featureStyle === "soft"
-      ? "rounded-xl bg-gray-50 border border-green-200 hover:shadow-md"
       : "border border-gray-300";
 
   const patternClass =
@@ -286,22 +140,6 @@ export default function ContentSection() {
       ? "bg-[radial-gradient(#0002_1px,transparent_1px)] bg-[size:8px_8px]"
       : settings.bgPattern === "grid"
       ? "bg-[linear-gradient(#0002_1px,transparent_1px)] bg-[size:20px_20px]"
-      : settings.bgPattern === "d-stripes"
-      ? "bg-[repeating-linear-gradient(45deg,#0001_0,#0001_2px,transparent_2px,transparent_6px)]"
-      : settings.bgPattern === "h-lines"
-      ? "bg-[repeating-linear-gradient(#0002_0,#0002_1px,transparent_1px,transparent_20px)]"
-      : settings.bgPattern === "v-lines"
-      ? "bg-[repeating-linear-gradient(90deg,#0002_0,#0002_1px,transparent_1px,transparent_20px)]"
-      : settings.bgPattern === "hatch"
-      ? "bg-[linear-gradient(#0001_1px,transparent_1px),linear-gradient(90deg,#0001_1px,transparent_1px)] bg-[size:20px_20px]"
-      : settings.bgPattern === "carbon"
-      ? "bg-[linear-gradient(45deg,#0002_25%,transparent_25%),linear-gradient(45deg,transparent_75%,#0002_75%)] bg-[size:8px_8px]"
-      : settings.bgPattern === "wave"
-      ? 'bg-[url(\'data:image/svg+xml;utf8,<svg width="100" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10 Q 25 0 50 10 T 100 10" stroke="%2306b66a" stroke-width="9.5" fill="transparent" /></svg>\')]'
-      : settings.bgPattern === "noise"
-      ? "bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-90"
-      : settings.bgPattern === "mesh"
-      ? "bg-[radial-gradient(circle_at_20%_20%,#ff9a9e80,transparent),radial-gradient(circle_at_80%_80%,#fad0c480,transparent)]"
       : "";
 
   const Divider = () =>
@@ -317,6 +155,7 @@ export default function ContentSection() {
       />
     ) : null;
 
+  /* ---------------- Pricing Card ---------------- */
   const PricingCard = ({ tier }) => {
     const key = normalizePlanName(tier.name);
     const active = key === selectedPlan;
@@ -353,6 +192,7 @@ export default function ContentSection() {
     );
   };
 
+  /* ---------------- Feature Renderer Component ---------------- */
   const FeatureRenderer = ({ f }) => {
     if (settings.featuresAsAccordion) {
       return (
@@ -360,6 +200,7 @@ export default function ContentSection() {
       );
     }
 
+    // Default Feature Item (Original)
     return (
       <div
         className={`p-4 rounded-xl transition-all hover:scale-[1.02] ${featureCardStyle}`}
@@ -384,7 +225,7 @@ export default function ContentSection() {
     );
   };
 
-  // --- VARIANTS (kept the same, but now use `settings` from state) ---
+  /* ---------------- VARIANTS ---------------- */
   const Variant1 = () => (
     <section
       className={`max-w-7xl mx-auto grid md:grid-cols-2 gap-10 ${spacingClass} ${patternClass}`}
@@ -576,6 +417,9 @@ export default function ContentSection() {
     </section>
   );
 
+  // --- NEW ADVANCED VARIANTS ---
+
+  // Variant 7: The Feature Comparison Table
   const Variant7 = () => (
     <section className={`max-w-7xl mx-auto ${spacingClass} ${patternClass}`}>
       <h2
@@ -587,6 +431,7 @@ export default function ContentSection() {
       <p className="text-center mb-10 max-w-2xl mx-auto opacity-80">
         {subheading}
       </p>
+
       <div
         className="overflow-x-auto rounded-lg border border-gray-200"
         style={{ borderColor: "var(--color-surface)" }}
@@ -669,6 +514,7 @@ export default function ContentSection() {
     </section>
   );
 
+  // Variant 8: The Interactive Tab View
   const Variant8 = () => {
     const [activeTab, setActiveTab] = useState(
       normalizePlanName(pricing[0]?.name || "free")
@@ -685,6 +531,7 @@ export default function ContentSection() {
         <p className="text-center mb-10 max-w-2xl mx-auto opacity-80">
           {subheading}
         </p>
+
         <div
           className="flex justify-center mb-8 border-b border-gray-200"
           style={{ borderColor: "var(--color-surface)" }}
@@ -712,6 +559,7 @@ export default function ContentSection() {
             );
           })}
         </div>
+
         {pricing.map((plan) => {
           const key = normalizePlanName(plan.name);
           if (key !== activeTab) return null;
@@ -732,6 +580,7 @@ export default function ContentSection() {
                 {plan.price}
               </div>
               <p className="mb-6 opacity-80">{plan.description}</p>
+
               <div className="text-left space-y-3 mb-8 max-w-md mx-auto">
                 {features.map((f) => (
                   <div
@@ -748,6 +597,7 @@ export default function ContentSection() {
                   </div>
                 ))}
               </div>
+
               <a
                 href={plan.button.href}
                 className="inline-block font-bold py-3 px-8 rounded-lg text-white"
@@ -762,6 +612,7 @@ export default function ContentSection() {
     );
   };
 
+  // Variant 9: The Modern Icon Cards
   const Variant9 = () => (
     <section className={`max-w-7xl mx-auto ${spacingClass} ${patternClass}`}>
       <h2
@@ -773,6 +624,7 @@ export default function ContentSection() {
       <p className="text-center mb-10 max-w-2xl mx-auto opacity-80">
         {subheading}
       </p>
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {pricing.map((plan) => {
           const key = normalizePlanName(plan.name);
@@ -853,7 +705,7 @@ export default function ContentSection() {
   );
 
   const renderVariant = () => {
-    switch (currentVariant) {
+    switch (variant) {
       case 1:
         return <Variant1 />;
       case 2:
@@ -877,11 +729,12 @@ export default function ContentSection() {
     }
   };
 
+  // --- NEW: Advanced VCore Banner Component ---
   const VCoreBanner = ({ extras }) => {
     if (!extras || extras.length === 0) return null;
 
     return (
-      <div className="max-w-5xl mx-auto px-6 py-12 mt-16 text-center">
+      <div className="max-w-5xl mx-auto px-6 py-12 mt-16 text-center ">
         <div
           className="relative p-8 md:p-12 rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-3xl"
           style={{
@@ -889,10 +742,12 @@ export default function ContentSection() {
             color: "var(--color-background)",
           }}
         >
+          {/* Animated background pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-40 h-40 bg-white rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
             <div className="absolute bottom-0 right-0 w-60 h-60 bg-white rounded-full transform translate-x-1/3 translate-y-1/3"></div>
           </div>
+
           <div className="relative z-10">
             <h3 className="text-3xl md:text-4xl font-extrabold mb-4">
               Unlock The Ultimate Power
@@ -901,11 +756,12 @@ export default function ContentSection() {
               The VCore plan includes exclusive features designed for
               enterprises that demand the best.
             </p>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 text-left">
               {extras.map((k) => (
                 <div
                   key={k}
-                  className="flex items-center space-x-3 p-3 rounded-lg bg-white bg-opacity-20 text-blue-700"
+                  className="flex items-center space-x-3 p-3 rounded-lg bg-white bg-opacity-20 text-blue-600"
                 >
                   <svg
                     className="w-6 h-6 flex-shrink-0"
@@ -920,8 +776,9 @@ export default function ContentSection() {
                 </div>
               ))}
             </div>
+
             <a
-              href="/contact"
+              href="/#"
               className="inline-block bg-white text-gray-900 font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
             >
               Get Your Custom VCore Plan
@@ -933,25 +790,9 @@ export default function ContentSection() {
   };
 
   return (
-    // --- NEW: Main layout with Control Panel ---
-    <div
-      className="flex gap-8 p-8"
-      style={{ backgroundColor: "var(--color-background)" }}
-    >
-      <main className="flex-1">
-        {renderVariant()}
-        <VCoreBanner extras={vcoreExtras} />
-      </main>
-
-      <ControlPanel
-        currentVariant={currentVariant}
-        setVariant={setVariant}
-        currentPattern={currentPattern}
-        setPattern={setPattern}
-        currentFeatureStyle={currentFeatureStyle}
-        setFeatureStyle={setFeatureStyle}
-        originalSettings={section}
-      />
+    <div style={{ backgroundColor: "var(--color-background)" }}>
+      {renderVariant()}
+      <VCoreBanner extras={vcoreExtras} />
     </div>
   );
 }

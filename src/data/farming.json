@@ -45,7 +45,7 @@
       },
       "button": [],
       "ctaNote": "",
-      "image": "/vegitable.png"
+      "image": "/farmmm.jpg"
     },
     "products": [
       {
@@ -89,13 +89,12 @@
     "contentSection": {
       "heading": "Choose Your Farming Plan",
       "subheading": "Select the perfect plan for your agricultural needs. Upgrade anytime.",
-      "layoutVariant": 9,
+      "layoutVariant": 3,
       "variantSettings": {
         "spacing": "normal",
-        "pricingShape": "rounded",
+        "pricingShape": "rounded-2xl",
         "featureStyle": "card",
-        "bgPattern": "",
-        "divider": "line",
+        "bgPattern": "d-stripes",
         "showIcons": true,
         "featuresAsAccordion": true
       },
