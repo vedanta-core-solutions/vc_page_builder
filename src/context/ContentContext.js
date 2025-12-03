@@ -25,80 +25,60 @@
 
 'use client';
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import { getInitialSelectionMap } from "@/lib/getInitialSelectionMap";
 
 const ContentContext = createContext(null);
 
-
-function normalizeContent(input) {
-  if (!input) return {};
-  if (input.content && (input.content.navbar || input.content.hero || input.content.footer)) {
-    return input.content;
-  }
-  return input;
-}
-
-function computeDefaultsFromContent(content) {
-  if (!content) return {};
-  const defaults = {};
-  ['navbar', 'hero', 'footer'].forEach((key) => {
-    const comp = content[key];
-    if (!comp) return;
-    defaults[key] = comp.defaultVariant || (comp.variants && comp.variants[0]?.key) || null;
-  });
-  return defaults;
-}
-
-export function ContentProvider({ children, content, initialSelectionMap  }) {
-
+export function ContentProvider({ children, content, initialSelectionMap }) {
   const raw = content || {};
 
-  const initial = normalizeContent(raw);
-
-  const [internalContent, setInternalContent] = useState(initial);
+  const [internalContent, setInternalContent] = useState(raw);
 
   const initialMap = (initialSelectionMap && Object.keys(initialSelectionMap).length > 0)
     ? initialSelectionMap
-    : computeDefaultsFromContent(initial);
+    : getInitialSelectionMap(raw, null);
 
   const [selectionMap, setSelectionMap] = useState(() => initialMap);
 
+<<<<<<< HEAD
 
   // useEffect(() => {
   //   setInternalContent(normalizeContent(raw));
   // }, [raw]);
+=======
+  
+  useEffect(() => {
+    setInternalContent(raw);
+  }, [raw]);
+>>>>>>> origin/main
 
- 
   useEffect(() => {
     if (!internalContent) return;
     setSelectionMap((prev) => {
-      const defaults = computeDefaultsFromContent(internalContent);
-
+      const defaults = getInitialSelectionMap(internalContent, null);
       const merged = { ...defaults, ...prev };
       return merged;
     });
   }, [internalContent]);
 
-   
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
     try {
-      
+
       const saved = JSON.parse(localStorage.getItem('variantSelectionMap') || 'null');
       let next = {};
       if (saved && typeof saved === 'object') next = { ...saved };
 
-     
       const params = new URLSearchParams(window.location.search);
-     
+
       for (const [key, value] of params.entries()) {
         if (key.startsWith('variant_') && value) {
-          const compKey = key.replace(/^variant_/, ''); 
+          const compKey = key.replace(/^variant_/, '');
           next[compKey] = value;
         }
       }
 
-      
       if (Object.keys(next).length > 0) {
         setSelectionMap(prev => ({ ...prev, ...next }));
       }
@@ -109,7 +89,6 @@ export function ContentProvider({ children, content, initialSelectionMap  }) {
   }, []);
 
 
- 
   useEffect(() => {
     if (typeof window === 'undefined') return;
     try {
@@ -131,12 +110,10 @@ export function useContent() {
   const ctx = useContext(ContentContext);
   if (!ctx) return null;
 
- 
   if (typeof ctx === 'object' && ctx.content !== undefined) {
     return ctx;
   }
 
-  
   return {
     content: ctx,
     selectionMap: {},
@@ -144,3 +121,4 @@ export function useContent() {
     setContent: () => {},
   };
 }
+
