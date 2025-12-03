@@ -43,6 +43,7 @@ export default async function BizPage({ params, searchParams }) {
     initialSelectionMap[key] =
       comp.defaultVariant || (comp.variants && comp.variants[0]?.key) || null;
   });
+  console.log("banija", initialSelectionMap)
 
   const navbarOverride =
     typeof sp?.get === "function"
@@ -54,7 +55,6 @@ export default async function BizPage({ params, searchParams }) {
   if (navbarOverride) initialSelectionMap.navbar = navbarOverride;
   if (heroOverride) initialSelectionMap.hero = heroOverride;
   // 3
-
 
   return (
     <ConfigProviderClient theme={theme}>

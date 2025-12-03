@@ -63,9 +63,9 @@ export function ContentProvider({ children, content, initialSelectionMap  }) {
   const [selectionMap, setSelectionMap] = useState(() => initialMap);
 
 
-  useEffect(() => {
-    setInternalContent(normalizeContent(raw));
-  }, [raw]);
+  // useEffect(() => {
+  //   setInternalContent(normalizeContent(raw));
+  // }, [raw]);
 
  
   useEffect(() => {
