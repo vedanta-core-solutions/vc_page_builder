@@ -115,3 +115,4 @@ export function useContent() {
   };
 }
 
+// “ContentContext centralizes content + variant selection with server defaults, client overrides, and safe persistence, ensuring all page components stay in sync without hydration issues.”
