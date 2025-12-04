@@ -74,7 +74,6 @@ export default function Header() {
 
   const { content = {}, selectionMap = {} } = ctx;
   const navbarRoot = content?.navbar || {};
-
   // determine selected variant key (selectionMap overrides default)
   const selectedKey = selectionMap?.navbar || navbarRoot?.defaultVariant;
 

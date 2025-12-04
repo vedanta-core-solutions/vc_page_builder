@@ -7,7 +7,7 @@
         { "label": "About", "href": "/about" },
         { "label": "Services", "href": "/services" }
       ],
-      "button": [{ "label": "Reserve Table", "href": "/booking" }],
+      "button": [{ "label": "Cart", "href": "/cart" }],
       "defaultVariant": "v1",
       "variants": [
         {
@@ -19,7 +19,7 @@
             { "label": "About", "href": "/about" },
             { "label": "Services", "href": "/services" }
           ],
-          "button": [{ "label": "Reserve Table", "href": "/booking" }],
+          "button": [{ "label": "Cart", "href": "/cart" }],
           "layout": "logo-left links-center button-right"
         },
         {
