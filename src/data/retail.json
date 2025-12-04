@@ -66,6 +66,7 @@
       "ctaNote": "",
       "image": "/t-shirt.png"
     },
+
     "products": [
       {
         "name": "Product A",
@@ -85,6 +86,7 @@
       "phone": "+91-9876543210",
       "address": "Retail Street, City"
     },
+
     "services": {
       "top_heading": [
         {
@@ -92,23 +94,117 @@
           "text": "buying and selling of goods and services over the Internet"
         }
       ],
+
       "cards": [
         {
-          "img": "./retail.png",
+          "img": "/images/retail/reatil1.png",
           "h_1": "Direct Marketing and E-commerce",
-          "para": "providing comprehensive product catalogs with detailed descriptions and images, secure payment gateways that process transactions safely, and virtual shopping carts for accumulating items before checkout.",
+          "para": "Providing comprehensive product catalogs with detailed descriptions and images, secure payment gateways that process transactions safely, and virtual shopping carts for accumulating items before checkout.",
           "btn": "get demo",
           "alignment": "left"
         },
         {
-          "img": "./reatil1.png",
+          "img": "/images/retail/reatil.png",
           "h_1": "Chef's Picks",
-          "para": "product display through high-quality images and detailed descriptions, secure electronic payment processing, and order management and fulfillment systems.",
+          "para": "Product display through high-quality images and detailed descriptions, secure electronic payment processing, and order management and fulfillment systems.",
           "btn": "get demo",
           "alignment": "right"
         }
+      ],
+
+      "defaultVariant": "v1",
+
+      "variants": [
+        {
+          "key": "v1",
+          "label": "Retail — Classic cards (OLD DATA)",
+          "layout": "cards-classic",
+
+          "top_heading": [
+            {
+              "h_1": "Services",
+              "text": "buying and selling of goods and services over the Internet"
+            }
+          ],
+
+          "cards": [
+            {
+              "img": "/images/retail/retail.png",
+              "h_1": "Direct Marketing and E-commerce",
+              "para": "Providing comprehensive product catalogs with detailed descriptions and images, secure payment gateways that process transactions safely, and virtual shopping carts for accumulating items before checkout.",
+              "btn": "get demo",
+              "alignment": "left"
+            },
+            {
+              "img": "/images/retail/retail1.png",
+              "h_1": "Chef's Picks",
+              "para": "Product display through high-quality images and detailed descriptions, secure electronic payment processing, and order management and fulfillment systems.",
+              "btn": "get demo",
+              "alignment": "right"
+            }
+          ]
+        },
+
+        {
+          "key": "v2",
+          "label": "Retail — Grid Features",
+          "layout": "grid-cards",
+          "items": [
+            {
+              "title": "Product Catalog",
+              "description": "Browse items with detailed specifications and images.",
+              "image": "/retail.png",
+              "href": "/catalog"
+            },
+            {
+              "title": "Secure Payments",
+              "description": "Fast and trusted checkout with multiple payment options.",
+              "image": "/payment.jpg",
+              "href": "/checkout"
+            },
+            {
+              "title": "Order Management",
+              "description": "Track orders, returns, and delivery updates.",
+              "image": "/orders.png",
+              "href": "/orders"
+            },
+            {
+              "title": "Promotions & Deals",
+              "description": "Exclusive online discounts and seasonal offers.",
+              "image": "/offers.jpg",
+              "href": "/deals"
+            }
+          ]
+        },
+
+        {
+          "key": "v3",
+          "label": "Retail — Minimal List with CTA",
+          "layout": "list-cta",
+          "items": [
+            {
+              "title": "Shop Online",
+              "description": "Explore thousands of products with one click.",
+              "href": "/shop",
+              "icon": "shopping-cart"
+            },
+            {
+              "title": "Track Orders",
+              "description": "Stay updated with real-time order status.",
+              "href": "/track-order",
+              "icon": "truck"
+            },
+            {
+              "title": "Easy Returns",
+              "description": "Hassle-free product replacement and refunds.",
+              "href": "/returns",
+              "icon": "rotate-ccw"
+            }
+          ]
+        }
       ]
     },
+
     "contentSection": {
       "heading": "Power Your Online Store",
       "subheading": "Select the perfect e-commerce plan to grow your retail business. Scale as you go.",
@@ -248,7 +344,7 @@
           "label": "Retail — Teal Clean Grid (default)",
           "layout": "columns-standard",
           "logo": "/retail_logo.png",
-          "backgroundImage": "/retail_footer_bg.jpg",
+          "backgroundImage": "/images/retail/retail.png",
           "colorScheme": "teal",
           "columns": {
             "company": [
@@ -307,7 +403,7 @@
           "label": "Retail — Logo-left emphasis",
           "layout": "logo-left-emphasis",
           "logo": "/retail_logo.png",
-          "backgroundImage": "/retail_footer_bg.jpg",
+          "backgroundImage": "/images/retail/retail1.png",
           "colorScheme": "teal-contrast",
           "columns": {
             "support": [
@@ -353,7 +449,7 @@
           "label": "Retail — Minimal row (3-column layout)",
           "layout": "row-minimal",
           "logo": "/retail_logo.png",
-          "backgroundImage": "/retail_footer_bg.jpg",
+          "backgroundImage": "/images/retail/retail.png",
           "colorScheme": "teal-minimal",
           "columns": {
             "left": [

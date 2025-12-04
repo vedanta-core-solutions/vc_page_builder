@@ -16,11 +16,6 @@
 //   return useContext(ContentContext);
 // }
 
-
-
-
-
-
 // 3
 
 'use client';
@@ -34,9 +29,10 @@ export function ContentProvider({ children, content, initialSelectionMap }) {
 
   const [internalContent, setInternalContent] = useState(raw);
 
-  const initialMap = (initialSelectionMap && Object.keys(initialSelectionMap).length > 0)
-    ? initialSelectionMap
-    : getInitialSelectionMap(raw, null);
+  const initialMap =
+    initialSelectionMap && Object.keys(initialSelectionMap).length > 0
+      ? initialSelectionMap
+      : getInitialSelectionMap(raw, null);
 
   const [selectionMap, setSelectionMap] = useState(() => initialMap);
 
@@ -54,37 +50,39 @@ export function ContentProvider({ children, content, initialSelectionMap }) {
   }, [internalContent]);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     try {
-
-      const saved = JSON.parse(localStorage.getItem('variantSelectionMap') || 'null');
+      const saved = JSON.parse(
+        localStorage.getItem("variantSelectionMap") || "null"
+      );
       let next = {};
-      if (saved && typeof saved === 'object') next = { ...saved };
+      if (saved && typeof saved === "object") next = { ...saved };
 
       const params = new URLSearchParams(window.location.search);
 
       for (const [key, value] of params.entries()) {
-        if (key.startsWith('variant_') && value) {
-          const compKey = key.replace(/^variant_/, '');
+        if (key.startsWith("variant_") && value) {
+          const compKey = key.replace(/^variant_/, "");
           next[compKey] = value;
         }
       }
 
       if (Object.keys(next).length > 0) {
-        setSelectionMap(prev => ({ ...prev, ...next }));
+        setSelectionMap((prev) => ({ ...prev, ...next }));
       }
     } catch (e) {
-      console.warn('ContentProvider: error reading variantSelectionMap or URL params', e);
+      console.warn(
+        "ContentProvider: error reading variantSelectionMap or URL params",
+        e
+      );
     }
-    
   }, []);
 
-
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
     try {
-      localStorage.setItem('variantSelectionMap', JSON.stringify(selectionMap));
+      localStorage.setItem("variantSelectionMap", JSON.stringify(selectionMap));
     } catch {}
   }, [selectionMap]);
 
@@ -95,14 +93,16 @@ export function ContentProvider({ children, content, initialSelectionMap }) {
     setSelectionMap,
   };
 
-  return <ContentContext.Provider value={value}>{children}</ContentContext.Provider>;
+  return (
+    <ContentContext.Provider value={value}>{children}</ContentContext.Provider>
+  );
 }
 
 export function useContent() {
   const ctx = useContext(ContentContext);
   if (!ctx) return null;
 
-  if (typeof ctx === 'object' && ctx.content !== undefined) {
+  if (typeof ctx === "object" && ctx.content !== undefined) {
     return ctx;
   }
 
@@ -114,3 +114,4 @@ export function useContent() {
   };
 }
 
+// “ContentContext centralizes content + variant selection with server defaults, client overrides, and safe persistence, ensuring all page components stay in sync without hydration issues.”

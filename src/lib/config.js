@@ -6,7 +6,7 @@ import restaurant from "../data/restaurant.json";
 const contentMap = {
   retail,
   farming,
-  restaurant
+  restaurant,
 };
 
 // 3
@@ -23,7 +23,7 @@ function normalizeContent(input) {
     "hero",
     "services",
     "contentSection",
-    "footer"
+    "footer",
   ];
 
   const hasIndicator = indicatorKeys.some((k) => k in content);
@@ -42,12 +42,10 @@ function normalizeContent(input) {
 
 export async function loadConfig(bizType) {
   const theme = themeData.themes[bizType] || themeData.themes.default;
-  const rawContent = contentMap[bizType] || contentMap["retail"]; 
+  const rawContent = contentMap[bizType] || contentMap["retail"];
   const content = normalizeContent(rawContent);
   return { theme, content };
 }
-
-
 
 // normalizeContent ka work:
 // Agar input hi nahi mila → {} return karo`

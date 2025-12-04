@@ -39,5 +39,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 Assigned sections (each dev picks at most 2 sections):
 - Member A (priyanshu): header, hero
 - Member B (dilip): features, testimonials
-- Member C (sumit): contact/content, footer
+- Member C (sumit): services, footer
 
