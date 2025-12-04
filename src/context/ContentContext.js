@@ -40,17 +40,9 @@ export function ContentProvider({ children, content, initialSelectionMap }) {
 
   const [selectionMap, setSelectionMap] = useState(() => initialMap);
 
-<<<<<<< HEAD
-
-  // useEffect(() => {
-  //   setInternalContent(normalizeContent(raw));
-  // }, [raw]);
-=======
-  
   useEffect(() => {
     setInternalContent(raw);
   }, [raw]);
->>>>>>> origin/main
 
   useEffect(() => {
     if (!internalContent) return;
