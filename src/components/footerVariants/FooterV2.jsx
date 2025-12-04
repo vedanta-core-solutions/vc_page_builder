@@ -1,4 +1,4 @@
-// src/components/footerVariants/FooterV2.jsx
+
 "use client";
 
 import React from "react";
@@ -14,15 +14,12 @@ export default function FooterV2({ data = {} }) {
   const year = new Date().getFullYear();
 
   return (
-    <footer
-      className="w-full pt-10 pb-8 border-t font-base"
-      
-    >
+    <footer className="w-full pt-10 pb-8 border-t font-base bg-accent">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        {/* TOP ROW: on md+ show a single row with three areas (left/logo, center/nav, right/social) */}
+
         <div className="flex flex-col md:flex-row items-start md:items-center md:justify-between gap-6">
-          {/* LEFT: logo */}
-          <div className="w-full md:w-auto flex items-center md:items-start">
+
+          <div className="w-full md:w-auto flex justify-center ">
             {data.logo && (
               <Link href="/" className="inline-flex items-center">
                 <img src={data.logo} alt="logo" className="h-12 w-auto" />
@@ -30,7 +27,7 @@ export default function FooterV2({ data = {} }) {
             )}
           </div>
 
-          {/* CENTER: nav columns — centered on md+ */}
+ 
           <div className="w-full md:flex-1 flex justify-center">
             <div className="w-full max-w-3xl">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center md:text-left">
@@ -79,9 +76,9 @@ export default function FooterV2({ data = {} }) {
             </div>
           </div>
 
-          {/* RIGHT: social icons (md+) and small credits */}
-          <div className="w-full md:w-auto flex flex-col items-start md:items-end">
-            {/* social icons - align right on md */}
+
+          <div className="w-full md:w-auto flex flex-col items-center">
+
             <div className="flex items-center gap-3 mb-3 md:mb-4">
               {social.map((it, i) => (
                 <a
@@ -93,25 +90,25 @@ export default function FooterV2({ data = {} }) {
                   aria-label={it.label}
                   title={it.label}
                 >
-                  <svg viewBox={it.icon?.viewBox} className="w-5 h-5 fill-current" aria-hidden="true">
+                  <svg viewBox={it.icon?.viewBox} className="w-5 h-5 fill-current hidden md:block" aria-hidden="true">
                     <path d={it.icon?.path} />
                   </svg>
                 </a>
               ))}
             </div>
 
-            {/* credits / small text */}
-            <div className="text-sm text-left md:text-right">
+
+            <div className="text-sm flex flex-col items-center">
               <p className="leading-tight">© {year} {data.copyRight?.text}</p>
               <p className="text-xs opacity-90 mt-1">{data.copyRight?.builtWith}</p>
             </div>
           </div>
         </div>
 
-        {/* divider */}
-        <div className="border-t border-gray-200 my-6" />
 
-        {/* mobile-only: show centered social under divider to avoid cramped top row */}
+        <div className="border-t border-primary my-6" />
+
+
         <div className="md:hidden flex justify-center gap-4 mt-4">
           {social.map((it, i) => (
             <a

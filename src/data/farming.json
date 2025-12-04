@@ -90,6 +90,7 @@
       "phone": "+91-9988776655",
       "address": "Farm Lane, Countryside"
     },
+
     "services": {
       "top_heading": [
         {
@@ -97,6 +98,7 @@
           "text": "Cultivating Innovation, Growing the Future, From Our Farm to Your Table, and Where Quality Harvest Meets Your Needs"
         }
       ],
+
       "cards": [
         {
           "img": "./agri.webp",
@@ -111,6 +113,98 @@
           "para": "These platforms serve as a single window for information on various government policies, regulations, subsidies, and programs relevant to the agricultural sector, helping farmers access available support.",
           "btn": "get demo",
           "alignment": "right"
+        }
+      ],
+
+      "defaultVariant": "v1",
+
+      "variants": [
+        {
+          "key": "v1",
+          "label": "Farming — Classic cards (OLD DATA)",
+          "layout": "cards-classic",
+
+          "top_heading": [
+            {
+              "h_1": "Services",
+              "text": "Cultivating Innovation, Growing the Future, From Our Farm to Your Table, and Where Quality Harvest Meets Your Needs"
+            }
+          ],
+
+          "cards": [
+            {
+              "img": "images/farming/agri.webp",
+              "h_1": "Expert Advisory and Educational Resources",
+              "para": "Platforms offer educational content like tutorials, articles, and webinars on modern farming techniques, crop management, soil health, and sustainable practices. Farmers can also access expert advice and post questions in online forums, fostering a community for knowledge exchange.",
+              "btn": "get demo",
+              "alignment": "left"
+            },
+            {
+              "img": "images/farming/agri1.jpg",
+              "h_1": "Government Schemes and Subsidies",
+              "para": "These platforms serve as a single window for information on various government policies, regulations, subsidies, and programs relevant to the agricultural sector, helping farmers access available support.",
+              "btn": "get demo",
+              "alignment": "right"
+            }
+          ]
+        },
+
+        {
+          "key": "v2",
+          "label": "Farming — Grid Features",
+          "layout": "grid-cards",
+          "items": [
+            {
+              "title": "Crop Advisory",
+              "description": "Get expert recommendations on crop selection, pest control, and soil health.",
+              "image": "/agri.webp",
+              "href": "/crop-advisory"
+            },
+            {
+              "title": "Weather Forecasting",
+              "description": "Real-time weather updates to plan irrigation and harvesting.",
+              "image": "/weather.jpg",
+              "href": "/weather"
+            },
+            {
+              "title": "Government Schemes",
+              "description": "Access updated information on subsidies and agricultural programs.",
+              "image": "/agri1.jpg",
+              "href": "/schemes"
+            },
+            {
+              "title": "Market Price Updates",
+              "description": "Track real-time mandi prices for better selling decisions.",
+              "image": "/market.jpg",
+              "href": "/market-prices"
+            }
+          ]
+        },
+
+        {
+          "key": "v3",
+          "label": "Farming — Minimal List with CTA",
+          "layout": "list-cta",
+          "items": [
+            {
+              "title": "Soil Testing",
+              "description": "Quick soil analysis for accurate crop planning.",
+              "href": "/soil-testing",
+              "icon": "flask"
+            },
+            {
+              "title": "Farming Tutorials",
+              "description": "Learn modern techniques through videos and articles.",
+              "href": "/tutorials",
+              "icon": "book-open"
+            },
+            {
+              "title": "Apply for Subsidies",
+              "description": "Find and apply for government agricultural schemes.",
+              "href": "/apply-subsidy",
+              "icon": "landmark"
+            }
+          ]
         }
       ]
     },
@@ -194,6 +288,7 @@
         }
       ]
     },
+
     "footer": {
       "columns": {
         "company": [
@@ -256,7 +351,7 @@
           "label": "Farming — Green Minimal (default)",
           "layout": "columns-standard",
           "logo": "/farms.jpg",
-          "backgroundImage": "/farms.jpg",
+          "backgroundImage": "/images/farming/farms.jpg",
           "colorScheme": "green",
           "columns": {
             "company": [
@@ -304,7 +399,7 @@
           "label": "Farming — Logo-left emphasis",
           "layout": "logo-left-emphasis",
           "logo": "/farms.jpg",
-          "backgroundImage": "/farms.jpg",
+          "backgroundImage": "/images/farming/farms.jpg",
           "colorScheme": "green-contrast",
           "columns": {
             "support": [
@@ -340,8 +435,8 @@
           "key": "v3",
           "label": "Farming — Minimal three-column row",
           "layout": "row-minimal",
-          "logo": "/farms.jpg",
-          "backgroundImage": "/farms.jpg",
+          "logo": "/agri.webp",
+          "backgroundImage": "/images/farming/farms.jpg",
           "colorScheme": "green-minimal",
           "columns": {
             "left": [
