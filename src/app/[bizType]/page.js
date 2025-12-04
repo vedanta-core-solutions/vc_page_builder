@@ -8,10 +8,7 @@ import Services from "../../components/Services.jsx";
 import ContentSection from "@/components/ContentSection";
 import Footer from "../../components/Footer.jsx";
 
-
-
 export default async function BizPage({ params, searchParams }) {
-
   // const { bizType } = await params;
   // const sp = await searchParams;
 
@@ -37,12 +34,16 @@ export default async function BizPage({ params, searchParams }) {
 
   const { theme, content } = config;
 
-  const initialSelectionMap = getInitialSelectionMap(content, sp );
+  const initialSelectionMap = getInitialSelectionMap(content, sp);
 
   return (
     <ConfigProviderClient theme={theme}>
-      <ContentProvider content={content} initialSelectionMap={initialSelectionMap}>
+      <ContentProvider
+        content={content}
+        initialSelectionMap={initialSelectionMap}
+      >
         <Header />
+
         <Hero />
         <Services />
         <ContentSection />
@@ -51,5 +52,3 @@ export default async function BizPage({ params, searchParams }) {
     </ConfigProviderClient>
   );
 }
-
-
