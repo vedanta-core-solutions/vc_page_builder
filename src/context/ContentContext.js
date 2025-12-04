@@ -20,55 +20,30 @@
 
 "use client";
 import React, { createContext, useContext, useEffect, useState } from "react";
+import { getInitialSelectionMap } from "@/lib/getInitialSelectionMap";
 
 const ContentContext = createContext(null);
-
-function normalizeContent(input) {
-  if (!input) return {};
-  if (
-    input.content &&
-    (input.content.navbar || input.content.hero || input.content.footer)
-  ) {
-    return input.content;
-  }
-  return input;
-}
-
-function computeDefaultsFromContent(content) {
-  if (!content) return {};
-  const defaults = {};
-  ["navbar", "hero", "footer"].forEach((key) => {
-    const comp = content[key];
-    if (!comp) return;
-    defaults[key] =
-      comp.defaultVariant || (comp.variants && comp.variants[0]?.key) || null;
-  });
-  return defaults;
-}
 
 export function ContentProvider({ children, content, initialSelectionMap }) {
   const raw = content || {};
 
-  const initial = normalizeContent(raw);
-
-  const [internalContent, setInternalContent] = useState(initial);
+  const [internalContent, setInternalContent] = useState(raw);
 
   const initialMap =
     initialSelectionMap && Object.keys(initialSelectionMap).length > 0
       ? initialSelectionMap
-      : computeDefaultsFromContent(initial);
+      : getInitialSelectionMap(raw, null);
 
   const [selectionMap, setSelectionMap] = useState(() => initialMap);
 
   useEffect(() => {
-    setInternalContent(normalizeContent(raw));
+    setInternalContent(raw);
   }, [raw]);
 
   useEffect(() => {
     if (!internalContent) return;
     setSelectionMap((prev) => {
-      const defaults = computeDefaultsFromContent(internalContent);
-
+      const defaults = getInitialSelectionMap(internalContent, null);
       const merged = { ...defaults, ...prev };
       return merged;
     });

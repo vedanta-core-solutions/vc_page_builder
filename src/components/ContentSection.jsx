@@ -16,7 +16,12 @@ const ControlPanel = ({
   currentPattern,
   setPattern,
   currentFeatureStyle,
+  showIcons,
+  setShowIcons,
+  featuresAccordion,
+  setFeaturesAccordion,
   setFeatureStyle,
+
   originalSettings,
 }) => {
   const variants = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -149,6 +154,35 @@ const ControlPanel = ({
         </div>
       </div>
 
+      <div className="mb-6">
+        <label className="block text-sm font-semibold mb-2">Show Icons</label>
+
+        <button
+          onClick={() => setShowIcons(!showIcons)}
+          className={`w-full p-2 rounded-md border transition-all ${
+            showIcons ? "bg-blue-600  text-white " : "bg-white text-gray-800"
+          }`}
+        >
+          {showIcons ? "ON" : "OFF"}
+        </button>
+      </div>
+      {/* idhar hai feature accordion iske upar hai showicons ka  */}
+      <div className="mb-6">
+        <label className="block text-sm font-semibold mb-2">
+          FeaturesAccordion
+        </label>
+        <button
+          onClick={() => setFeaturesAccordion(!featuresAccordion)}
+          className={`w-full p-2 rounded-md border transition-all ${
+            featuresAccordion
+              ? "bg-blue-600 text-white"
+              : "bg-white text-gray-800"
+          }`}
+        >
+          {featuresAccordion ? "ON" : "OFF"}
+        </button>
+      </div>
+
       {/* Reset Button */}
       <button
         onClick={handleReset}
@@ -175,6 +209,12 @@ export default function ContentSection() {
   );
   const [currentFeatureStyle, setFeatureStyle] = useState(
     section.variantSettings?.featureStyle || "card"
+  );
+  const [showIcons, setShowIcons] = useState(
+    section.variantSettings?.showIcons ?? true
+  );
+  const [featuresAccordion, setFeaturesAccordion] = useState(
+    section.variantSettings?.featuresAccordion ?? true
   );
 
   const { features, pricing, pricingAccess, settings, heading, subheading } =
@@ -230,6 +270,8 @@ export default function ContentSection() {
         ...section.variantSettings,
         bgPattern: currentPattern,
         featureStyle: currentFeatureStyle,
+        showIcons: showIcons,
+        featuresAsAccordion: featuresAccordion,
       };
 
       return {
@@ -873,7 +915,7 @@ export default function ContentSection() {
       case 9:
         return <Variant9 />;
       default:
-        return <Variant2 />;
+        return <Variant6 />;
     }
   };
 
@@ -951,6 +993,10 @@ export default function ContentSection() {
         currentFeatureStyle={currentFeatureStyle}
         setFeatureStyle={setFeatureStyle}
         originalSettings={section}
+        showIcons={showIcons}
+        setShowIcons={setShowIcons}
+        featuresAccordion={featuresAccordion}
+        setFeaturesAccordion={setFeaturesAccordion}
       />
     </div>
   );
