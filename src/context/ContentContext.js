@@ -25,7 +25,7 @@
 
 'use client';
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { getInitialSelectionMap } from "@/lib/getInitialSelectionMap";
+import { getInitialSelectionMap } from "../lib/getInitialSelectionMap";
 
 const ContentContext = createContext(null);
 
