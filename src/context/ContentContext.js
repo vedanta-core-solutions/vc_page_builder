@@ -113,8 +113,5 @@ export function useContent() {
     setContent: () => {},
   };
 }
-<<<<<<< HEAD
 
 // “ContentContext centralizes content + variant selection with server defaults, client overrides, and safe persistence, ensuring all page components stay in sync without hydration issues.”
-=======
->>>>>>> d7b88d32685274cd848d83c78a59fb5c6236b889
