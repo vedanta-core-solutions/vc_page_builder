@@ -3,11 +3,25 @@
     "navbar": {
       "logo": "/girl.jpeg",
       "navlink": [
-        { "label": "Home", "href": "/" },
-        { "label": "About", "href": "/about" },
-        { "label": "Services", "href": "/services" }
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "About",
+          "href": "/about"
+        },
+        {
+          "label": "Services",
+          "href": "/services"
+        }
       ],
-      "button": [{ "label": "Cart", "href": "/cart" }],
+      "button": [
+        {
+          "label": "Cart",
+          "href": "/cart"
+        }
+      ],
       "defaultVariant": "v1",
       "variants": [
         {
@@ -15,11 +29,25 @@
           "label": "Legacy (Logo left — links middle — CTA right)",
           "logo": "/girl.jpeg",
           "navlink": [
-            { "label": "Home", "href": "/" },
-            { "label": "About", "href": "/about" },
-            { "label": "Services", "href": "/services" }
+            {
+              "label": "Home",
+              "href": "/"
+            },
+            {
+              "label": "About",
+              "href": "/about"
+            },
+            {
+              "label": "Services",
+              "href": "/services"
+            }
           ],
-          "button": [{ "label": "Cart", "href": "/cart" }],
+          "button": [
+            {
+              "label": "Cart",
+              "href": "/cart"
+            }
+          ],
           "layout": "logo-left links-center button-right"
         },
         {
@@ -27,11 +55,25 @@
           "label": "Centered logo — links left — CTA right",
           "logo": "/girl.jpeg",
           "navlink": [
-            { "label": "Home", "href": "/" },
-            { "label": "Menu", "href": "/menu" },
-            { "label": "About", "href": "/about" }
+            {
+              "label": "Home",
+              "href": "/"
+            },
+            {
+              "label": "Menu",
+              "href": "/menu"
+            },
+            {
+              "label": "About",
+              "href": "/about"
+            }
           ],
-          "button": [{ "label": "Order Online", "href": "/order" }],
+          "button": [
+            {
+              "label": "Order Online",
+              "href": "/order"
+            }
+          ],
           "layout": "logo-center links-left button-right"
         },
         {
@@ -39,16 +81,29 @@
           "label": "Hamburger left — logo center — CTA right",
           "logo": "/girl.jpeg",
           "navlink": [
-            { "label": "Menu", "href": "/menu" },
-            { "label": "Services", "href": "/services" },
-            { "label": "Contact", "href": "/contact" }
+            {
+              "label": "Menu",
+              "href": "/menu"
+            },
+            {
+              "label": "Services",
+              "href": "/services"
+            },
+            {
+              "label": "Contact",
+              "href": "/contact"
+            }
           ],
-          "button": [{ "label": "Book Now", "href": "/booking" }],
+          "button": [
+            {
+              "label": "Book Now",
+              "href": "/booking"
+            }
+          ],
           "layout": "hamburger-left logo-center links-hidden button-right"
         }
       ]
     },
-
     "hero": {
       "branding": "RetailCo",
       "tagline": "Everything You Need.",
@@ -56,7 +111,11 @@
       "highlight": "",
       "subtitle": "Best products at best prices",
       "description": "Discover premium products, great discounts, and everything you need under one roof.",
-      "badges": ["Top Brands", "Great Discounts", "Trusted Quality"],
+      "badges": [
+        "Top Brands",
+        "Great Discounts",
+        "Trusted Quality"
+      ],
       "rating": {
         "iconPath": "",
         "value": "",
@@ -64,9 +123,9 @@
       },
       "button": [],
       "ctaNote": "",
-      "image": "/t-shirt.png"
+      "image": "/t-shirt.png",
+      "defaultVariant": "v1"
     },
-
     "products": [
       {
         "name": "Product A",
@@ -81,12 +140,6 @@
         "price": "1299"
       }
     ],
-    "about": "We provide quality retail products across categories.",
-    "contact": {
-      "phone": "+91-9876543210",
-      "address": "Retail Street, City"
-    },
-
     "services": {
       "top_heading": [
         {
@@ -94,7 +147,6 @@
           "text": "buying and selling of goods and services over the Internet"
         }
       ],
-
       "cards": [
         {
           "img": "/images/retail/reatil1.png",
@@ -111,22 +163,18 @@
           "alignment": "right"
         }
       ],
-
       "defaultVariant": "v1",
-
       "variants": [
         {
           "key": "v1",
           "label": "Retail — Classic cards (OLD DATA)",
           "layout": "cards-classic",
-
           "top_heading": [
             {
               "h_1": "Services",
               "text": "buying and selling of goods and services over the Internet"
             }
           ],
-
           "cards": [
             {
               "img": "/images/retail/retail.png",
@@ -144,7 +192,6 @@
             }
           ]
         },
-
         {
           "key": "v2",
           "label": "Retail — Grid Features",
@@ -176,7 +223,6 @@
             }
           ]
         },
-
         {
           "key": "v3",
           "label": "Retail — Minimal List with CTA",
@@ -204,7 +250,6 @@
         }
       ]
     },
-
     "contentSection": {
       "heading": "Power Your Online Store",
       "subheading": "Select the perfect e-commerce plan to grow your retail business. Scale as you go.",
@@ -234,7 +279,10 @@
           "price": "$19",
           "period": "/month",
           "description": "Essential features to launch your online store.",
-          "button": { "label": "Get Started", "href": "/signup" },
+          "button": {
+            "label": "Get Started",
+            "href": "/signup"
+          },
           "popular": false,
           "features": {
             "Product Listings (Unlimited)": true,
@@ -252,7 +300,10 @@
           "price": "$69",
           "period": "/month",
           "description": "Everything you need to run and grow a successful business.",
-          "button": { "label": "Start Free Trial", "href": "/signup" },
+          "button": {
+            "label": "Start Free Trial",
+            "href": "/signup"
+          },
           "popular": true,
           "features": {
             "Product Listings (Unlimited)": true,
@@ -270,7 +321,10 @@
           "price": "Custom",
           "period": "",
           "description": "A fully tailored solution for large-scale retailers.",
-          "button": { "label": "Contact Sales", "href": "/contact" },
+          "button": {
+            "label": "Contact Sales",
+            "href": "/contact"
+          },
           "popular": false,
           "features": {
             "Product Listings (Unlimited)": true,
@@ -285,26 +339,61 @@
         }
       ]
     },
-
     "footer": {
       "columns": {
         "company": [
-          { "label": "About Our Retail Business", "href": "/about" },
-          { "label": "Our Products", "href": "/products" },
-          { "label": "Trending Collections", "href": "/collections" },
-          { "label": "Return & Exchange Info", "href": "/returns-exchange" }
+          {
+            "label": "About Our Retail Business",
+            "href": "/about"
+          },
+          {
+            "label": "Our Products",
+            "href": "/products"
+          },
+          {
+            "label": "Trending Collections",
+            "href": "/collections"
+          },
+          {
+            "label": "Return & Exchange Info",
+            "href": "/returns-exchange"
+          }
         ],
         "support": [
-          { "label": "Customer Care", "href": "/customer-care" },
-          { "label": "Warranty Support", "href": "/warranty-support" },
-          { "label": "Order Tracking", "href": "/order-tracking" },
-          { "label": "Returns & Refunds", "href": "/returns-refunds" }
+          {
+            "label": "Customer Care",
+            "href": "/customer-care"
+          },
+          {
+            "label": "Warranty Support",
+            "href": "/warranty-support"
+          },
+          {
+            "label": "Order Tracking",
+            "href": "/order-tracking"
+          },
+          {
+            "label": "Returns & Refunds",
+            "href": "/returns-refunds"
+          }
         ],
         "legal": [
-          { "label": "Terms of Service", "href": "/terms" },
-          { "label": "Privacy Policy", "href": "/privacy" },
-          { "label": "Warranty Terms", "href": "/warranty-terms" },
-          { "label": "Consumer Rights", "href": "/consumer-rights" }
+          {
+            "label": "Terms of Service",
+            "href": "/terms"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "/privacy"
+          },
+          {
+            "label": "Warranty Terms",
+            "href": "/warranty-terms"
+          },
+          {
+            "label": "Consumer Rights",
+            "href": "/consumer-rights"
+          }
         ],
         "social": [
           {
@@ -348,22 +437,58 @@
           "colorScheme": "teal",
           "columns": {
             "company": [
-              { "label": "About Our Retail Business", "href": "/about" },
-              { "label": "Our Products", "href": "/products" },
-              { "label": "Trending Collections", "href": "/collections" },
-              { "label": "Return & Exchange Info", "href": "/returns-exchange" }
+              {
+                "label": "About Our Retail Business",
+                "href": "/about"
+              },
+              {
+                "label": "Our Products",
+                "href": "/products"
+              },
+              {
+                "label": "Trending Collections",
+                "href": "/collections"
+              },
+              {
+                "label": "Return & Exchange Info",
+                "href": "/returns-exchange"
+              }
             ],
             "support": [
-              { "label": "Customer Care", "href": "/customer-care" },
-              { "label": "Warranty Support", "href": "/warranty-support" },
-              { "label": "Order Tracking", "href": "/order-tracking" },
-              { "label": "Returns & Refunds", "href": "/returns-refunds" }
+              {
+                "label": "Customer Care",
+                "href": "/customer-care"
+              },
+              {
+                "label": "Warranty Support",
+                "href": "/warranty-support"
+              },
+              {
+                "label": "Order Tracking",
+                "href": "/order-tracking"
+              },
+              {
+                "label": "Returns & Refunds",
+                "href": "/returns-refunds"
+              }
             ],
             "legal": [
-              { "label": "Terms of Service", "href": "/terms" },
-              { "label": "Privacy Policy", "href": "/privacy" },
-              { "label": "Warranty Terms", "href": "/warranty-terms" },
-              { "label": "Consumer Rights", "href": "/consumer-rights" }
+              {
+                "label": "Terms of Service",
+                "href": "/terms"
+              },
+              {
+                "label": "Privacy Policy",
+                "href": "/privacy"
+              },
+              {
+                "label": "Warranty Terms",
+                "href": "/warranty-terms"
+              },
+              {
+                "label": "Consumer Rights",
+                "href": "/consumer-rights"
+              }
             ],
             "social": [
               {
@@ -397,7 +522,6 @@
             "builtWith": "Built with VCBuilder."
           }
         },
-
         {
           "key": "v2",
           "label": "Retail — Logo-left emphasis",
@@ -407,17 +531,38 @@
           "colorScheme": "teal-contrast",
           "columns": {
             "support": [
-              { "label": "Customer Care", "href": "/customer-care" },
-              { "label": "Warranty Support", "href": "/warranty-support" },
-              { "label": "Order Tracking", "href": "/order-tracking" }
+              {
+                "label": "Customer Care",
+                "href": "/customer-care"
+              },
+              {
+                "label": "Warranty Support",
+                "href": "/warranty-support"
+              },
+              {
+                "label": "Order Tracking",
+                "href": "/order-tracking"
+              }
             ],
             "company": [
-              { "label": "Our Products", "href": "/products" },
-              { "label": "Trending Collections", "href": "/collections" }
+              {
+                "label": "Our Products",
+                "href": "/products"
+              },
+              {
+                "label": "Trending Collections",
+                "href": "/collections"
+              }
             ],
             "legal": [
-              { "label": "Privacy Policy", "href": "/privacy" },
-              { "label": "Warranty Terms", "href": "/warranty-terms" }
+              {
+                "label": "Privacy Policy",
+                "href": "/privacy"
+              },
+              {
+                "label": "Warranty Terms",
+                "href": "/warranty-terms"
+              }
             ],
             "social": [
               {
@@ -443,7 +588,6 @@
             "builtWith": "Built with VCBuilder."
           }
         },
-
         {
           "key": "v3",
           "label": "Retail — Minimal row (3-column layout)",
@@ -453,17 +597,38 @@
           "colorScheme": "teal-minimal",
           "columns": {
             "left": [
-              { "label": "Our Products", "href": "/products" },
-              { "label": "Trending Collections", "href": "/collections" }
+              {
+                "label": "Our Products",
+                "href": "/products"
+              },
+              {
+                "label": "Trending Collections",
+                "href": "/collections"
+              }
             ],
             "middle": [
-              { "label": "About Our Retail Business", "href": "/about" },
-              { "label": "Warranty Support", "href": "/warranty-support" }
+              {
+                "label": "About Our Retail Business",
+                "href": "/about"
+              },
+              {
+                "label": "Warranty Support",
+                "href": "/warranty-support"
+              }
             ],
             "right": [
-              { "label": "Order Tracking", "href": "/order-tracking" },
-              { "label": "Customer Care", "href": "/customer-care" },
-              { "label": "Contact", "href": "/contact" }
+              {
+                "label": "Order Tracking",
+                "href": "/order-tracking"
+              },
+              {
+                "label": "Customer Care",
+                "href": "/customer-care"
+              },
+              {
+                "label": "Contact",
+                "href": "/contact"
+              }
             ],
             "social": [
               {

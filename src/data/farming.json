@@ -3,13 +3,33 @@
     "navbar": {
       "logo": "/girl.jpeg",
       "navlink": [
-        { "label": "Home", "href": "/" },
-        { "label": "Products", "href": "/products" },
-        { "label": "Services", "href": "/services" },
-        { "label": "About", "href": "/about" },
-        { "label": "Contact", "href": "/contact" }
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Products",
+          "href": "/products"
+        },
+        {
+          "label": "Services",
+          "href": "/services"
+        },
+        {
+          "label": "About",
+          "href": "/about"
+        },
+        {
+          "label": "Contact",
+          "href": "/contact"
+        }
       ],
-      "button": [{ "label": "Contact Us", "href": "/contact" }],
+      "button": [
+        {
+          "label": "Contact Us",
+          "href": "/contact"
+        }
+      ],
       "defaultVariant": "v1",
       "variants": [
         {
@@ -17,13 +37,33 @@
           "label": "Legacy (Logo left — links middle — CTA right)",
           "logo": "/girl.jpeg",
           "navlink": [
-            { "label": "Home", "href": "/" },
-            { "label": "Products", "href": "/products" },
-            { "label": "Services", "href": "/services" },
-            { "label": "About", "href": "/about" },
-            { "label": "Contact", "href": "/contact" }
+            {
+              "label": "Home",
+              "href": "/"
+            },
+            {
+              "label": "Products",
+              "href": "/products"
+            },
+            {
+              "label": "Services",
+              "href": "/services"
+            },
+            {
+              "label": "About",
+              "href": "/about"
+            },
+            {
+              "label": "Contact",
+              "href": "/contact"
+            }
           ],
-          "button": [{ "label": "Contact Us", "href": "/contact" }],
+          "button": [
+            {
+              "label": "Contact Us",
+              "href": "/contact"
+            }
+          ],
           "layout": "logo-left links-center button-right"
         },
         {
@@ -31,12 +71,29 @@
           "label": "Centered logo — links left — CTA right",
           "logo": "/girl.jpeg",
           "navlink": [
-            { "label": "Home", "href": "/" },
-            { "label": "Products", "href": "/products" },
-            { "label": "Services", "href": "/services" },
-            { "label": "About", "href": "/about" }
+            {
+              "label": "Home",
+              "href": "/"
+            },
+            {
+              "label": "Products",
+              "href": "/products"
+            },
+            {
+              "label": "Services",
+              "href": "/services"
+            },
+            {
+              "label": "About",
+              "href": "/about"
+            }
           ],
-          "button": [{ "label": "Contact Us", "href": "/contact" }],
+          "button": [
+            {
+              "label": "Contact Us",
+              "href": "/contact"
+            }
+          ],
           "layout": "logo-center links-left button-right"
         },
         {
@@ -44,16 +101,29 @@
           "label": "Hamburger left — logo center — CTA right (mobile-only)",
           "logo": "/girl.jpeg",
           "navlink": [
-            { "label": "Products", "href": "/products" },
-            { "label": "Services", "href": "/services" },
-            { "label": "Contact", "href": "/contact" }
+            {
+              "label": "Products",
+              "href": "/products"
+            },
+            {
+              "label": "Services",
+              "href": "/services"
+            },
+            {
+              "label": "Contact",
+              "href": "/contact"
+            }
           ],
-          "button": [{ "label": "Contact Us", "href": "/contact" }],
+          "button": [
+            {
+              "label": "Contact Us",
+              "href": "/contact"
+            }
+          ],
           "layout": "hamburger-left logo-center links-hidden button-right"
         }
       ]
     },
-
     "hero": {
       "branding": "AgriCare",
       "tagline": "Grow Better. Farm Smarter.",
@@ -73,7 +143,8 @@
       },
       "button": [],
       "ctaNote": "",
-      "image": "/farmmm.jpg"
+      "image": "/vegitable.png",
+      "defaultVariant": "v1"
     },
     "products": [
       {
@@ -85,12 +156,6 @@
         "price": "₹950"
       }
     ],
-    "about": "We support farmers with high-quality supplies and professional services.",
-    "contact": {
-      "phone": "+91-9988776655",
-      "address": "Farm Lane, Countryside"
-    },
-
     "services": {
       "top_heading": [
         {
@@ -98,7 +163,6 @@
           "text": "Cultivating Innovation, Growing the Future, From Our Farm to Your Table, and Where Quality Harvest Meets Your Needs"
         }
       ],
-
       "cards": [
         {
           "img": "./agri.webp",
@@ -115,22 +179,18 @@
           "alignment": "right"
         }
       ],
-
       "defaultVariant": "v1",
-
       "variants": [
         {
           "key": "v1",
           "label": "Farming — Classic cards (OLD DATA)",
           "layout": "cards-classic",
-
           "top_heading": [
             {
               "h_1": "Services",
               "text": "Cultivating Innovation, Growing the Future, From Our Farm to Your Table, and Where Quality Harvest Meets Your Needs"
             }
           ],
-
           "cards": [
             {
               "img": "images/farming/agri.webp",
@@ -148,7 +208,6 @@
             }
           ]
         },
-
         {
           "key": "v2",
           "label": "Farming — Grid Features",
@@ -180,7 +239,6 @@
             }
           ]
         },
-
         {
           "key": "v3",
           "label": "Farming — Minimal List with CTA",
@@ -236,7 +294,10 @@
           "price": "$0",
           "period": "/month",
           "description": "Perfect for small farms getting started.",
-          "button": { "label": "Get Started", "href": "/signup" },
+          "button": {
+            "label": "Get Started",
+            "href": "/signup"
+          },
           "popular": false,
           "features": {
             "Crop Cycle Management": true,
@@ -254,7 +315,10 @@
           "price": "$49",
           "period": "/month",
           "description": "Ideal for growing commercial farms.",
-          "button": { "label": "Start Free Trial", "href": "/signup" },
+          "button": {
+            "label": "Start Free Trial",
+            "href": "/signup"
+          },
           "popular": true,
           "features": {
             "Crop Cycle Management": true,
@@ -272,7 +336,10 @@
           "price": "Custom",
           "period": "",
           "description": "All-inclusive solution for large-scale agribusiness.",
-          "button": { "label": "Contact Sales", "href": "/contact" },
+          "button": {
+            "label": "Contact Sales",
+            "href": "/contact"
+          },
           "popular": false,
           "features": {
             "Crop Cycle Management": true,
@@ -287,25 +354,57 @@
         }
       ]
     },
-
     "footer": {
       "columns": {
         "company": [
-          { "label": "About Our Agriculture Business", "href": "/about" },
-          { "label": "Our Team", "href": "/team" },
-          { "label": "Crop & Livestock Portfolio", "href": "/portfolio" },
-          { "label": "Research & Development", "href": "/research" }
+          {
+            "label": "About Our Agriculture Business",
+            "href": "/about"
+          },
+          {
+            "label": "Our Team",
+            "href": "/team"
+          },
+          {
+            "label": "Crop & Livestock Portfolio",
+            "href": "/portfolio"
+          },
+          {
+            "label": "Research & Development",
+            "href": "/research"
+          }
         ],
         "support": [
-          { "label": "Farming Consultation Support", "href": "/consultation" },
-          { "label": "Field Visit Scheduling", "href": "/field-visits" },
-          { "label": "Agricultural Training Guides", "href": "/training" },
-          { "label": "Soil & Water Management", "href": "/soil-water" }
+          {
+            "label": "Farming Consultation Support",
+            "href": "/consultation"
+          },
+          {
+            "label": "Field Visit Scheduling",
+            "href": "/field-visits"
+          },
+          {
+            "label": "Agricultural Training Guides",
+            "href": "/training"
+          },
+          {
+            "label": "Soil & Water Management",
+            "href": "/soil-water"
+          }
         ],
         "legal": [
-          { "label": "Farm Policy Agreement", "href": "/farm-policy" },
-          { "label": "Data & Farming Privacy", "href": "/privacy" },
-          { "label": "Refund & Returns Policy", "href": "/refunds" },
+          {
+            "label": "Farm Policy Agreement",
+            "href": "/farm-policy"
+          },
+          {
+            "label": "Data & Farming Privacy",
+            "href": "/privacy"
+          },
+          {
+            "label": "Refund & Returns Policy",
+            "href": "/refunds"
+          },
           {
             "label": "Sustainable Farming Commitment",
             "href": "/sustainability"
@@ -342,7 +441,6 @@
         "text": "GreenHarvest Farms. All rights reserved.",
         "builtWith": "Built with VCBuilder."
       },
-
       "defaultVariant": "v1",
       "variants": [
         {
@@ -354,24 +452,54 @@
           "colorScheme": "green",
           "columns": {
             "company": [
-              { "label": "About Our Agriculture Business", "href": "/about" },
-              { "label": "Our Team", "href": "/team" },
-              { "label": "Crop & Livestock Portfolio", "href": "/portfolio" },
-              { "label": "Research & Development", "href": "/research" }
+              {
+                "label": "About Our Agriculture Business",
+                "href": "/about"
+              },
+              {
+                "label": "Our Team",
+                "href": "/team"
+              },
+              {
+                "label": "Crop & Livestock Portfolio",
+                "href": "/portfolio"
+              },
+              {
+                "label": "Research & Development",
+                "href": "/research"
+              }
             ],
             "support": [
               {
                 "label": "Farming Consultation Support",
                 "href": "/consultation"
               },
-              { "label": "Field Visit Scheduling", "href": "/field-visits" },
-              { "label": "Agricultural Training Guides", "href": "/training" },
-              { "label": "Soil & Water Management", "href": "/soil-water" }
+              {
+                "label": "Field Visit Scheduling",
+                "href": "/field-visits"
+              },
+              {
+                "label": "Agricultural Training Guides",
+                "href": "/training"
+              },
+              {
+                "label": "Soil & Water Management",
+                "href": "/soil-water"
+              }
             ],
             "legal": [
-              { "label": "Farm Policy Agreement", "href": "/farm-policy" },
-              { "label": "Data & Farming Privacy", "href": "/privacy" },
-              { "label": "Refund & Returns Policy", "href": "/refunds" },
+              {
+                "label": "Farm Policy Agreement",
+                "href": "/farm-policy"
+              },
+              {
+                "label": "Data & Farming Privacy",
+                "href": "/privacy"
+              },
+              {
+                "label": "Refund & Returns Policy",
+                "href": "/refunds"
+              },
               {
                 "label": "Sustainable Farming Commitment",
                 "href": "/sustainability"
@@ -402,17 +530,38 @@
           "colorScheme": "green-contrast",
           "columns": {
             "support": [
-              { "label": "Field Visit Scheduling", "href": "/field-visits" },
-              { "label": "Agricultural Training Guides", "href": "/training" },
-              { "label": "Soil & Water Management", "href": "/soil-water" }
+              {
+                "label": "Field Visit Scheduling",
+                "href": "/field-visits"
+              },
+              {
+                "label": "Agricultural Training Guides",
+                "href": "/training"
+              },
+              {
+                "label": "Soil & Water Management",
+                "href": "/soil-water"
+              }
             ],
             "company": [
-              { "label": "Our Team", "href": "/team" },
-              { "label": "Crop & Livestock Portfolio", "href": "/portfolio" }
+              {
+                "label": "Our Team",
+                "href": "/team"
+              },
+              {
+                "label": "Crop & Livestock Portfolio",
+                "href": "/portfolio"
+              }
             ],
             "legal": [
-              { "label": "Farm Policy Agreement", "href": "/farm-policy" },
-              { "label": "Data & Farming Privacy", "href": "/privacy" }
+              {
+                "label": "Farm Policy Agreement",
+                "href": "/farm-policy"
+              },
+              {
+                "label": "Data & Farming Privacy",
+                "href": "/privacy"
+              }
             ],
             "social": [
               {
@@ -439,17 +588,38 @@
           "colorScheme": "green-minimal",
           "columns": {
             "left": [
-              { "label": "Crop & Livestock Portfolio", "href": "/portfolio" },
-              { "label": "Order Seeds", "href": "/order-seeds" }
+              {
+                "label": "Crop & Livestock Portfolio",
+                "href": "/portfolio"
+              },
+              {
+                "label": "Order Seeds",
+                "href": "/order-seeds"
+              }
             ],
             "middle": [
-              { "label": "About Our Farm", "href": "/about" },
-              { "label": "Research & Development", "href": "/research" }
+              {
+                "label": "About Our Farm",
+                "href": "/about"
+              },
+              {
+                "label": "Research & Development",
+                "href": "/research"
+              }
             ],
             "right": [
-              { "label": "Field Visit Scheduling", "href": "/field-visits" },
-              { "label": "Soil & Water Management", "href": "/soil-water" },
-              { "label": "Contact Us", "href": "/contact" }
+              {
+                "label": "Field Visit Scheduling",
+                "href": "/field-visits"
+              },
+              {
+                "label": "Soil & Water Management",
+                "href": "/soil-water"
+              },
+              {
+                "label": "Contact Us",
+                "href": "/contact"
+              }
             ],
             "social": [
               {

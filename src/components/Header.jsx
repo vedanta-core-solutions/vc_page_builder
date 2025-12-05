@@ -81,12 +81,7 @@ export default function Header() {
   const variantData = navbarRoot?.variants?.find(v => v.key === selectedKey);
 
   // canonical data object to pass into variant components (fallback to legacy)
-  const data = variantData || {
-    logo: navbarRoot.logo,
-    navlink: navbarRoot.navlink,
-    button: navbarRoot.button,
-    layout: 'logo-left',
-  };
+  const data = variantData || navbarRoot;
 
   // console.log('Header debug → selectedKey:', selectedKey, 'variantData:', variantData, 'data:', data);
 
