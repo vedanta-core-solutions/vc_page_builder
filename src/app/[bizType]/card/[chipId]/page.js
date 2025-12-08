@@ -5,7 +5,6 @@ import CardNotFound from "@/components/Nfc/CardNotFound";
 
 export default async function Page({ params }) {
   const { bizType, chipId } = await params;
-    console.log("jack", await params)
   // 1) Load Tenant Theme
   const { theme } = await loadConfig(bizType);
 
