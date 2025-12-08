@@ -10,10 +10,7 @@ import Footer from "@/components/Footer.jsx";
 
 
 export default async function BizPage({ params, searchParams }) {
-  // const { bizType } = await params;
-  // const sp = await searchParams;
-
-  // 3
+  
   const resolvedParams =
     typeof params?.then === "function" ? await params : params;
   const resolvedSearchParams =
@@ -23,7 +20,7 @@ export default async function BizPage({ params, searchParams }) {
 
   const { bizType } = resolvedParams;
   const sp = resolvedSearchParams;
-  // 3
+
 
   const config = await loadConfig(bizType);
 
