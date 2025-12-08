@@ -18,11 +18,6 @@
 
 // 3
 
-<<<<<<< HEAD
-'use client';
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import { getInitialSelectionMap } from "../lib/getInitialSelectionMap";
-=======
 // "use client";
 // import React, { createContext, useContext, useEffect, useState } from "react";
 // import { getInitialSelectionMap } from "@/lib/getInitialSelectionMap";
@@ -129,7 +124,6 @@ import { getInitialSelectionMap } from "../lib/getInitialSelectionMap";
 "use client";
 import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { getInitialSelectionMap } from "@/lib/getInitialSelectionMap";
->>>>>>> feat/footer
 
 const ContentContext = createContext(null);
 
