@@ -46,7 +46,7 @@ export default function NfcRegisterPage() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json(response);
-        const isIdValid = data.includes(form.chipId);
+        const isIdValid = data.some(item => item.value === form.chipId);
         if (!isIdValid) {
             return alert("Put Valid ChipId!");
         }
