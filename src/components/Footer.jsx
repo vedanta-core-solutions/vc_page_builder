@@ -7,7 +7,7 @@ import FooterV1 from "./footerVariants/FooterV1";
 import FooterV2 from "./footerVariants/FooterV2";
 import FooterV3 from "./footerVariants/FooterV3";
 
-import { normalizeFooter } from "@/lib/footerUtils";
+import { normalizeFooter } from "../lib/footerUtils";
 
 /** small isPlainObject check */
 function isPlainObject(v) {
