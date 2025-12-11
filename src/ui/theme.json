@@ -4,66 +4,254 @@
       "colors": {
         "primary": "#0066FF",
         "secondary": "#1A1A1A",
-        "accent": "#FFB800",
-        "background": "#FFFFFF"
+        "background": "#FFFFFF",
+        "surface": "#F7F7F7",
+        "text": "#1A1A1A",
+        "border": "#E0E0E0"
       },
       "font": "Inter, sans-serif",
       "extras": {
-        "borderRadius": "6px",
+        "borderRadius": {
+          "sm": "4px",
+          "md": "8px",
+          "lg": "12px",
+          "xl": "16px"
+        },
+        "spacing": {
+          "xs": "4px",
+          "sm": "8px",
+          "md": "16px",
+          "lg": "24px",
+          "xl": "32px"
+        },
+        "shadow": {
+          "sm": "0 1px 2px rgba(0, 0, 0, 0.05)",
+          "md": "0 4px 6px rgba(0, 0, 0, 0.07)",
+          "lg": "0 10px 15px rgba(0, 0, 0, 0.1)"
+        },
+        "fontSize": {
+          "xs": "12px",
+          "sm": "14px",
+          "base": "16px",
+          "lg": "18px",
+          "xl": "20px",
+          "2xl": "24px",
+          "3xl": "30px"
+        },
+        "fontWeight": {
+          "normal": 400,
+          "medium": 500,
+          "semibold": 600,
+          "bold": 700
+        },
+        "transition": "all 0.2s ease",
         "buttonStyle": "rounded"
       }
     },
     "retail": {
       "colors": {
         "primary": "#3A7AFE",
-        "secondary": "#4A4A4A",
-        "accent": "#FFB200",
-        "background": "#F9FAFB",
-        "colortext": "#1F2937",
-        "colorsurface": "#FFFFFF"
+        "secondary": "#1F2937",
+        "background": "#FFFFFF",
+        "surface": "#F9FAFB",
+        "text": "#1F2937",
+        "border": "#E5E7EB"
       },
       "font": "Poppins, sans-serif",
       "extras": {
-        "cardShadow": "0 2px 6px rgba(0,0,0,0.15)",
-        "badgeStyle": "pill"
+        "borderRadius": {
+          "sm": "6px",
+          "md": "8px",
+          "lg": "12px",
+          "xl": "16px",
+          "pill": "9999px"
+        },
+        "spacing": {
+          "xs": "4px",
+          "sm": "8px",
+          "md": "16px",
+          "lg": "24px",
+          "xl": "32px"
+        },
+        "shadow": {
+          "sm": "0 1px 3px rgba(0, 0, 0, 0.08)",
+          "md": "0 4px 8px rgba(0, 0, 0, 0.1)",
+          "lg": "0 12px 24px rgba(0, 0, 0, 0.12)",
+          "card": "0 2px 6px rgba(0, 0, 0, 0.08)"
+        },
+        "fontSize": {
+          "xs": "12px",
+          "sm": "14px",
+          "base": "16px",
+          "lg": "18px",
+          "xl": "20px",
+          "2xl": "24px",
+          "3xl": "32px"
+        },
+        "fontWeight": {
+          "normal": 400,
+          "medium": 500,
+          "semibold": 600,
+          "bold": 700
+        },
+        "transition": "all 0.15s ease-in-out",
+        "badgeStyle": "pill",
+        "buttonPadding": "12px 24px"
       }
     },
     "restaurant": {
       "colors": {
-        "primary": "#d4af37",
-        "secondary": "#8b7355",
-        "accent": "#d4af37",
-        "background": "#FFF3E0",
-        "colortext": "#2c2416",
-        "colorsurface": "#4af37"
+        "primary": "#D4AF37",
+        "secondary": "#2C2416",
+        "background": "#FFFBF5",
+        "surface": "#FFF8E7",
+        "text": "#2C2416",
+        "border": "#E8D9B8"
       },
       "font": "Playfair Display, serif",
       "extras": {
+        "borderRadius": {
+          "sm": "8px",
+          "md": "12px",
+          "lg": "16px",
+          "xl": "20px"
+        },
+        "spacing": {
+          "xs": "6px",
+          "sm": "12px",
+          "md": "20px",
+          "lg": "32px",
+          "xl": "48px"
+        },
+        "shadow": {
+          "sm": "0 2px 4px rgba(44, 36, 22, 0.06)",
+          "md": "0 4px 12px rgba(44, 36, 22, 0.08)",
+          "lg": "0 8px 24px rgba(44, 36, 22, 0.12)",
+          "elegant": "0 4px 16px rgba(212, 175, 55, 0.15)"
+        },
+        "fontSize": {
+          "xs": "13px",
+          "sm": "15px",
+          "base": "17px",
+          "lg": "20px",
+          "xl": "24px",
+          "2xl": "28px",
+          "3xl": "36px"
+        },
+        "fontWeight": {
+          "normal": 400,
+          "medium": 500,
+          "semibold": 600,
+          "bold": 700
+        },
+        "fontSecondary": "Lato, sans-serif",
+        "transition": "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
         "menuStyle": "elegant",
-        "buttonCurve": "8px"
+        "buttonCurve": "12px"
       }
     },
     "farming": {
       "colors": {
         "primary": "#4CAF50",
-        "secondary": "#F54927",
-        "accent": "#8BC34A",
-        "background": "#F1F8E9"
+        "secondary": "#2C3E2D",
+        "background": "#FFFFFF",
+        "surface": "#F1F8E9",
+        "text": "#2C3E2D",
+        "border": "#C5E1A5"
       },
       "font": "Lora, serif",
       "extras": {
+        "borderRadius": {
+          "sm": "6px",
+          "md": "10px",
+          "lg": "14px",
+          "xl": "18px"
+        },
+        "spacing": {
+          "xs": "4px",
+          "sm": "8px",
+          "md": "16px",
+          "lg": "28px",
+          "xl": "40px"
+        },
+        "shadow": {
+          "sm": "0 2px 4px rgba(76, 175, 80, 0.08)",
+          "md": "0 4px 10px rgba(76, 175, 80, 0.12)",
+          "lg": "0 8px 20px rgba(76, 175, 80, 0.15)",
+          "organic": "0 3px 8px rgba(139, 195, 74, 0.2)"
+        },
+        "fontSize": {
+          "xs": "13px",
+          "sm": "15px",
+          "base": "17px",
+          "lg": "19px",
+          "xl": "22px",
+          "2xl": "26px",
+          "3xl": "34px"
+        },
+        "fontWeight": {
+          "normal": 400,
+          "medium": 500,
+          "semibold": 600,
+          "bold": 700
+        },
+        "fontSecondary": "Open Sans, sans-serif",
+        "transition": "all 0.25s ease",
         "iconStyle": "organic",
         "borderStyle": "soft"
       }
     },
-    "profileTypo":{
-      "colors":{
-        "primary":"#0066FF",
-        "secondary":"#1A1A1A",
-        "accent":"#8BC34A",
-        "background":"#F1F8E9"
+    "profiletypo": {
+      "colors": {
+        "primary": "#0A84FF",
+        "secondary": "#1C1C1E",
+        "background": "#FFFFFF",
+        "surface": "#F5F5F7",
+        "text": "#1C1C1E",
+        "border": "#E5E5EA"
       },
-      "font":"Poppins, sans-serif"
+      "font": "Inter, -apple-system, system-ui, sans-serif",
+      "extras": {
+        "borderRadius": {
+          "sm": "8px",
+          "md": "12px",
+          "lg": "16px",
+          "xl": "24px"
+        },
+        "spacing": {
+          "xs": "4px",
+          "sm": "8px",
+          "md": "16px",
+          "lg": "24px",
+          "xl": "32px",
+          "2xl": "48px"
+        },
+        "shadow": {
+          "sm": "0 1px 3px rgba(0, 0, 0, 0.06)",
+          "md": "0 4px 6px rgba(0, 0, 0, 0.07)",
+          "lg": "0 10px 15px rgba(0, 0, 0, 0.1)",
+          "xl": "0 20px 25px rgba(0, 0, 0, 0.12)"
+        },
+        "fontSize": {
+          "xs": "12px",
+          "sm": "14px",
+          "base": "16px",
+          "lg": "18px",
+          "xl": "20px",
+          "2xl": "24px",
+          "3xl": "30px",
+          "4xl": "36px"
+        },
+        "fontWeight": {
+          "normal": 400,
+          "medium": 500,
+          "semibold": 600,
+          "bold": 700
+        },
+        "fontFamilyDisplay": "Poppins, sans-serif",
+        "transition": "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+        "buttonStyle": "rounded"
+      }
     }
   }
 }

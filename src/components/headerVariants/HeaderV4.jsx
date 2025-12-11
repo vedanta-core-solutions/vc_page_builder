@@ -9,10 +9,8 @@ export default function HeaderV4() {
   const content = ctx?.content || {};
   const navbar = content?.navbar || {};
 
-  // selectionMap comes from ContentProvider (localStorage / URL / defaults)
   const selectionMap = ctx?.selectionMap || {};
 
-  // decide active variant key (no hardcode)
   const firstVariantKey =
     Array.isArray(navbar.variants) && navbar.variants.length > 0
       ? navbar.variants[0].key
@@ -20,17 +18,13 @@ export default function HeaderV4() {
   const variantKey =
     selectionMap?.navbar || navbar.defaultVariant || firstVariantKey;
 
-  // find variant object
   const variantObj = Array.isArray(navbar.variants)
     ? navbar.variants.find((v) => v.key === variantKey)
     : null;
 
-  // build active navbar by merging base + variant overrides
-  // avoid copying the "variants" array itself
   const { variants, defaultVariant, ...baseNavbar } = navbar;
   const activeNavbar = { ...baseNavbar, ...(variantObj || {}) };
 
-  // now get data from activeNavbar (no hard-coded defaults here)
   const behavior = activeNavbar.behavior || {};
   const sticky = Boolean(behavior.sticky);
   const shadowOnScroll = Boolean(behavior.shadowOnScroll);
@@ -49,7 +43,6 @@ export default function HeaderV4() {
     "/logo_rest.jpg";
   const logoHref = activeNavbar.logoHref || content?.defaults?.logoHref || "/";
 
-  // scrolling / hide state (same as before)
   const [scrolled, setScrolled] = useState(false);
   const [visible, setVisible] = useState(true);
   const [lastY, setLastY] = useState(0);
@@ -77,34 +70,33 @@ export default function HeaderV4() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lastY, shadowOnScroll, hideOnScroll]);
 
-  // classes
-  const outerBase = sticky ? "sticky top-0 z-30" : "relative";
+  // wrapper: positioning + hide/show transform
+  const outerBase = sticky ? "fixed w-full top-0 z-30" : "relative";
   const shadowClass = scrolled ? "shadow-lg" : "shadow-none";
-  const blurClass = blur
-    ? "backdrop-blur-sm bg-white/60 dark:bg-gray-900/60"
-    : "bg-white dark:bg-gray-900";
+  const blurClass = blur ? "backdrop-blur-sm" : "";
   const hiddenClass =
     hideOnScroll && !visible ? "-translate-y-[110%]" : "translate-y-0";
 
   return (
     <>
-      <div className={` ${outerBase}`}>
+      {/* wrapper controls sticky + hide transform */}
+      <div className={`${outerBase} ${hiddenClass} header-v4 transition-transform duration-300`}>
+        {/* header: visual styling */}
         <header
-          className={`transition-all duration-300 shadow shadow-amber-950 ${shadowClass} ${blurClass} ${hiddenClass}`}
+          className={`transition-all duration-300 ${shadowClass} ${blurClass} border-b border-default bg-surface`}
         >
           <div className="max-w-7xl mx-auto px-4 md:px-6">
-            <div className="flex items-center justify-between h-16 w-full">
-              {/* LEFT: Hamburger (mobile) + Desktop logo (hidden on mobile) */}
-              <div className="flex items-center w-1/3 gap-3">
-                {/* Hamburger: visible only on mobile (left) */}
+            <div className="flex items-center justify-between h-12 w-full">
+              {/* LEFT: Hamburger (mobile) + Desktop logo */}
+              <div className="flex items-center gap-3 w-1/3">
                 <button
                   onClick={() => setSidebarOpen(true)}
-                  className="md:hidden inline-flex items-center justify-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
+                  className="md:hidden inline-flex items-center justify-center p-2 rounded hover:bg-surface-elev"
                   aria-label="Open menu"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-gray-700 dark:text-gray-200"
+                    className="h-6 w-6 text-default"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -118,9 +110,9 @@ export default function HeaderV4() {
                   </svg>
                 </button>
 
-                {/* DESKTOP LOGO: visible on md+ and placed in left column */}
+                {/* DESKTOP LOGO */}
                 <div className="hidden md:flex items-center">
-                  <Link href={logoHref} className="flex items-center gap-2 ">
+                  <Link href={logoHref} className="flex items-center gap-2">
                     <div className="relative">
                       <Image
                         src={logo}
@@ -130,12 +122,12 @@ export default function HeaderV4() {
                         className="object-fill rounded-xl"
                       />
                     </div>
-                    <span className="font-semibold text-lg text-gray-800 dark:text-gray-100">
+                    <span className="brand-text-theme text-lg">
                       {navbar.logoText || ""}
                     </span>
                   </Link>
                 </div>
-                {/* keep space so left column doesn't collapse on md+ */}
+
                 <div className="hidden md:block flex-1" />
               </div>
 
@@ -150,7 +142,7 @@ export default function HeaderV4() {
                       <a
                         key={i}
                         href={n.href || "#"}
-                        className="text-gray-700 dark:text-gray-200  hover:text-indigo-600 dark:hover:text-indigo-400 transition"
+                        className="nav-item hover:font-semibold transition"
                       >
                         {n.label}
                       </a>
@@ -159,9 +151,8 @@ export default function HeaderV4() {
                 )}
               </div>
 
-              {/* RIGHT: Mobile logo (visible on mobile) + md+ nav+CTA */}
+              {/* RIGHT: Mobile logo + md+ nav + CTA */}
               <div className="flex items-center justify-end w-1/3 gap-3">
-                {/* MOBILE LOGO: only visible on small screens, sits at right */}
                 <div className="md:hidden flex items-center">
                   <Link href={logoHref} className="flex items-center gap-2">
                     <div className="relative w-10 h-10 rounded-full overflow-hidden">
@@ -173,11 +164,9 @@ export default function HeaderV4() {
                         className="object-cover"
                       />
                     </div>
-                    {/* hide site text on strict mobile to save space */}
                   </Link>
                 </div>
 
-                {/* md+: nav (if CTA exists) */}
                 {cta ? (
                   <>
                     <nav
@@ -188,7 +177,7 @@ export default function HeaderV4() {
                         <a
                           key={i}
                           href={n.href || "#"}
-                          className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition hover:font-semibold hover:border-b-2"
+                          className="nav-item hover:font-semibold transition"
                         >
                           {n.label}
                         </a>
@@ -197,7 +186,7 @@ export default function HeaderV4() {
 
                     <Link
                       href={cta.href || "#"}
-                      className="hidden md:inline-block px-4 py-2 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition"
+                      className="hidden md:inline-block btn-cta"
                       role="button"
                     >
                       {cta.label}
@@ -216,12 +205,12 @@ export default function HeaderV4() {
       <aside
         className={`fixed rounded-br-3xl inset-y-0 left-0 z-40 w-64 transform ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } max-h-90 transition-transform duration-300 bg-white dark:bg-gray-900 shadow-xl lg:hidden `}
+        } max-h-screen transition-transform duration-300 mobile-drawer shadow-xl lg:hidden`}
         aria-hidden={!sidebarOpen}
       >
-        <div className="p-4 ">
-          <div className="flex  items-center justify-between mb-6 ">
-            <div className="flex items-center gap-2 ">
+        <div className="p-4">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-2">
               <Image
                 className="rounded-full"
                 src={logo}
@@ -236,7 +225,7 @@ export default function HeaderV4() {
             </div>
             <button
               onClick={() => setSidebarOpen(false)}
-              className="text-gray-600 dark:text-gray-200"
+              className="text-default"
             >
               ✕
             </button>
@@ -249,7 +238,7 @@ export default function HeaderV4() {
                   <a
                     href={n.href || "#"}
                     onClick={() => setSidebarOpen(false)}
-                    className="block px-3 py-2 rounded hover:font-semibold hover:bg-gray-100 dark:hover:bg-gray-800"
+                    className="block px-3 py-2 rounded hover:font-semibold hover:bg-surface-elev"
                   >
                     {n.label}
                   </a>
@@ -261,7 +250,7 @@ export default function HeaderV4() {
               <div className="mt-6">
                 <Link
                   href={cta.href || "#"}
-                  className="block text-center px-4 py-2 rounded-full bg-indigo-600 text-white hover:font-semibold"
+                  className="block text-center px-4 py-2 rounded-full btn-cta w-full"
                 >
                   {cta.label}
                 </Link>
