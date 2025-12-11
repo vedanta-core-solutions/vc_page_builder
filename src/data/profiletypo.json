@@ -1,0 +1,474 @@
+{
+  "content": {
+    "navbar": {
+      "logo": "/girl.jpeg",
+
+      "navlink": [
+        { "label": "Home", "href": "#home" },
+        { "label": "About", "href": "#about" },
+        { "label": "Services", "href": "#services" },
+        { "label": "Contact", "href": "#contact" }
+      ],
+      "button": [{ "label": "Login", "href": "/login" }],
+      "defaultVariant": "v4",
+      "variants": [
+        {
+          "key": "v4",
+          "label": "Sidebar + top nav (profiletypo default)",
+          "layout": "hamburger-left logo-center links-hidden button-right",
+          "logo": "/girl.jpeg",
+          "behavior": {
+            "sticky": true,
+            "shadowOnScroll": true,
+            "hideOnScroll": false,
+            "blur": true
+          }
+        }
+      ]
+    },
+
+    "hero": {
+      "branding": "VCBuilder",
+      "tagline": "Build Beautiful Pages Instantly",
+      "title": "Build Beautiful Pages Instantly",
+      "subtitle": "A revolutionary web builder that empowers you to create stunning, professional websites with ease.",
+      "description": "No coding required — just your creativity.",
+      "badges": ["10K+ Happy Users", "50+ Templates", "24/7 Support"],
+      "image": "/images/retail/retail.png",
+      "cta": [
+        { "label": "Get Started", "href": "/get-started" },
+        { "label": "Learn More", "href": "#features" }
+      ]
+    },
+
+    "about": {
+      "heading": "About VCBuilder",
+      "lead": "We're on a mission to democratize web development by providing powerful tools that anyone can use to create professional websites.",
+      "cards": [
+        {
+          "icon": "🚀",
+          "title": "Fast & Efficient",
+          "description": "Build websites in minutes, not hours. Our optimized tools ensure your site loads lightning fast."
+        },
+        {
+          "icon": "🎨",
+          "title": "Beautiful Designs",
+          "description": "Choose from dozens of professionally designed templates that look great on all devices."
+        },
+        {
+          "icon": "⚙️",
+          "title": "Powerful Features",
+          "description": "From e-commerce to booking systems, our platform has all the features you need."
+        }
+      ],
+      "defaultVariant": "v1"
+    },
+
+    "services": {
+      "meta": {
+        "title": "Our Services",
+        "subtitle": "We offer a comprehensive range of services to help you establish and grow your online presence.",
+        "defaultVariant": "v4",
+        "schemaVersion": "1.0",
+        "updatedAt": "2025-12-09"
+      },
+      "cards": [
+        {
+          "id": "s1",
+          "title": "Web Design",
+          "image": "/images/farming/agri.webp",
+          "description": "Stunning, responsive designs that capture your brand's essence and engage your audience."
+        },
+        {
+          "id": "s2",
+          "title": "Development",
+          "image": "/images/farming/agri.webp",
+          "description": "Clean, efficient code that ensures your website performs flawlessly across all platforms."
+        },
+        {
+          "id": "s3",
+          "title": "E-commerce",
+          "image": "/images/farming/agri.webp",
+          "description": "Complete online stores with payment integration, inventory management, and more."
+        },
+        {
+          "id": "s4",
+          "title": "SEO Optimization",
+          "image": "/images/farming/agri.webp",
+          "description": "Improve your search rankings and drive organic traffic to your website."
+        },
+        {
+          "id": "s5",
+          "title": "Content Creation",
+          "image": "/images/farming/agri.webp",
+          "description": "Compelling copy and visuals that tell your story and connect with your audience."
+        },
+        {
+          "id": "s6",
+          "title": "Hosting & Support",
+          "image": "/images/farming/agri.webp",
+          "description": "Reliable hosting and ongoing support to keep your website running smoothly."
+        }
+      ],
+      "variants": {
+        "v4": {
+          "label": "Cards grid V4",
+          "layout": "grid-cards-v4",
+          "dataBinding": { "use": "cards" }
+        }
+      }
+    },
+
+    "features": {
+      "heading": "Amazing Features",
+      "lead": "Discover the powerful features that make VCBuilder the best choice for your web development needs.",
+      "items": [
+        {
+          "title": "Drag & Drop Builder",
+          "description": "Create beautiful pages with our intuitive drag and drop interface. No coding required."
+        },
+        {
+          "title": "Responsive Design",
+          "description": "Your website will look perfect on all devices, from desktop to mobile."
+        },
+        {
+          "title": "SEO Tools",
+          "description": "Built-in SEO tools to help your website rank higher in search results."
+        },
+        {
+          "title": "Analytics Dashboard",
+          "description": "Track your website's performance with our comprehensive analytics dashboard."
+        }
+      ],
+      "image": "/images/restaurants/food1.avif",
+      "layout": "image-left"
+    },
+
+    "portfolio": {
+      "heading": "Our Portfolio",
+      "lead": "Take a look at some of the amazing websites we've built for our clients.",
+      "items": [
+        {
+          "title": "E-commerce Store",
+          "category": "Online Shop",
+          "image": "/ecomm.jpg"
+        },
+        {
+          "title": "Corporate Website",
+          "category": "Business",
+          "image": "/corporate.jpg"
+        },
+        {
+          "title": "Restaurant Site",
+          "category": "Food & Drink",
+          "image": "/restaurant.jpg"
+        },
+        {
+          "title": "Travel Agency",
+          "category": "Tourism",
+          "image": "/travel.jpg"
+        },
+        {
+          "title": "Tech Startup",
+          "category": "Technology",
+          "image": "/startup.jpg"
+        },
+        {
+          "title": "Creative Portfolio",
+          "category": "Design",
+          "image": "/portfolio.jpg"
+        }
+      ]
+    },
+
+    "testimonials": {
+      "label": "What Our Clients Say",
+      "layout": "grid",
+      "items": [
+        {
+          "id": "t1",
+          "name": "Sarah Johnson",
+          "role": "CEO, TechStart",
+          "quote": "VCBuilder transformed our online presence. Our new website has increased conversions by 40% in just two months.",
+          "avatar": "/man1.jpg"
+        },
+        {
+          "id": "t2",
+          "name": "Michael Chen",
+          "role": "Restaurant Owner",
+          "quote": "I never thought I could have such a professional website without knowing how to code. VCBuilder made it possible!",
+          "avatar": "/man2.jpg"
+        },
+        {
+          "id": "t3",
+          "name": "Emily Rodriguez",
+          "role": "Freelance Designer",
+          "quote": "The drag and drop interface is incredibly intuitive. I can now create beautiful websites for my clients in half the time.",
+          "avatar": "/man3.jpg"
+        }
+      ]
+    },
+
+    "statistics": {
+      "items": [
+        {
+          "key": "projects",
+          "label": "Projects Completed",
+          "value": 320,
+          "showPlus": true
+        },
+        {
+          "key": "clients",
+          "label": "clients",
+          "value": 150,
+          "showPlus": true
+        },
+        {
+          "key": "awards",
+          "label": "Awards",
+          "value": 30,
+          "showPlus": true
+        },
+        {
+          "key": "team",
+          "label": "Team",
+          "value": 40,
+          "showPlus": true
+        }
+      ]
+    },
+
+    "pricing": {
+      "heading": "Simple, Transparent Pricing",
+      "lead": "Choose the plan that best fits your needs. All plans include our core features.",
+      "plans": [
+        {
+          "id": "free",
+          "name": "Free",
+          "price": "0",
+          "period": "month",
+          "description": "Perfect for small projects",
+          "features": {
+            "pages": 5,
+            "templates": "Basic",
+            "emailSupport": true,
+            "customDomain": false,
+            "analytics": false
+          },
+          "button": { "label": "Choose Plan", "href": "/signup" }
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "price": "19.99",
+          "period": "month",
+          "description": "For growing businesses",
+          "features": {
+            "pages": "Unlimited",
+            "templates": "Premium",
+            "emailSupport": true,
+            "customDomain": true,
+            "analytics": true
+          },
+          "badge": "Most Popular",
+          "button": { "label": "Choose Plan", "href": "/signup" }
+        },
+        {
+          "id": "vcore",
+          "name": "VCore",
+          "price": "49.99",
+          "period": "month",
+          "description": "For large organizations",
+          "features": {
+            "pages": "Unlimited",
+            "templates": "Custom",
+            "dedicatedSupport": true,
+            "whiteLabel": true,
+            "apiAccess": true
+          },
+          "button": { "label": "Contact Sales", "href": "/contact" }
+        }
+      ],
+      "defaultVariant": "v1"
+    },
+
+    "team": {
+      "heading": "Meet Our Team",
+      "lead": "Our talented team is dedicated to helping you create amazing websites.",
+      "members": [
+        {
+          "name": "Alex Johnson",
+          "role": "CEO & Founder",
+          "bio": "Visionary leader with 15+ years of experience in web development.",
+          "image": "/ceo.jpg"
+        },
+        {
+          "name": "John Williams",
+          "role": "Head of Design",
+          "bio": "Creative genius with an eye for beautiful, functional design.",
+          "image": "/man1.jpg"
+        },
+        {
+          "name": "Michael Chen",
+          "role": "Lead Developer",
+          "bio": "Full-stack wizard who turns complex problems into elegant solutions.",
+          "image": "/man2.jpg"
+        },
+        {
+          "name": "Omi Rodriguez",
+          "role": "Marketing Director",
+          "bio": "Strategic thinker who helps our clients reach their audience.",
+          "image": "/man3.jpg"
+        }
+      ],
+      "defaultVariant": "v1"
+    },
+
+    "blog": {
+      "heading": "Latest From Our Blog",
+      "lead": "Stay up to date with the latest trends in web design and development.",
+      "posts": [
+        {
+          "title": "10 Web Design Trends for 2025",
+          "excerpt": "Discover the latest trends that will shape the web design landscape this year.",
+          "date": "March 15, 2025",
+          "image": "/startup.jpg"
+        },
+        {
+          "title": "How to Optimize Your Website for Speed",
+          "excerpt": "Learn the techniques to make your website load faster and improve user experience.",
+          "date": "March 10, 2025",
+          "image": "/travel.jpg"
+        },
+        {
+          "title": "The Future of E-commerce",
+          "excerpt": "Explore the emerging technologies that will transform online shopping in the coming years.",
+          "date": "March 5, 2025",
+          "image": "/ecomm.jpg"
+        }
+      ],
+      "defaultVariant": "v1"
+    },
+
+    "newsletter": {
+      "heading": "Stay Updated",
+      "lead": "Subscribe to our newsletter for the latest updates, tips, and exclusive offers.",
+      "cta": { "label": "Subscribe", "placeholder": "Enter your email" },
+      "defaultVariant": "v1"
+    },
+
+    "contact": {
+  "heading": "Get In Touch",
+  "lead": "Have a question? We'd love to hear from you.",
+  "image": "/travel.jpg",
+  "layout": "image-left",
+  "labels": {
+    "name": "Your name",
+    "email": "Your email",
+    "subject": "Subject",
+    "message": "Message",
+    "address": "Address",
+    "phone": "Phone",
+    "emailTitle": "Email",
+    "follow": "Follow Us"
+  },
+  "messages": {
+    "nameRequired": "Please enter your name.",
+    "emailInvalid": "Please enter a valid email address.",
+    "messageRequired": "Please enter your message.",
+    "sending": "Sending...",
+    "success": "Message sent. Thank you!",
+    "error": "Something went wrong. Please try again later."
+  },
+  "buttonLabel": "Send Message",
+  "address": {
+    "line1": "Bafna House ,401404",
+    "city": "Palghar",
+    "state": "MH"
+  },
+  "phone": "(+91)-1234567890",
+  "email": "info@vcbuilder.com",
+  "social": [ { "label": "Facebook", "href": "#" } ]
+},
+
+    "footer": {
+      "defaultVariant": "v1",
+      "defaults": {
+        "logo": "/girl.jpeg",
+        "layout": "columns-standard",
+        "theme": { "colorScheme": "dark" },
+        "columnTitles": {
+          "company": "Company",
+          "services": "Services",
+          "resources": "Resources",
+          "legal": "Legal"
+        },
+        "columns": [
+          {
+            "key": "company",
+            "title": "Company",
+            "type": "links",
+            "items": [
+              { "label": "About Us", "href": "#about" },
+              { "label": "Our Team", "href": "#team" },
+              { "label": "Blog", "href": "#blog" },
+              { "label": "Contact", "href": "#contact" }
+            ]
+          },
+          {
+            "key": "services",
+            "title": "Services",
+            "type": "links",
+            "items": [
+              { "label": "Web Design", "href": "#services" },
+              { "label": "Development", "href": "#services" },
+              { "label": "E-commerce", "href": "#services" },
+              { "label": "SEO", "href": "#services" }
+            ]
+          },
+          {
+            "key": "resources",
+            "title": "Resources",
+            "type": "links",
+            "items": [
+              { "label": "Help Center", "href": "#" },
+              { "label": "Documentation", "href": "#" },
+              { "label": "Tutorials", "href": "#" },
+              { "label": "FAQ", "href": "#" }
+            ]
+          },
+          {
+            "key": "legal",
+            "title": "Legal",
+            "type": "links",
+            "items": [
+              { "label": "Terms of Service", "href": "#" },
+              { "label": "Privacy Policy", "href": "#" },
+              { "label": "Cookie Policy", "href": "#" }
+            ]
+          }
+        ],
+        "copyRight": {
+          "text": "© 2025 VedantaCore. All rights reserved.",
+          "builtWith": "Built with VCBuilder"
+        }
+      },
+      "variants": [
+        {
+          "key": "v1",
+          "label": "Dark columns (default)",
+          "overrides": {
+            "layout": "columns-standard",
+            "theme": { "colorScheme": "dark" }
+          }
+        }
+      ]
+    }
+  },
+  "meta": {
+    "site": "profiletypo",
+    "env": "staging",
+    "createdAt": "2025-12-09",
+    "defaultTheme": "light"
+  }
+}

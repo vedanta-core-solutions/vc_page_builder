@@ -2,11 +2,13 @@ import themeData from "../ui/theme.json";
 import retail from "../data/retail.json";
 import farming from "../data/farming.json";
 import restaurant from "../data/restaurant.json";
+import profiletypo from "../data/profiletypo.json"
 
 const contentMap = {
   retail,
   farming,
   restaurant,
+  profiletypo,
 };
 
 // 3

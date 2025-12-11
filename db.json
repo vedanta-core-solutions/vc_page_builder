@@ -11,6 +11,7 @@
       "email": "sumit@mail.com",
       "website": "http://localhost:3000/nfc/registe",
       "address": "palghar",
+      "googleReviewUrl": "https://g.page/PLACE_ID/review",
       "socialLinks": {
         "instagram": "",
         "facebook": "",
@@ -28,6 +29,7 @@
       "email": "dlip@mail.com",
       "website": "http://localhost:3000/nfc/register",
       "address": "palghar",
+      "googleReviewUrl": "https://g.page/PLACE_ID/review",
       "socialLinks": {
         "instagram": "",
         "facebook": "",
