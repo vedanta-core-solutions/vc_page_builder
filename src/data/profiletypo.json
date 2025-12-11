@@ -2,7 +2,8 @@
   "content": {
     "navbar": {
       "logo": "/girl.jpeg",
-
+      "logoText":"Profile Tap",
+      "logoHref":"https://profiletap.io",
       "navlink": [
         { "label": "Home", "href": "#home" },
         { "label": "About", "href": "#about" },
@@ -28,13 +29,13 @@
     },
 
     "hero": {
-      "branding": "VCBuilder",
-      "tagline": "Build Beautiful Pages Instantly",
-      "title": "Build Beautiful Pages Instantly",
-      "subtitle": "A revolutionary web builder that empowers you to create stunning, professional websites with ease.",
+      "branding": "ProfileTap",
+      "tagline": "Build Beautiful Card Instantly ",
+      "title": "Share  contact  details  with a single tap",
+      "subtitle": "For people who want to make a great first impression. Tap and share your contact details and gather leads. No App Required.",
       "description": "No coding required — just your creativity.",
       "badges": ["10K+ Happy Users", "50+ Templates", "24/7 Support"],
-      "image": "/images/retail/retail.png",
+      "image": "/tap.png",
       "cta": [
         { "label": "Get Started", "href": "/get-started" },
         { "label": "Learn More", "href": "#features" }
@@ -358,41 +359,41 @@
     },
 
     "contact": {
-  "heading": "Get In Touch",
-  "lead": "Have a question? We'd love to hear from you.",
-  "image": "/travel.jpg",
-  "layout": "image-left",
-  "labels": {
-    "name": "Your name",
-    "email": "Your email",
-    "subject": "Subject",
-    "message": "Message",
-    "address": "Address",
-    "phone": "Phone",
-    "emailTitle": "Email",
-    "follow": "Follow Us"
-  },
-  "messages": {
-    "nameRequired": "Please enter your name.",
-    "emailInvalid": "Please enter a valid email address.",
-    "messageRequired": "Please enter your message.",
-    "sending": "Sending...",
-    "success": "Message sent. Thank you!",
-    "error": "Something went wrong. Please try again later."
-  },
-  "buttonLabel": "Send Message",
-  "address": {
-    "line1": "Bafna House ,401404",
-    "city": "Palghar",
-    "state": "MH"
-  },
-  "phone": "(+91)-1234567890",
-  "email": "info@vcbuilder.com",
-  "social": [ { "label": "Facebook", "href": "#" } ]
-},
+      "heading": "Get In Touch",
+      "lead": "Have a question? We'd love to hear from you.",
+      "image": "/travel.jpg",
+      "layout": "image-left",
+      "labels": {
+        "name": "Your name",
+        "email": "Your email",
+        "subject": "Subject",
+        "message": "Message",
+        "address": "Address",
+        "phone": "Phone",
+        "emailTitle": "Email",
+        "follow": "Follow Us"
+      },
+      "messages": {
+        "nameRequired": "Please enter your name.",
+        "emailInvalid": "Please enter a valid email address.",
+        "messageRequired": "Please enter your message.",
+        "sending": "Sending...",
+        "success": "Message sent. Thank you!",
+        "error": "Something went wrong. Please try again later."
+      },
+      "buttonLabel": "Send Message",
+      "address": {
+        "line1": "Bafna House ,401404",
+        "city": "Palghar",
+        "state": "MH"
+      },
+      "phone": "(+91)-1234567890",
+      "email": "info@vcbuilder.com",
+      "social": [{ "label": "Facebook", "href": "#" }]
+    },
 
     "footer": {
-      "defaultVariant": "v1",
+      "defaultVariant": "v4",
       "defaults": {
         "logo": "/girl.jpeg",
         "layout": "columns-standard",
@@ -455,7 +456,7 @@
       },
       "variants": [
         {
-          "key": "v1",
+          "key": "v4",
           "label": "Dark columns (default)",
           "overrides": {
             "layout": "columns-standard",

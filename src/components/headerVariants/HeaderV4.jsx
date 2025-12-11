@@ -45,7 +45,6 @@ export default function HeaderV4() {
     : null;
   const logo =
     activeNavbar.logo ||
-    activeNavbar.logoImage ||
     content?.defaults?.logo ||
     "/logo_rest.jpg";
   const logoHref = activeNavbar.logoHref || content?.defaults?.logoHref || "/";
