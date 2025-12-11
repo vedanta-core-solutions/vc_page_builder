@@ -7,7 +7,7 @@ export default function HeaderV2({ navbar = {} }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-background shadow-card font-base">
+    <header className="bg-background shadow-card font-base w-full fixed top-0 z-10">
       <div className="max-w-screen-2xl mx-auto px-6 lg:px-10">
         <div className="flex items-center h-20 justify-between md:justify-center">
           

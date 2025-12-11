@@ -18,49 +18,157 @@
 
 // 3
 
-'use client';
-import React, { createContext, useContext, useEffect, useState } from 'react';
+// "use client";
+// import React, { createContext, useContext, useEffect, useState } from "react";
+// import { getInitialSelectionMap } from "@/lib/getInitialSelectionMap";
+
+// const ContentContext = createContext(null);
+
+// export function ContentProvider({ children, content, initialSelectionMap }) {
+//   const raw = content || {};
+
+//   const [internalContent, setInternalContent] = useState(raw);
+
+//   const initialMap =
+//     initialSelectionMap && Object.keys(initialSelectionMap).length > 0
+//       ? initialSelectionMap
+//       : getInitialSelectionMap(raw, null);
+
+//   const [selectionMap, setSelectionMap] = useState(() => initialMap);
+
+//   useEffect(() => {
+//     setInternalContent(raw);
+//   }, [raw]);
+
+//   useEffect(() => {
+//     if (!internalContent) return;
+//     setSelectionMap((prev) => {
+//       const defaults = getInitialSelectionMap(internalContent, null);
+//       const merged = { ...defaults, ...prev };
+//       return merged;
+//     });
+//   }, [internalContent]);
+
+//   useEffect(() => {
+//     if (typeof window === "undefined") return;
+
+//     try {
+//       const saved = JSON.parse(
+//         localStorage.getItem("variantSelectionMap") || "null"
+//       );
+//       let next = {};
+//       if (saved && typeof saved === "object") next = { ...saved };
+
+//       const params = new URLSearchParams(window.location.search);
+
+//       for (const [key, value] of params.entries()) {
+//         if (key.startsWith("variant_") && value) {
+//           const compKey = key.replace(/^variant_/, "");
+//           next[compKey] = value;
+//         }
+//       }
+
+//       if (Object.keys(next).length > 0) {
+//         setSelectionMap((prev) => ({ ...prev, ...next }));
+//       }
+//     } catch (e) {
+//       console.warn(
+//         "ContentProvider: error reading variantSelectionMap or URL params",
+//         e
+//       );
+//     }
+//   }, []);
+
+//   useEffect(() => {
+//     if (typeof window === "undefined") return;
+//     try {
+//       localStorage.setItem("variantSelectionMap", JSON.stringify(selectionMap));
+//     } catch {}
+//   }, [selectionMap]);
+
+//   const value = {
+//     content: internalContent,
+//     setContent: setInternalContent,
+//     selectionMap,
+//     setSelectionMap,
+//   };
+
+//   return (
+//     <ContentContext.Provider value={value}>{children}</ContentContext.Provider>
+//   );
+// }
+
+// export function useContent() {
+//   const ctx = useContext(ContentContext);
+//   if (!ctx) return null;
+
+//   if (typeof ctx === "object" && ctx.content !== undefined) {
+//     return ctx;
+//   }
+
+//   return {
+//     content: ctx,
+//     selectionMap: {},
+//     setSelectionMap: () => {},
+//     setContent: () => {},
+//   };
+// }
+
+// “ContentContext centralizes content + variant selection with server defaults, client overrides, and safe persistence, ensuring all page components stay in sync without hydration issues.”
+
+// 3
+
+// new 3
+
+// src/context/ContentContext.js
+"use client";
+import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { getInitialSelectionMap } from "../lib/getInitialSelectionMap";
 
 const ContentContext = createContext(null);
 
 export function ContentProvider({ children, content, initialSelectionMap }) {
-  const raw = content || {};
+  // stable "raw" reference — prevents recreating {} on each render and helps hooks deps
+  const raw = useMemo(() => content || {}, [content]);
 
+  // internal content state (initialized from raw)
   const [internalContent, setInternalContent] = useState(raw);
 
-  const initialMap =
-    initialSelectionMap && Object.keys(initialSelectionMap).length > 0
-      ? initialSelectionMap
-      : getInitialSelectionMap(raw, null);
+  // compute initialMap once and memoize
+  const computedInitialMap = useMemo(() => {
+    if (initialSelectionMap && Object.keys(initialSelectionMap).length > 0) {
+      return initialSelectionMap;
+    }
+    return getInitialSelectionMap(raw, null);
+  }, [initialSelectionMap, raw]);
 
-  const [selectionMap, setSelectionMap] = useState(() => initialMap);
+  // use lazy initializer with memoized value
+  const [selectionMap, setSelectionMap] = useState(() => computedInitialMap);
 
+  // sync internalContent when raw changes
   useEffect(() => {
     setInternalContent(raw);
   }, [raw]);
 
+  // compute defaults from internalContent when it changes
   useEffect(() => {
     if (!internalContent) return;
     setSelectionMap((prev) => {
       const defaults = getInitialSelectionMap(internalContent, null);
-      const merged = { ...defaults, ...prev };
-      return merged;
+      return { ...defaults, ...prev };
     });
   }, [internalContent]);
 
+  // read selectionMap override from localStorage / url once on mount
   useEffect(() => {
     if (typeof window === "undefined") return;
 
     try {
-      const saved = JSON.parse(
-        localStorage.getItem("variantSelectionMap") || "null"
-      );
+      const saved = JSON.parse(localStorage.getItem("variantSelectionMap") || "null");
       let next = {};
       if (saved && typeof saved === "object") next = { ...saved };
 
       const params = new URLSearchParams(window.location.search);
-
       for (const [key, value] of params.entries()) {
         if (key.startsWith("variant_") && value) {
           const compKey = key.replace(/^variant_/, "");
@@ -72,13 +180,11 @@ export function ContentProvider({ children, content, initialSelectionMap }) {
         setSelectionMap((prev) => ({ ...prev, ...next }));
       }
     } catch (e) {
-      console.warn(
-        "ContentProvider: error reading variantSelectionMap or URL params",
-        e
-      );
+      console.warn("ContentProvider: error reading variantSelectionMap or URL params", e);
     }
   }, []);
 
+  // persist selectionMap to localStorage
   useEffect(() => {
     if (typeof window === "undefined") return;
     try {
@@ -93,9 +199,7 @@ export function ContentProvider({ children, content, initialSelectionMap }) {
     setSelectionMap,
   };
 
-  return (
-    <ContentContext.Provider value={value}>{children}</ContentContext.Provider>
-  );
+  return <ContentContext.Provider value={value}>{children}</ContentContext.Provider>;
 }
 
 export function useContent() {
@@ -114,4 +218,12 @@ export function useContent() {
   };
 }
 
-// “ContentContext centralizes content + variant selection with server defaults, client overrides, and safe persistence, ensuring all page components stay in sync without hydration issues.”
+
+// Kyon yeh change karna zaroori hai (short, Hinglish)
+
+// useMemo se raw aur computedInitialMap stable ho jaate hain — hooks aur effects ke dependency lists consistent rehte hain aur ESLint warning chala jaata hai.
+
+// selectionMap initial state still lazy-initialized but based on memoized value — correct and efficient.
+
+// No behavior change for consumers — only internal stability/efficiency improvement.
+// new 3

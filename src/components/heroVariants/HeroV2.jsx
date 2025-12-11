@@ -6,7 +6,7 @@ export default function HeroV2({ hero = {} }) {
     if (!hero) return null;
 
     return (
-        <section className="bg-background text-center py-20 px-6 font-base">
+        <section className="bg-background text-center py-20 px-6 font-base mt-20">
 
             {/* TAGLINE */}
             {hero.tagline && (

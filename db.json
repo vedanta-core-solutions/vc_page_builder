@@ -46,57 +46,356 @@
       "chipId": "7D9C33EA",
       "website": "http://localhost:3000/nfc/register"
     }
-  ],  
+  ],
   "validId": [
-    { "id": 1, "value": "A9F3D2B8" },
-    { "id": 2, "value": "4C7E91FA" },
-    { "id": 3, "value": "BB12A7C3" },
-    { "id": 4, "value": "8F22D9E1" },
-    { "id": 5, "value": "C1A4F8B2" },
-    { "id": 6, "value": "7D9C33EA" },
-    { "id": 7, "value": "F2B18C44" },
-    { "id": 8, "value": "9E7A1BC3" },
-    { "id": 9, "value": "3AD9F0C1" },
-    { "id": 10, "value": "EF23A9B7" },
-    { "id": 11, "value": "C44B9F21" },
-    { "id": 12, "value": "8B1F3CDE" },
-    { "id": 13, "value": "D9A73F22" },
-    { "id": 14, "value": "11FA9BC3" },
-    { "id": 15, "value": "7E3C4A9F" },
-    { "id": 16, "value": "A1B3D5F7" },
-    { "id": 17, "value": "F9D233AE" },
-    { "id": 18, "value": "BC18E4F2" },
-    { "id": 19, "value": "5A9F33D1" },
-    { "id": 20, "value": "C2E4A771" },
-    { "id": 21, "value": "9F33D2AA" },
-    { "id": 22, "value": "E1A7C9F3" },
-    { "id": 23, "value": "6C3FA9E2" },
-    { "id": 24, "value": "AA32F1BC" },
-    { "id": 25, "value": "D1E7B933" },
-    { "id": 26, "value": "F7A1C3E9" },
-    { "id": 27, "value": "8D23B1FE" },
-    { "id": 28, "value": "4A9C7F33" },
-    { "id": 29, "value": "BC3EA1D9" },
-    { "id": 30, "value": "99F1A3C7" },
-    { "id": 31, "value": "3F2A9D7C" },
-    { "id": 32, "value": "E7C1A933" },
-    { "id": 33, "value": "F1B9D2A4" },
-    { "id": 34, "value": "7C3E91FB" },
-    { "id": 35, "value": "D2B19F4A" },
-    { "id": 36, "value": "A77C9E31" },
-    { "id": 37, "value": "4E9AF1C2" },
-    { "id": 38, "value": "99CD33B1" },
-    { "id": 39, "value": "E3F1A8C4" },
-    { "id": 40, "value": "F9AB22D1" },
-    { "id": 41, "value": "1D3C7EFA" },
-    { "id": 42, "value": "B3A9D771" },
-    { "id": 43, "value": "C94F31EA" },
-    { "id": 44, "value": "FA77B12C" },
-    { "id": 45, "value": "3E1C8FB2" },
-    { "id": 46, "value": "7A9D44F1" },
-    { "id": 47, "value": "D1F2A9E3" },
-    { "id": 48, "value": "B77C19AF" },
-    { "id": 49, "value": "C922F7A1" },
-    { "id": 50, "value": "F1C7A3E9" }
+    {
+      "id": "1",
+      "value": "A9F3D2B8"
+    },
+    {
+      "id": "2",
+      "value": "4C7E91FA"
+    },
+    {
+      "id": "3",
+      "value": "BB12A7C3"
+    },
+    {
+      "id": "4",
+      "value": "8F22D9E1"
+    },
+    {
+      "id": "5",
+      "value": "C1A4F8B2"
+    },
+    {
+      "id": "6",
+      "value": "7D9C33EA"
+    },
+    {
+      "id": "7",
+      "value": "F2B18C44"
+    },
+    {
+      "id": "8",
+      "value": "9E7A1BC3"
+    },
+    {
+      "id": "9",
+      "value": "3AD9F0C1"
+    },
+    {
+      "id": "10",
+      "value": "EF23A9B7"
+    },
+    {
+      "id": "11",
+      "value": "C44B9F21"
+    },
+    {
+      "id": "12",
+      "value": "8B1F3CDE"
+    },
+    {
+      "id": "13",
+      "value": "D9A73F22"
+    },
+    {
+      "id": "14",
+      "value": "11FA9BC3"
+    },
+    {
+      "id": "15",
+      "value": "7E3C4A9F"
+    },
+    {
+      "id": "16",
+      "value": "A1B3D5F7"
+    },
+    {
+      "id": "17",
+      "value": "F9D233AE"
+    },
+    {
+      "id": "18",
+      "value": "BC18E4F2"
+    },
+    {
+      "id": "19",
+      "value": "5A9F33D1"
+    },
+    {
+      "id": "20",
+      "value": "C2E4A771"
+    },
+    {
+      "id": "21",
+      "value": "9F33D2AA"
+    },
+    {
+      "id": "22",
+      "value": "E1A7C9F3"
+    },
+    {
+      "id": "23",
+      "value": "6C3FA9E2"
+    },
+    {
+      "id": "24",
+      "value": "AA32F1BC"
+    },
+    {
+      "id": "25",
+      "value": "D1E7B933"
+    },
+    {
+      "id": "26",
+      "value": "F7A1C3E9"
+    },
+    {
+      "id": "27",
+      "value": "8D23B1FE"
+    },
+    {
+      "id": "28",
+      "value": "4A9C7F33"
+    },
+    {
+      "id": "29",
+      "value": "BC3EA1D9"
+    },
+    {
+      "id": "30",
+      "value": "99F1A3C7"
+    },
+    {
+      "id": "31",
+      "value": "3F2A9D7C"
+    },
+    {
+      "id": "32",
+      "value": "E7C1A933"
+    },
+    {
+      "id": "33",
+      "value": "F1B9D2A4"
+    },
+    {
+      "id": "34",
+      "value": "7C3E91FB"
+    },
+    {
+      "id": "35",
+      "value": "D2B19F4A"
+    },
+    {
+      "id": "36",
+      "value": "A77C9E31"
+    },
+    {
+      "id": "37",
+      "value": "4E9AF1C2"
+    },
+    {
+      "id": "38",
+      "value": "99CD33B1"
+    },
+    {
+      "id": "39",
+      "value": "E3F1A8C4"
+    },
+    {
+      "id": "40",
+      "value": "F9AB22D1"
+    },
+    {
+      "id": "41",
+      "value": "1D3C7EFA"
+    },
+    {
+      "id": "42",
+      "value": "B3A9D771"
+    },
+    {
+      "id": "43",
+      "value": "C94F31EA"
+    },
+    {
+      "id": "44",
+      "value": "FA77B12C"
+    },
+    {
+      "id": "45",
+      "value": "3E1C8FB2"
+    },
+    {
+      "id": "46",
+      "value": "7A9D44F1"
+    },
+    {
+      "id": "47",
+      "value": "D1F2A9E3"
+    },
+    {
+      "id": "48",
+      "value": "B77C19AF"
+    },
+    {
+      "id": "49",
+      "value": "C922F7A1"
+    },
+    {
+      "id": "50",
+      "value": "F1C7A3E9"
+    }
+  ],
+  "retailers": [
+    {
+      "id": "1",
+      "name": "ElectroMart",
+      "contact": "9876543210",
+      "createdBy": 1,
+      "createdAt": "2025-11-01T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "name": "DeviceHub",
+      "contact": "9876500000",
+      "createdBy": 1,
+      "createdAt": "2025-11-10T11:20:00Z"
+    },
+    {
+      "id": "3",
+      "name": "TechSquare",
+      "contact": "7894561230",
+      "createdBy": 1,
+      "createdAt": "2025-11-15T09:45:00Z"
+    },
+    {
+      "id": "a85a",
+      "name": "hanuman",
+      "contact": "78756535",
+      "createdBy": 1,
+      "createdAt": "2025-12-09T09:45:17.060Z"
+    },
+    {
+      "id": "9c69",
+      "name": "uoft",
+      "contact": "56767",
+      "createdBy": 1,
+      "createdAt": "2025-12-09T10:47:37.835Z"
+    }
+  ],
+  "cardBatches": [
+    {
+      "id": "1",
+      "startId": 100001,
+      "endId": 100500,
+      "createdBy": 1,
+      "createdAt": "2025-11-01T09:00:00Z"
+    },
+    {
+      "id": "2",
+      "startId": 200001,
+      "endId": 200300,
+      "createdAt": "2025-11-10T09:30:00Z",
+      "createdBy": 1
+    }
+  ],
+  "assignedRanges": [
+    {
+      "id": "1",
+      "batchId": 1,
+      "retailerId": 1,
+      "startId": 100001,
+      "endId": 100050,
+      "assignedBy": 1,
+      "assignedAt": "2025-11-01T10:10:00Z"
+    },
+    {
+      "id": "2",
+      "batchId": 1,
+      "retailerId": 1,
+      "startId": 100051,
+      "endId": 100090,
+      "assignedBy": 1,
+      "assignedAt": "2025-11-03T11:00:00Z"
+    },
+    {
+      "id": "3",
+      "batchId": 1,
+      "retailerId": 2,
+      "startId": 100101,
+      "endId": 100140,
+      "assignedBy": 1,
+      "assignedAt": "2025-11-10T12:00:00Z"
+    },
+    {
+      "id": "4",
+      "batchId": 2,
+      "retailerId": 2,
+      "startId": 200001,
+      "endId": 200030,
+      "assignedBy": 1,
+      "assignedAt": "2025-11-11T09:15:00Z"
+    },
+    {
+      "id": "5",
+      "batchId": 1,
+      "retailerId": 3,
+      "startId": 100201,
+      "endId": 100250,
+      "assignedBy": 1,
+      "assignedAt": "2025-11-15T10:00:00Z"
+    }
+  ],
+  "soldRanges": [
+    {
+      "id": "1",
+      "retailerId": 1,
+      "startId": 100001,
+      "endId": 100005,
+      "eventDate": "2025-11-02",
+      "recordedBy": 1,
+      "createdAt": "2025-11-02T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "retailerId": 1,
+      "startId": 100020,
+      "endId": 100025,
+      "eventDate": "2025-11-04",
+      "recordedBy": 1,
+      "createdAt": "2025-11-04T15:00:00Z"
+    },
+    {
+      "id": "3",
+      "retailerId": 2,
+      "startId": 100101,
+      "endId": 100105,
+      "eventDate": "2025-11-12",
+      "recordedBy": 1,
+      "createdAt": "2025-11-12T13:30:00Z"
+    },
+    {
+      "id": "4",
+      "retailerId": 2,
+      "startId": 200001,
+      "endId": 200003,
+      "eventDate": "2025-11-13",
+      "recordedBy": 1,
+      "createdAt": "2025-11-13T10:00:00Z"
+    }
+  ],
+  "returnedRanges": [
+    {
+      "id": "1",
+      "retailerId": 1,
+      "startId": 100030,
+      "endId": 100035,
+      "eventDate": "2025-11-05",
+      "recordedBy": 1,
+      "createdAt": "2025-11-05T17:00:00Z"
+    }
   ]
 }
