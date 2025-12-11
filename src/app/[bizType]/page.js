@@ -7,10 +7,19 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services.jsx";
 import ContentSection from "@/components/ContentSection";
 import Footer from "@/components/Footer.jsx";
-
+import About from "@/components/About";
+import Team from "@/components/Team";
+import NewsLetter from "@/components/NewsLetter";
+import Portfolio from "@/components/Portfolio";
+import Pricing from "@/components/Pricing";
+import Statistics from "@/components/Statistics";
+import Blog from "@/components/Blog";
+import Contact from "@/components/contact";
+import Features from "@/components/Features";
+import Testimonials from "@/components/Testimonials";
+import LoadingSkeleton from "@/components/LoadingSkeleton";
 
 export default async function BizPage({ params, searchParams }) {
-  
   const resolvedParams =
     typeof params?.then === "function" ? await params : params;
   const resolvedSearchParams =
@@ -20,7 +29,6 @@ export default async function BizPage({ params, searchParams }) {
 
   const { bizType } = resolvedParams;
   const sp = resolvedSearchParams;
-
 
   const config = await loadConfig(bizType);
 
@@ -41,10 +49,19 @@ export default async function BizPage({ params, searchParams }) {
         initialSelectionMap={initialSelectionMap}
       >
         <Header />
-
         <Hero />
         <Services />
+        <Features />
+        <About />
+        <Portfolio />
+        <Statistics />
+        <Pricing />
+        <Testimonials />
+        <Blog />
         <ContentSection />
+        <Team />
+        <NewsLetter />
+        <Contact />
         <Footer />
       </ContentProvider>
     </ConfigProviderClient>

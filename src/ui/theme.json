@@ -55,6 +55,15 @@
         "iconStyle": "organic",
         "borderStyle": "soft"
       }
+    },
+    "profileTypo":{
+      "colors":{
+        "primary":"#0066FF",
+        "secondary":"#1A1A1A",
+        "accent":"#8BC34A",
+        "background":"#F1F8E9"
+      },
+      "font":"Poppins, sans-serif"
     }
   }
 }

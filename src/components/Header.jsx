@@ -51,25 +51,25 @@
 //   );
 // }
 
-
-
-// 3 
-'use client';
-import React, { useState } from 'react';
-import { useContent } from '@/context/ContentContext';
-import HeaderV1 from './headerVariants/HeaderV1';
-import HeaderV2 from './headerVariants/HeaderV2';
-import HeaderV3 from './headerVariants/HeaderV3';
+// 3
+"use client";
+import React, { useState } from "react";
+import { useContent } from "@/context/ContentContext";
+import HeaderV1 from "./headerVariants/HeaderV1";
+import HeaderV2 from "./headerVariants/HeaderV2";
+import HeaderV3 from "./headerVariants/HeaderV3";
+import HeaderV4 from "./headerVariants/HeaderV4";
 
 const VARIANT_MAP = {
   v1: HeaderV1,
   v2: HeaderV2,
   v3: HeaderV3,
+  v4: HeaderV4,
 };
 
 export default function Header() {
   const ctx = useContent();
- 
+
   if (!ctx) return null;
 
   const { content = {}, selectionMap = {} } = ctx;
@@ -78,14 +78,16 @@ export default function Header() {
   const selectedKey = selectionMap?.navbar || navbarRoot?.defaultVariant;
 
   // find variant data (if any)
-  const variantData = navbarRoot?.variants?.find(v => v.key === selectedKey);
+  const variantData = navbarRoot?.variants?.find((v) => v.key === selectedKey);
 
   // canonical data object to pass into variant components (fallback to legacy)
   const data = variantData || navbarRoot;
 
   // console.log('Header debug → selectedKey:', selectedKey, 'variantData:', variantData, 'data:', data);
 
-  const VariantComp = VARIANT_MAP[selectedKey] || VARIANT_MAP[navbarRoot?.defaultVariant] || HeaderV1;
+  const VariantComp =
+    VARIANT_MAP[selectedKey] ||
+    VARIANT_MAP[navbarRoot?.defaultVariant] ||
+    HeaderV1;
   return <VariantComp navbar={data} />;
 }
-

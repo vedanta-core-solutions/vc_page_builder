@@ -6,6 +6,7 @@ import { useContent } from "@/context/ContentContext";
 import FooterV1 from "./footerVariants/FooterV1";
 import FooterV2 from "./footerVariants/FooterV2";
 import FooterV3 from "./footerVariants/FooterV3";
+import FooterV4 from "./footerVariants/FooterV4";
 
 import { normalizeFooter } from "../lib/footerUtils";
 
@@ -63,6 +64,7 @@ export default function Footer() {
 
   if (layout === "logo-right-emphasis") return <FooterV2 data={data} />;
   if (layout === "row-minimal" || layout === "three-column") return <FooterV3 data={data} />;
+  if (layout === "columns-standard") return <FooterV4 data={data} />;
 
   return <FooterV1 data={data} />;
 }
