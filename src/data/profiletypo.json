@@ -24,6 +24,48 @@
             "hideOnScroll": false,
             "blur": true
           }
+        },
+        {
+          "key": "v5",
+          "label": "Glass pill nav with announcement",
+          "layout": "logo-left pill-nav dual-cta",
+          "tagline": "Tap-ready cards for modern teams",
+          "announcement": {
+            "eyebrow": "New",
+            "text": "ProfileTap 2.0 is live — build cards in minutes",
+            "href": "#features"
+          },
+          "primaryButton": { "label": "Create Card", "href": "/get-started" },
+          "secondaryButton": { "label": "Book Demo", "href": "/demo" },
+          "behavior": {
+            "sticky": false,
+            "shadowOnScroll": false,
+            "hideOnScroll": false,
+            "blur": false
+          }
+        },
+        {
+          "key": "v6",
+          "label": "Support strip with dual CTA",
+          "layout": "top-strip dual-row cta-right",
+          "tagline": "Instantly share your contact details",
+          "supportLinks": [
+            { "label": "Docs", "href": "/docs" },
+            { "label": "Changelog", "href": "/changelog" },
+            { "label": "Status", "href": "/status" }
+          ],
+          "contactChip": {
+            "label": "hello@profiletap.io",
+            "href": "mailto:hello@profiletap.io"
+          },
+          "accentButton": { "label": "Launch Builder", "href": "/get-started" },
+          "ghostButton": { "label": "Live Demo", "href": "/demo" },
+          "behavior": {
+            "sticky": false,
+            "shadowOnScroll": false,
+            "hideOnScroll": false,
+            "blur": false
+          }
         }
       ]
     },
