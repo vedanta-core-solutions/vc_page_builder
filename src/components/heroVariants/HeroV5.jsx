@@ -28,7 +28,7 @@ export default function HeroV5({ hero = {} }) {
   const badgeItems = Array.isArray(badges) ? badges : [];
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-indigo-700 via-purple-600 to-rose-500 text-white py-20 px-6 font-base">
+    <section className="relative overflow-hidden bg-linear-to-br from-indigo-700 via-purple-600 to-rose-500 text-white py-20 px-6 font-base">
       <div className="absolute inset-x-0 top-0 h-40 bg-white/10 blur-3xl" aria-hidden />
       <div className="max-w-6xl mx-auto relative z-10 grid gap-12 lg:grid-cols-2 items-center">
         <div className="space-y-6">

@@ -8,6 +8,7 @@
         "background": "#FFFFFF"
       },
       "font": "Inter, sans-serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap",
       "extras": {
         "borderRadius": "6px",
         "buttonStyle": "rounded"
@@ -23,6 +24,7 @@
         "colorsurface": "#FFFFFF"
       },
       "font": "Poppins, sans-serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Poppins&display=swap",
       "extras": {
         "cardShadow": "0 2px 6px rgba(0,0,0,0.15)",
         "badgeStyle": "pill"
@@ -38,6 +40,7 @@
         "colorsurface": "#4af37"
       },
       "font": "Playfair Display, serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Playfair:opsz@5..1200&display=swap",
       "extras": {
         "menuStyle": "elegant",
         "buttonCurve": "8px"
@@ -51,6 +54,7 @@
         "background": "#F1F8E9"
       },
       "font": "Lora, serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Lora&display=swap",
       "extras": {
         "iconStyle": "organic",
         "borderStyle": "soft"
@@ -63,7 +67,8 @@
         "accent":"#8BC34A",
         "background":"#F1F8E9"
       },
-      "font":"Poppins, sans-serif"
+      "font":"Poppins, sans-serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Poppins&display=swap"
     }
   }
 }
