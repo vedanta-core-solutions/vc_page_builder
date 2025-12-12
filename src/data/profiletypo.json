@@ -81,6 +81,50 @@
       "cta": [
         { "label": "Get Started", "href": "/get-started" },
         { "label": "Learn More", "href": "#features" }
+      ],
+      "defaultVariant": "v5",
+      "variants": [
+        {
+          "key": "v5",
+          "label": "Gradient split hero with stats",
+          "layout": "gradient-two-column",
+          "primaryCta": { "label": "Launch Builder", "href": "/get-started" },
+          "secondaryCta": { "label": "Book Demo", "href": "/demo" },
+          "bulletPoints": [
+            "No-code templates customized for your brand",
+            "Share contact details with a tap or QR scan",
+            "Collect leads and sync them instantly"
+          ],
+          "stats": [
+            { "label": "Cards shared", "value": "2.4M+", "hint": "in the last 12 months" },
+            { "label": "Avg. setup time", "value": "8 min", "hint": "from sign-up to share" },
+            { "label": "Teams onboarded", "value": "1.3K", "hint": "sales and event teams" },
+            { "label": "NPS score", "value": "74", "hint": "customers love ProfileTap" }
+          ]
+        },
+        {
+          "key": "v6",
+          "label": "Content + testimonial hero",
+          "layout": "content-testimonial",
+          "eyebrow": "CONTACT SHARING 2.0",
+          "featureList": [
+            { "title": "Smart lead capture", "description": "Auto-sync every tap to your CRM or spreadsheet." },
+            { "title": "Team-ready templates", "description": "Launch custom microsites for every rep in minutes." },
+            { "title": "Analytics built-in", "description": "Track taps, opens, and conversions across campaigns." },
+            { "title": "Secure + branded", "description": "Your brand, your domain, encrypted everywhere." }
+          ],
+          "testimonial": {
+            "quote": "ProfileTap became our default way to share contact details at conferences. We spin up cards overnight and capture every lead.",
+            "author": "Samantha Cole",
+            "role": "Head of Events, Brightwave"
+          },
+          "socialProof": {
+            "label": "Trusted by 10k+ creators and teams",
+            "avatars": ["/man1.jpg", "/man2.jpg", "/man3.jpg", "/girl.jpeg"]
+          },
+          "primaryCta": { "label": "Create my card", "href": "/get-started" },
+          "secondaryCta": { "label": "View templates", "href": "#portfolio" }
+        }
       ]
     },
 
